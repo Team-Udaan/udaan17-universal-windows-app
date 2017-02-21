@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "udaan17-universal-windows-app", "udaan17-universal-windows-app", "{E13A1611-EFC6-44DC-AA1A-19D0D7CA215C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "udaan17-universal-windows-app.Shared", "udaan17-universal-windows-app\udaan17-universal-windows-app.Shared\udaan17-universal-windows-app.Shared.shproj", "{26BFAF1E-CB7D-4BDA-9C14-49241D0A6EDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udaan17-universal-windows-app.Windows", "udaan17-universal-windows-app\udaan17-universal-windows-app.Windows\udaan17-universal-windows-app.Windows.csproj", "{1EB5C349-A2FE-4E80-8012-B825DDC14436}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udaan17-universal-windows-app.WindowsPhone", "udaan17-universal-windows-app\udaan17-universal-windows-app.WindowsPhone\udaan17-universal-windows-app.WindowsPhone.csproj", "{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		udaan17-universal-windows-app\udaan17-universal-windows-app.Shared\udaan17-universal-windows-app.Shared.projitems*{1eb5c349-a2fe-4e80-8012-b825ddc14436}*SharedItemsImports = 4
+		udaan17-universal-windows-app\udaan17-universal-windows-app.Shared\udaan17-universal-windows-app.Shared.projitems*{26bfaf1e-cb7d-4bda-9c14-49241d0a6eda}*SharedItemsImports = 13
+		udaan17-universal-windows-app\udaan17-universal-windows-app.Shared\udaan17-universal-windows-app.Shared.projitems*{ae0709df-dfa7-4bef-a256-3f3ea02d12d6}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|ARM.Build.0 = Debug|ARM
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|ARM.Deploy.0 = Debug|ARM
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|x64.ActiveCfg = Debug|x64
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|x64.Build.0 = Debug|x64
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|x64.Deploy.0 = Debug|x64
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|x86.ActiveCfg = Debug|x86
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|x86.Build.0 = Debug|x86
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Debug|x86.Deploy.0 = Debug|x86
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|ARM.ActiveCfg = Release|ARM
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|ARM.Build.0 = Release|ARM
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|ARM.Deploy.0 = Release|ARM
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|x64.ActiveCfg = Release|x64
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|x64.Build.0 = Release|x64
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|x64.Deploy.0 = Release|x64
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|x86.ActiveCfg = Release|x86
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|x86.Build.0 = Release|x86
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436}.Release|x86.Deploy.0 = Release|x86
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|ARM.ActiveCfg = Debug|ARM
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|ARM.Build.0 = Debug|ARM
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|ARM.Deploy.0 = Debug|ARM
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|x64.Build.0 = Debug|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|x86.ActiveCfg = Debug|x86
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|x86.Build.0 = Debug|x86
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Debug|x86.Deploy.0 = Debug|x86
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|ARM.ActiveCfg = Release|ARM
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|ARM.Build.0 = Release|ARM
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|ARM.Deploy.0 = Release|ARM
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|x64.Build.0 = Release|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|x64.Deploy.0 = Release|Any CPU
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|x86.ActiveCfg = Release|x86
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|x86.Build.0 = Release|x86
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{26BFAF1E-CB7D-4BDA-9C14-49241D0A6EDA} = {E13A1611-EFC6-44DC-AA1A-19D0D7CA215C}
+		{1EB5C349-A2FE-4E80-8012-B825DDC14436} = {E13A1611-EFC6-44DC-AA1A-19D0D7CA215C}
+		{AE0709DF-DFA7-4BEF-A256-3F3EA02D12D6} = {E13A1611-EFC6-44DC-AA1A-19D0D7CA215C}
+	EndGlobalSection
+EndGlobal
