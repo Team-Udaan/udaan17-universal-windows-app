@@ -63,9 +63,16 @@ namespace udaan17_universal_windows_app
         /// session.  The state will be null the first time a page is visited.</param>
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var sampleDataGroup = await SampleDataSource.GetGroupAsync("Group-4");
-            this.DefaultViewModel["Section3Items"] = sampleDataGroup;
+            var comingup = await DataSource.GetUpcomingAsync();
+            this.DefaultViewModel["ComingUp"] = comingup;
+            var tevents = await DataSource.GetTeventsAsync();
+            this.DefaultViewModel["TechEvents"] = tevents;
+            var ntevents = await DataSource.GetDepartmentAsync("non-tech");
+            this.DefaultViewModel["NonTechEvents"] = ntevents;
+            var cultural = await DataSource.GetDepartmentAsync("cultural");
+            this.DefaultViewModel["Cultural"] = cultural;
+            var gs = await DataSource.GetDepartmentAsync("girls-special");
+            this.DefaultViewModel["GirlsSpecial"] = gs;
         }
 
         /// <summary>
@@ -88,9 +95,12 @@ namespace udaan17_universal_windows_app
         /// <param name="e">Event data that describes the item clicked.</param>
         void ItemView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            // Navigate to the appropriate destination page, configuring the new page
-            // by passing required information as a navigation parameter
-            var itemId = ((SampleDataItem)e.ClickedItem).UniqueId;
+            var itemId = ((Department)e.ClickedItem).Alias;
+            this.Frame.Navigate(typeof(SectionPage), itemId);
+        }
+        void ItemView_EventItemClick(object sender, ItemClickEventArgs e)
+        {
+            var itemId = ((Event)e.ClickedItem).name;
             this.Frame.Navigate(typeof(ItemPage), itemId);
         }
         #region NavigationHelper registration
@@ -115,5 +125,10 @@ namespace udaan17_universal_windows_app
         }
 
         #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DevsPage));
+        }
     }
 }
