@@ -15,29 +15,18 @@ using Windows.UI.Xaml.Navigation;
 using udaan17_universal_windows_app.Data;
 using udaan17_universal_windows_app.Common;
 
-// The Universal Hub Application project template is documented at http://go.microsoft.com/fwlink/?LinkID=391955
 
 namespace udaan17_universal_windows_app
 {
-    /// <summary>
-    /// A page that displays a grouped collection of items.
-    /// </summary>
     public sealed partial class HubPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-
-        /// <summary>
-        /// Gets the NavigationHelper used to aid in navigation and process lifetime management.
-        /// </summary>
+        
         public NavigationHelper NavigationHelper
         {
             get { return this.navigationHelper; }
         }
-
-        /// <summary>
-        /// Gets the DefaultViewModel. This can be changed to a strongly typed view model.
-        /// </summary>
         public ObservableDictionary DefaultViewModel
         {
             get { return this.defaultViewModel; }
@@ -49,18 +38,6 @@ namespace udaan17_universal_windows_app
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
         }
-
-        /// <summary>
-        /// Populates the page with content passed during navigation.  Any saved state is also
-        /// provided when recreating a page from a prior session.
-        /// </summary>
-        /// <param name="sender">
-        /// The source of the event; typically <see cref="NavigationHelper"/>
-        /// </param>
-        /// <param name="e">Event data that provides both the navigation parameter passed to
-        /// <see cref="Frame.Navigate(Type, object)"/> when this page was initially requested and
-        /// a dictionary of state preserved by this page during an earlier
-        /// session.  The state will be null the first time a page is visited.</param>
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             var comingup = await DataSource.GetUpcomingAsync();
@@ -74,25 +51,12 @@ namespace udaan17_universal_windows_app
             var gs = await DataSource.GetDepartmentAsync("girls-special");
             this.DefaultViewModel["GirlsSpecial"] = gs;
         }
-
-        /// <summary>
-        /// Invoked when a HubSection header is clicked.
-        /// </summary>
-        /// <param name="sender">The Hub that contains the HubSection whose header was clicked.</param>
-        /// <param name="e">Event data that describes how the click was initiated.</param>
         void Hub_SectionHeaderClick(object sender, HubSectionHeaderClickEventArgs e)
         {
             HubSection section = e.Section;
             var group = section.DataContext;
             this.Frame.Navigate(typeof(SectionPage), ((SampleDataGroup)group).UniqueId);
         }
-
-        /// <summary>
-        /// Invoked when an item within a section is clicked.
-        /// </summary>
-        /// <param name="sender">The GridView or ListView
-        /// displaying the item clicked.</param>
-        /// <param name="e">Event data that describes the item clicked.</param>
         void ItemView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var itemId = ((Department)e.ClickedItem).Alias;

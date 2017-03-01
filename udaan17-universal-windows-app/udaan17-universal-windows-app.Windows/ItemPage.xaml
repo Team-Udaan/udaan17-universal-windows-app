@@ -39,7 +39,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Margin="79,4,79,0">
-                <Image Source="{Binding Image}" Height="400" Margin="0,0,0,20" Stretch="Uniform" AutomationProperties.Name="{Binding Title}"/>
+                <Border Height="400" Margin="0,0,0,20" Background="White">
+                    <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding Title}"/>
+                </Border>
+                
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="No. of participants :  " Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,2,0,2"/>
                     <TextBlock Text="{Binding NoOfParticipants}" Margin="4,2,0,2" Style="{StaticResource SubheaderTextBlockStyle}"/>

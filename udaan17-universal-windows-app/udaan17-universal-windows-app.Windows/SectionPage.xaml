@@ -23,7 +23,7 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    <Grid
         DataContext="{Binding Group}"
         d:DataContext="{Binding Groups[5], Source={d:DesignData Source=../udaan17-universal-windows-app.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}">
         <Grid.ChildrenTransitions>
@@ -35,7 +35,9 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/tech.png" Stretch="UniformToFill"/>
+        </Grid.Background>
         <!-- Horizontal scrolling grid -->
         <GridView
             x:Name="itemGridView"
@@ -56,12 +58,10 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                            <Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding name}"/>
+                        <Border Background="White" Width="110" Height="110">
+                            <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
                         </Border>
-                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0">
-                            <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="NoWrap" VerticalAlignment="Top"/>
-                        </StackPanel>
+                        <TextBlock Grid.Column="1" Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="10,0,0,10"/>
                     </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>

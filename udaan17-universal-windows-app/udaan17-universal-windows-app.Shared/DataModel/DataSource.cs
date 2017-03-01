@@ -173,10 +173,10 @@ namespace udaan17_universal_windows_app.Data
             var matches = _DataSource.Events.SelectMany(group => group.Events).ToList();
             var ls = new List<Event>();
             Random r = new Random();
-            ls.Add(matches[r.Next() % matches.Count]);
-            ls.Add(matches[r.Next() % matches.Count]);
-            ls.Add(matches[r.Next() % matches.Count]);
-            ls.Add(matches[r.Next() % matches.Count]);
+            for (int i = 0; i < 20; i++)
+            {
+                ls.Add(matches[r.Next() % matches.Count]);
+            }
             return ls;
         }
         public static async Task<List<Devs>> GetDevsAsync()
@@ -207,6 +207,7 @@ namespace udaan17_universal_windows_app.Data
         public string Email { get; set; }
         public string Git { get; set; }
         public string Contact { get; set; }
+        public string Mailto { get; set; }
 
         public Devs(string n, string e, string g, string c)
         {
@@ -214,6 +215,7 @@ namespace udaan17_universal_windows_app.Data
             Email = e;
             Git = g;
             Contact = c;
+            Mailto = "mailto:" + e;
         }
     }
     public class Event
@@ -224,10 +226,18 @@ namespace udaan17_universal_windows_app.Data
         public string NoOfParticipants { get; set; }
         public List<Manager> Managers { get; set; }
         public string Fee { get; set; }
+        public string Image { get; set; }
 
         public Event(string s)
         {
             name = s;
+            Image = "Assets/img/" + name + ".png";
+            if (Image.Contains("<"))
+            {
+                Image = Image.Replace("<", "");
+                Image = Image.Replace(">", "");
+            }
+            if (Image.Contains(" ")) Image = Image.Replace(" ", "-");
         }
 
     }

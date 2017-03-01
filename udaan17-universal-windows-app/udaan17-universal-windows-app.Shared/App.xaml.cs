@@ -16,6 +16,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using udaan17_universal_windows_app.Common;
+using System.Threading.Tasks;
+using Windows.Storage;
+using System.Net;
 
 namespace udaan17_universal_windows_app
 {
@@ -81,8 +84,27 @@ namespace udaan17_universal_windows_app
                     throw new Exception("Failed to create initial page");
                 }
             }
-            
+            //await CheckDataAsync();
             Window.Current.Activate();
+        }
+
+        private async Task CheckDataAsync()
+        {
+            Uri dataUri = new Uri("ms-appx:///DataModel/Data.json");
+            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            var props = await file.GetBasicPropertiesAsync();
+            DateTime local = props.DateModified.DateTime;
+            HttpWebRequest req = WebRequest.CreateHttp("https://raw.githubusercontent.com/Team-Udaan/udaan16-windows-phone-app/master/Udaan16/Udaan16/DataModel/Data.json");
+            WebResponse res = (HttpWebResponse)await req.GetResponseAsync();
+            DateTime remote = DateTime.Parse(res.Headers[HttpRequestHeader.LastModified]);
+            if (remote.CompareTo(local) != 0)
+            {
+                using (StreamReader sr = new StreamReader(res.GetResponseStream()))
+                using (StreamWriter sw = new StreamWriter(await file.OpenStreamForWriteAsync()))
+                {
+                    sw.WriteLine(sr.ReadToEnd());
+                }
+            }
         }
 
 #if WINDOWS_PHONE_APP
@@ -93,7 +115,7 @@ namespace udaan17_universal_windows_app
             rootFrame.Navigated -= this.RootFrame_FirstNavigated;
         }
 #endif
-        
+
         private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
