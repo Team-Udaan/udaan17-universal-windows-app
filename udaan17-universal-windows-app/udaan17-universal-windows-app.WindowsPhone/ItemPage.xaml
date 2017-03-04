@@ -21,6 +21,9 @@
     </Page.Transitions>
 
     <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/non-tech.png" Stretch="UniformToFill" Opacity="0.4"/>
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -34,14 +37,55 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock x:Uid="Header" Text="application name" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0" />
-            <TextBlock Text="{Binding Title}" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,-6.5,0,26.5" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            <TextBlock x:Uid="Header" Text="Udaan '17" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0" />
+            <TextBlock Text="{Binding name}" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,-6.5,0,26.5" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid 
                   to show details for the current item -->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Background="White" Height="auto" Width="auto">
+                        <Image Source="{Binding Image}" Height="auto" Width="auto" MaxHeight="200"/>
+                    </Grid>
+                    <StackPanel Orientation="Vertical" Grid.Row="1">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Max Team members : " Style="{ThemeResource BaseTextBlockStyle}"/>
+                            <TextBlock Text="{Binding NoOfParticipants}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Fee : ₹" Style="{ThemeResource BaseTextBlockStyle}"/>
+                            <TextBlock Text="{Binding Fee}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="E-mail : " Style="{ThemeResource BaseTextBlockStyle}"/>
+                            <TextBlock Text="{Binding email}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0"/>
+                        </StackPanel>
+                        <TextBlock Text="Event Description :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,0,0,8"/>
+                        <TextBlock Text="{Binding Description}" Margin="8,0,0,0" Style="{ThemeResource BaseTextBlockStyle}" TextWrapping="Wrap"/>
+                        <TextBlock Text="Managers :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,8,0,8"/>
+                        <ListView Margin="8,0,0,0" ItemsSource="{Binding Managers}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Text="{Binding name}" Style="{ThemeResource BaseTextBlockStyle}" Margin="5"/>
+                                        <TextBlock Text="{Binding Contact}" Style="{ThemeResource BaseTextBlockStyle}" Grid.Row="1" Margin="5,0,0,0"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Page>

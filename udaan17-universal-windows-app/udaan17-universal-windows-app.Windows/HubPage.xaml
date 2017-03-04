@@ -40,7 +40,7 @@
         </Grid.ChildrenTransitions>
         <Hub SectionHeaderClick="Hub_SectionHeaderClick">
             <Hub.Background>
-                <ImageBrush ImageSource="Assets/cover-photo-color.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="Assets/cover-photo-color.jpg" Stretch="UniformToFill" Opacity="0.6"/>
             </Hub.Background>
             <Hub.Header>
                 <!-- Back button and page title -->

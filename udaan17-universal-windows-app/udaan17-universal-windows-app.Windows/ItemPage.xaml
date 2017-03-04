@@ -15,9 +15,12 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    <Grid
         DataContext="{Binding Item}"
         d:DataContext="{Binding Groups[0].Items[0], Source={d:DesignData Source=../udaan17-universal-windows-app.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/non-tech.png" Stretch="UniformToFill" Opacity="0.6"/>
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
