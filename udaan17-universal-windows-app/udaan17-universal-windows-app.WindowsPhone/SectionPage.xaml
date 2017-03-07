@@ -10,7 +10,7 @@
     DataContext="{Binding DefaultViewModel.Group, RelativeSource={RelativeSource Self}}"
     d:DataContext="{Binding Groups[0], Source={d:DesignData Source=../udaan17-universal-windows-app.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Page.Transitions>
+    <!--Page.Transitions>
         <TransitionCollection>
             <NavigationThemeTransition>
                 <NavigationThemeTransition.DefaultNavigationTransitionInfo>
@@ -18,8 +18,52 @@
                 </NavigationThemeTransition.DefaultNavigationTransitionInfo>
             </NavigationThemeTransition>
         </TransitionCollection>
-    </Page.Transitions>
+    </Page.Transitions-->
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="Assets/HubBackground.png"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="{x:Null}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <DataTemplate x:Key="HubSectionHeaderTemplate">
+                <TextBlock Margin="0,0,0,-9.5" Text="{Binding}"/>
+            </DataTemplate>
+
+            <DataTemplate x:Key="StandardDoubleLineItemTemplate">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
+                        <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="79" Width="79"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="14.5,0,0,0">
+                        <TextBlock Text="{Binding name}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+                        <TextBlock Text="{Binding OneLiner}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}" TextTrimming="WordEllipsis"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="HeadsViewItemTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{Binding name}" Style="{ThemeResource BaseTextBlockStyle}"/>
+                    <TextBlock Grid.Row="1" Text="{Binding Contact}" Style="{ThemeResource BaseTextBlockStyle}"/>
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Page.Resources>
     <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the page title
@@ -27,7 +71,7 @@
     -->
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/tech.png" Stretch="UniformToFill" Opacity="0.4"/>
+            <ImageBrush ImageSource="Assets/caption-america.png" Stretch="UniformToFill" Opacity="0.4"/>
         </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -35,50 +79,52 @@
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="Udaan '17" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
-            <TextBlock Text="{Binding Alias}" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" TextWrapping="NoWrap" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
-        </StackPanel>
-
-        <ListView
-            x:Name="itemListView"
-            AutomationProperties.AutomationId="ItemListView"
-            AutomationProperties.Name="Items In Group"
-            TabIndex="1"
-            Grid.Row="1"
-            ItemsSource="{Binding Events}"
-            IsItemClickEnabled="True"
-            ItemClick="ItemView_ItemClick"
-            SelectionMode="None"
-            IsSwipeEnabled="false"
-            Margin="19,0,0,0">
-            <ListView.ItemTemplate>
+        <Hub x:Name="DeptHub" Header="{Binding Alias}">
+            <HubSection x:Uid="Events" Header="Events" DataContext="{Binding Events}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+                <DataTemplate>
+                    <ListView
+                        x:Name="itemListView"
+                        AutomationProperties.AutomationId="ItemListView"
+                        AutomationProperties.Name="Items In Group"
+                        TabIndex="1"
+                        ItemsSource="{Binding}"
+                        IsItemClickEnabled="True"
+                        ItemClick="ItemView_ItemClick"
+                        SelectionMode="None"
+                        IsSwipeEnabled="false"
+                        ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"/>
+                </DataTemplate>
+            </HubSection>
+            <HubSection x:Uid="Heads" Header="Heads" DataContext="{Binding}" Width="auto" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
                     <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Border Background="{ThemeResource PhoneAccentBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
-                            <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="79" Width="79"/>
-                        </Border>
-                        <StackPanel Grid.Column="1" Margin="14.5,0,0,0" VerticalAlignment="Center">
-                            <TextBlock Text="{Binding name}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Max Team menbers : " Style="{ThemeResource ListViewItemContentTextBlockStyle}" Foreground="{ThemeResource PhoneMidBrush}" />
-                                <TextBlock Text="{Binding NoOfParticipants}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}" />
-                            </StackPanel>
-                        </StackPanel>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ListView Grid.Row="0"
+                            x:Name="headsView"
+                            AutomationProperties.AutomationId="ItemListView"
+                            AutomationProperties.Name="Items In Group"
+                            ItemsSource="{Binding Heads}"
+                            IsItemClickEnabled="True"
+                            SelectionMode="None"
+                            IsSwipeEnabled="false"
+                            ItemTemplate="{StaticResource HeadsViewItemTemplate}"/>
+                        <TextBlock Text="Co-Heads" Style="{ThemeResource BodyTextBlockStyle}" Grid.Row="1" VerticalAlignment="Center" FontWeight="Bold"/>
+                        <ListView Grid.Row="2"
+                            x:Name="coHeadsView"
+                            AutomationProperties.AutomationId="ItemListView"
+                            AutomationProperties.Name="Items In Group"
+                            ItemsSource="{Binding CoHeads}"
+                            IsItemClickEnabled="True"
+                            SelectionMode="None"
+                            IsSwipeEnabled="false"
+                            ItemTemplate="{StaticResource HeadsViewItemTemplate}"/>
                     </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </HubSection>
+        </Hub>
     </Grid>
 </Page>

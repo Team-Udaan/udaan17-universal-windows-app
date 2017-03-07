@@ -45,6 +45,8 @@ namespace udaan17_universal_windows_app
         {
             var group = await DataSource.GetDepartmentAsync((string)e.NavigationParameter);
             this.DefaultViewModel["Group"] = group;
+            this.defaultViewModel["Heads"] = group.Heads;
+            this.defaultViewModel["CoHeads"] = group.CoHeads;
             this.DefaultViewModel["Items"] = group.Events;
         }
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)

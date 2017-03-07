@@ -33,26 +33,6 @@
                 </Grid>
             </DataTemplate>
 
-            <DataTemplate x:Key="StandardTripleLineItemTemplate">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Border Background="{ThemeResource PhoneAccentBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
-                        <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="79" Width="79"/>
-                    </Border>
-                    <StackPanel Grid.Column="1" Margin="14.5,0,0,0" VerticalAlignment="Center">
-                        <TextBlock Text="{Binding name}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Max Team menbers : " Style="{ThemeResource ListViewItemContentTextBlockStyle}" Foreground="{ThemeResource PhoneMidBrush}" />
-                            <TextBlock Text="{Binding NoOfParticipants}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}" />
-                        </StackPanel>
-                    </StackPanel>
-                </Grid>
-            </DataTemplate>
-
             <DataTemplate x:Key="StandardDoubleLineItemTemplate">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -64,8 +44,8 @@
                         <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="79" Width="79"/>
                     </Border>
                     <StackPanel Grid.Column="1" Margin="14.5,0,0,0">
-                        <TextBlock Text="{Binding Title}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
-                        <TextBlock Text="{Binding Subtitle}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}"/>
+                        <TextBlock Text="{Binding name}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+                        <TextBlock Text="{Binding OneLiner}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}" TextTrimming="WordEllipsis"/>
                     </StackPanel>
                 </Grid>
             </DataTemplate>
@@ -87,7 +67,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="0,0,0,27.5">
-                                    <TextBlock Text="{Binding name}" Style="{ThemeResource ListViewItemTextBlockStyle}" />
+                                    <TextBlock Text="{Binding name}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -117,7 +97,7 @@
                 </DataTemplate>
             </HubSection>
 
-            <HubSection x:Uid="HubSection3" Header="Non Tech Events"
+            <HubSection x:Uid="NonTechEvents" Header="Non Tech Events"
                         DataContext="{Binding NonTechEvents}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
                     <ListView 
@@ -126,7 +106,22 @@
                         SelectionMode="None"
                         IsItemClickEnabled="True"
                         ItemsSource="{Binding Events}"
-                        ItemTemplate="{StaticResource StandardTripleLineItemTemplate}"
+                        ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"
+                        ItemClick="GroupSection_EventItemClick"
+                        ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+            <HubSection x:Uid="Cultural" Header="Cultural"
+                        DataContext="{Binding Cultural}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+                <DataTemplate>
+                    <ListView 
+                        AutomationProperties.AutomationId="ItemListViewSection3"
+                        AutomationProperties.Name="Items In Group"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ItemsSource="{Binding Events}"
+                        ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"
                         ItemClick="GroupSection_EventItemClick"
                         ContinuumNavigationTransitionInfo.ExitElementContainer="True">
                     </ListView>

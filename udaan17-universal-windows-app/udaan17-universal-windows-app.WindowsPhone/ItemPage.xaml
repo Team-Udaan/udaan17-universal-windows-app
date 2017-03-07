@@ -22,7 +22,7 @@
 
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/non-tech.png" Stretch="UniformToFill" Opacity="0.4"/>
+            <ImageBrush ImageSource="Assets/iron-man.jpg" Stretch="UniformToFill" Opacity="0.4"/>
         </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -50,25 +50,55 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
-                    <Grid Background="White" Height="auto" Width="auto">
+                    <Grid Background="Transparent" Height="auto" Width="auto">
                         <Image Source="{Binding Image}" Height="auto" Width="auto" MaxHeight="200"/>
                     </Grid>
                     <StackPanel Orientation="Vertical" Grid.Row="1">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Max Team members : " Style="{ThemeResource BaseTextBlockStyle}"/>
-                            <TextBlock Text="{Binding NoOfParticipants}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0"/>
+                            <TextBlock Text="Max Team members : " Style="{ThemeResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
+                            <TextBlock Text="{Binding NoOfParticipants}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Fee : ₹" Style="{ThemeResource BaseTextBlockStyle}"/>
-                            <TextBlock Text="{Binding Fee}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0"/>
+                            <TextBlock Text="Fee : ₹" Style="{ThemeResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
+                            <TextBlock Text="{Binding Fee}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="E-mail : " Style="{ThemeResource BaseTextBlockStyle}"/>
-                            <TextBlock Text="{Binding email}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0"/>
+                        <TextBlock Text="Event Description :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,0,0,8" FontWeight="Bold" FontSize="20"/>
+                        <TextBlock Text="{Binding Description}" Margin="8,0,0,0" Style="{ThemeResource BaseTextBlockStyle}"/>
+                        <StackPanel x:Name="rounds">
+                            <TextBlock Text="Rounds : " Style="{ThemeResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
+                            <ListView Margin="8,5,0,0" ItemsSource="{Binding Rounds}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="{Binding no}" Style="{ThemeResource BaseTextBlockStyle}"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding Value}" Style="{ThemeResource BaseTextBlockStyle}" Margin="5,0,0,0"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
                         </StackPanel>
-                        <TextBlock Text="Event Description :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,0,0,8"/>
-                        <TextBlock Text="{Binding Description}" Margin="8,0,0,0" Style="{ThemeResource BaseTextBlockStyle}" TextWrapping="Wrap"/>
-                        <TextBlock Text="Managers :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,8,0,8"/>
+                        <StackPanel x:Name="Prizes">
+                            <TextBlock Text="Prizes : " Style="{ThemeResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
+                            <ListView Margin="8,5,0,0" ItemsSource="{Binding Prizes}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="{Binding no}" Style="{ThemeResource BaseTextBlockStyle}"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding Value}" Style="{ThemeResource BaseTextBlockStyle}" Margin="5,0,0,0"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackPanel>
+                        <TextBlock Text="Managers :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,8,0,8" FontWeight="Bold" FontSize="20"/>
                         <ListView Margin="8,0,0,0" ItemsSource="{Binding Managers}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>

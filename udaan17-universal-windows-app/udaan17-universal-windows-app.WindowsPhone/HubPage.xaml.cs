@@ -57,12 +57,10 @@ namespace udaan17_universal_windows_app
             this.DefaultViewModel["ComingUp"] = comingup;
             var tevents = await DataSource.GetTeventsAsync();
             this.DefaultViewModel["TechEvents"] = tevents;
-            var ntevents = await DataSource.GetDepartmentAsync("non-tech");
+            var ntevents = await DataSource.GetDepartmentAsync("nonTech");
             this.DefaultViewModel["NonTechEvents"] = ntevents;
             var cultural = await DataSource.GetDepartmentAsync("cultural");
             this.DefaultViewModel["Cultural"] = cultural;
-            var gs = await DataSource.GetDepartmentAsync("girls-special");
-            this.DefaultViewModel["GirlsSpecial"] = gs;
         }
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {

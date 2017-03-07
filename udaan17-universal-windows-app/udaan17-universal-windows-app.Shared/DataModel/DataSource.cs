@@ -47,95 +47,101 @@ namespace udaan17_universal_windows_app.Data
         {
             if (this.Count != 0)
                 return;
-            Uri dataUri = new Uri("ms-appx:///DataModel/Data.json");
-            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
-            string jsonText = await FileIO.ReadTextAsync(file);
-            JsonObject Data = JsonObject.Parse(jsonText);
-            //Load Tech events
-            JsonArray Categories = Data["departments"].GetArray();
-            foreach (JsonValue val in Categories)
+            try
             {
-                JsonObject obj = val.GetObject();
-                Department d = new Department(obj["name"].GetString(), obj["alias"].GetString());
-                foreach (JsonValue item in obj["events"].GetArray())
+                Uri dataUri = new Uri("ms-appx:///DataModel/Data.json");
+                StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+                string jsonText = await FileIO.ReadTextAsync(file);
+                JsonObject Data = JsonObject.Parse(jsonText);
+                //Load Tech events
+                foreach (JsonValue val in Data["tech"].GetArray())
                 {
-                    JsonObject eventobj = item.GetObject();
-                    Event e = new Event(eventobj["name"].GetString());
-                    e.Fee = eventobj["fees"].GetString();
-                    try
+                    JsonObject obj = val.GetObject();
+                    Department d = new Department(obj["name"].GetString(), obj["alias"].GetString());
+                    foreach (JsonValue item in obj["events"].GetArray())
                     {
-                        e.Description = eventobj["eventDescription"].GetString();
-                        if (eventobj["round1Description"].GetString() != "")
-                            e.Description += "\r\n\nRound 1 : \r\n" + eventobj["round1Description"].GetString();
-                        if (eventobj["round2Description"].GetString() != "")
-                            e.Description += "\r\n\nRound 2 : \r\n" + eventobj["round2Description"].GetString();
-                        if (eventobj["round3Description"].GetString() != "")
-                            e.Description += "\r\n\nRound 3 : \r\n" + eventobj["round3Description"].GetString();
-                    }
-                    catch (KeyNotFoundException)
-                    { }
-                    e.NoOfParticipants = eventobj["participants"].GetString();
-                    e.Managers = new List<Manager>();
-                    e.email = eventobj["email"].GetString();
-                    foreach (JsonValue manager in eventobj["managers"].GetArray())
-                    {
-                        JsonObject mgr = manager.GetObject();
-                        Manager m = new Manager();
-                        m.name = mgr["name"].GetString();
-                        m.Contact = mgr["mobile"].GetString();
-                        e.Managers.Add(m);
-                    }
-                    d.Events.Add(e);
-                }
-                this.Events.Add(d);
-                this.TEvents.Add(d);
-            }
-            //load non-tech events
-            foreach (JsonValue item in Data["categories"].GetArray())
-            {
-                JsonObject o = item.GetObject();
-                if (o["name"].GetString() != "Tech")
-                {
-                    Department dep = new Department(o["name"].GetString(), o["alias"].GetString());
-                    //if (dep.Title != "Nights")
-                    try
-                    {
-                        foreach (JsonValue v in Data[o["alias"].GetString()].GetArray())
+                        JsonObject eventobj = item.GetObject();
+                        Event e = new Event(eventobj["name"].GetString());
+                        e.Fee = eventobj["fees"].GetString();
+                        e.Description = eventobj["description"].GetString();
+                        try
                         {
-                            JsonObject jobj = v.GetObject();
-                            Event e = new Event(jobj["name"].GetString());
-                            e.Description = jobj["eventDescription"].GetString();
-                            e.email = jobj["email"].GetString();
-                            try
-                            {
-                                if (jobj["round1Description"].GetString() != "")
-                                    e.Description += "\r\n\nRound 1 : \r\n" + jobj["round1Description"].GetString();
-                                if (jobj["round2Description"].GetString() != "")
-                                    e.Description += "\r\n\nRound 2 : \r\n" + jobj["round2Description"].GetString();
-                                if (jobj["round3Description"].GetString() != "")
-                                    e.Description += "\r\n\nRound 3 : \r\n" + jobj["round3Description"].GetString();
-                                e.NoOfParticipants = jobj["participants"].GetString();
-                                e.Fee = jobj["fees"].GetString();
-                            }
-                            catch (Exception)
-                            {
-                                e.NoOfParticipants = e.Fee = "N/A";
-                            }
-                            e.Managers = new List<Manager>();
-                            foreach (JsonValue manager in jobj["managers"].GetArray())
-                            {
-                                JsonObject mgr = manager.GetObject();
-                                Manager m = new Manager();
-                                m.name = mgr["name"].GetString();
-                                m.Contact = mgr["mobile"].GetString();
-                                e.Managers.Add(m);
-                            }
-                            dep.Events.Add(e);
+                            e.OneLiner = e.Description.Split('\n')[0];
                         }
+                        catch (Exception)
+                        {
+                            e.OneLiner = e.Description;
+                        }
+                        foreach (JsonValue jval in eventobj["rounds"].GetArray())
+                        {
+                            e.Rounds.Add(new Iteration() { no = e.Rounds.Count + 1+") ", Value = jval.GetString() });
+                        }
+                        e.NoOfParticipants = eventobj["participants"].GetString();
+                        e.Managers = new List<Manager>();
+                        foreach (JsonValue manager in eventobj["managers"].GetArray())
+                        {
+                            JsonObject mgr = manager.GetObject();
+                            e.Managers.Add(new Manager() { name = mgr["name"].GetString(), Contact = mgr["mobile"].GetString() });
+                        }
+                        foreach (JsonValue prize in eventobj["prizes"].GetArray())
+                        {
+                            e.Prizes.Add(new Iteration() { no = e.Prizes.Count + 1+") ", Value = prize.GetString() });
+                        }
+                        d.Events.Add(e);
                     }
-                    catch (Exception) { }
+                    foreach (JsonValue head in obj["heads"].GetArray())
+                    {
+                        JsonObject hObj = head.GetObject();
+                        d.Heads.Add(new Manager() { name = hObj["name"].GetString(), Contact = hObj["mobile"].GetString() });
+                    }
+                    foreach (JsonValue head in obj["coHeads"].GetArray())
+                    {
+                        JsonObject hObj = head.GetObject();
+                        d.CoHeads.Add(new Manager() { name = hObj["name"].GetString(), Contact = hObj["mobile"].GetString() });
+                    }
+                    this.Events.Add(d);
+                    this.TEvents.Add(d);
+                }
+                //load non-tech and cultural events
+                foreach (string str in new List<string> { "nonTech", "cultural" })
+                {
+                    Department dep = new Department(str, str);
+                    foreach (JsonValue item in Data[str].GetArray())
+                    {
+                        JsonObject o = item.GetObject();
+                        Event e = new Event(o["name"].GetString());
+                        e.NoOfParticipants = o["participants"].GetString();
+                        e.Description = o["description"].GetString();
+                        e.Fee = o["fees"].GetString();
+                        e.Managers = new List<Manager>();
+                        try
+                        {
+                            e.OneLiner = e.Description.Split('\n')[0];
+                        }catch (Exception)
+                        {
+                            e.OneLiner = e.Description;
+                        }
+                        foreach (JsonValue mgrs in o["managers"].GetArray())
+                        {
+                            JsonObject mgrObj = mgrs.GetObject();
+                            e.Managers.Add(new Manager() { name = mgrObj["name"].GetString(), Contact = mgrObj["mobile"].GetString() });
+                        }
+                        foreach (JsonValue round in o["rounds"].GetArray())
+                        {
+                            e.Rounds.Add(new Iteration() { no = e.Rounds.Count + 1 + ") ", Value = round.GetString() });
+                        }
+                        foreach (JsonValue prize in o["prizes"].GetArray())
+                        {
+                            e.Prizes.Add(new Iteration() { no = e.Prizes.Count + 1 + ") ", Value = prize.GetString() });
+                        }
+                        dep.Events.Add(e);
+                    }
                     this.Events.Add(dep);
                 }
+            }
+            catch(KeyNotFoundException ex)
+            {
+
             }
             //Load Developers data
             await LoadDevs();
@@ -192,13 +198,19 @@ namespace udaan17_universal_windows_app.Data
         public string Title { get; set; }
         public string Image { get; set; }
         public List<Event> Events { get; set; }
+        public List<Manager> Heads { get; set; }
+        public List<Manager> CoHeads { get; set; }
+        public string Background { get; set; }
 
         public Department(string name, string alias)
         {
             this.Title = name;
             this.Alias = alias;
             this.Image = "/Assets/DepartmentLogos/" + alias + ".png";
+            this.Background = "/Assets/DepartmentBackgrounds/" + alias + ".png";
             Events = new List<Event>();
+            Heads = new List<Manager>();
+            CoHeads = new List<Manager>();
         }
     }
     public class Devs
@@ -221,22 +233,22 @@ namespace udaan17_universal_windows_app.Data
     public class Event
     {
         public string name { get; set; }
-        public string email { get; set; }
+        public List<Iteration> Rounds { get; set; }
+        public List<Iteration> Prizes { get; set; }
         public string Description { get; set; }
         public string NoOfParticipants { get; set; }
         public List<Manager> Managers { get; set; }
         public string Fee { get; set; }
         public string Image { get; set; }
+        public string Background { get; set; }
+        public string OneLiner { get; set; }
 
         public Event(string s)
         {
+            Rounds = new List<Iteration>();
+            Prizes = new List<Iteration>();
             name = s;
             Image = "Assets/img/" + name + ".png";
-            if (Image.Contains("<"))
-            {
-                Image = Image.Replace("<", "");
-                Image = Image.Replace(">", "");
-            }
             if (Image.Contains(" ")) Image = Image.Replace(" ", "-");
         }
 
@@ -245,5 +257,11 @@ namespace udaan17_universal_windows_app.Data
     {
         public string name { get; set; }
         public string Contact { get; set; }
+    }
+
+    public class Iteration
+    {
+        public string no { get; set; }
+        public string Value { get; set; }
     }
 }
