@@ -78,7 +78,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\survey-hunt.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\takeshi's-castle.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\talent-hunt.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\the-philosophers-stone.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\Philosopher-Stone.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\the-tech-box.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\the-techbox.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\treasure-hunt.png" />

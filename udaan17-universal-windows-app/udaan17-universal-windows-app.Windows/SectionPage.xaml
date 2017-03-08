@@ -16,6 +16,22 @@
             x:Name="itemsViewSource"
             Source="{Binding Items}"
             />
+
+        <DataTemplate x:Key="ItemViewTemplate">
+            <Grid Height="110" Width="480" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Background="Transparent" Width="110" Height="110">
+                    <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
+                </Border>
+                <StackPanel Grid.Column="1" Margin="10,0,0,10">
+                    <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="2"/>
+                    <TextBlock Text="{Binding OneLiner}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="2"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
     </Page.Resources>
 
     <!--
@@ -35,7 +51,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill" Opacity=".5"/>
         </Grid.Background>
         <!-- Horizontal scrolling grid -->
         <GridView
@@ -49,24 +65,8 @@
             SelectionMode="None"
             IsSwipeEnabled="false"
             IsItemClickEnabled="True"
-            ItemClick="ItemView_ItemClick">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Height="110" Width="480" Margin="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Border Background="White" Width="110" Height="110">
-                            <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
-                        </Border>
-                        <StackPanel Grid.Column="1" Margin="10,0,0,10">
-                            <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="2"/>
-                            <TextBlock Text="{Binding OneLiner}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="2"/>
-                        </StackPanel>
-                         </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
+            ItemClick="ItemView_ItemClick"
+            ItemTemplate="{StaticResource ItemViewTemplate}">
             <GridView.Header>
                 <StackPanel Width="480" Margin="0,4,14,0">
                     <TextBlock Text="{Binding Title}" Margin="0,0,0,20" Style="{StaticResource SubheaderTextBlockStyle}" MaxHeight="60"/>
@@ -80,7 +80,6 @@
                 </Style>
             </GridView.ItemContainerStyle>
         </GridView>
-
         <!-- Back button and page title -->
         <Grid>
             <Grid.ColumnDefinitions>

@@ -126,6 +126,15 @@
     <None Include="udaan17-universal-windows-app.Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\DepartmentBackgrounds\cultural.png" />
+    <Content Include="Assets\DepartmentBackgrounds\embeddrones.png" />
+    <Content Include="Assets\DepartmentBackgrounds\fabfacturers.png" />
+    <Content Include="Assets\DepartmentBackgrounds\keycoders.png" />
+    <Content Include="Assets\DepartmentBackgrounds\machinists.png" />
+    <Content Include="Assets\DepartmentBackgrounds\nights.png" />
+    <Content Include="Assets\DepartmentBackgrounds\nontech.png" />
+    <Content Include="Assets\DepartmentBackgrounds\rezonizers.png" />
+    <Content Include="Assets\DepartmentBackgrounds\skyscrapers.png" />
     <Content Include="Assets\DepartmentLogos\Embeddrones.png" />
     <Content Include="Assets\DepartmentLogos\FabFacturers.png" />
     <Content Include="Assets\DepartmentLogos\Keycoders.png" />

@@ -9,17 +9,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <DataTemplate x:Key="IterationTemplate">
+            <Grid Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding no}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="Wrap"/>
+                <TextBlock Grid.Column="1" Text="{Binding Value}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="Wrap" Margin="8,0,0,0"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
     <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
     <Grid
-        DataContext="{Binding Item}"
-        d:DataContext="{Binding Groups[0].Items[0], Source={d:DesignData Source=../udaan17-universal-windows-app.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}">
+        DataContext="{Binding Item}">
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/non-tech.png" Stretch="UniformToFill" Opacity="0.6"/>
+            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill" Opacity="0.6"/>
         </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -42,29 +52,44 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Margin="79,4,79,0">
-                <Border Height="400" Margin="0,0,0,20" Background="White">
+                <Border Height="400" Margin="0,0,0,20" Background="Transparent">
                     <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding Title}"/>
                 </Border>
-                
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="No. of participants :  " Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,2,0,2"/>
-                    <TextBlock Text="{Binding NoOfParticipants}" Margin="4,2,0,2" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Fee                        : ₹ " Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,2,0,2"/>
-                    <TextBlock Text="{Binding Fee}" Margin="4,2,0,2" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                </StackPanel>
-                <StackPanel Orientation="Vertical">
-                    <TextBlock Text="E-mail                    :  " Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,2,0,2"/>
-                    <TextBlock Text="{Binding email}" Margin="0,2,0,2" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="Participants" Style="{StaticResource SubheaderTextBlockStyle}" Margin="5" FontWeight="Bold"/>
+                        <TextBlock Text="Fee" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text=":" FontWeight="Bold" Margin="5" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock Text=":" FontWeight="Bold" Margin="5" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="{Binding NoOfParticipants}" Style="{StaticResource SubheaderTextBlockStyle}" Margin="5"/>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <TextBlock Text="₹" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,2,0,2"/>
+                            <TextBlock Text="{Binding Fee}" Margin="4,2,0,2" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
             </StackPanel>
             <Grid Grid.Column="1">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Disabled">
                     <StackPanel Orientation="Vertical" Margin="10">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="Event Description : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <TextBlock Text="{Binding Description}" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <TextBlock Text="Event Description : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
+                        <TextBlock Text="{Binding Description}" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        <StackPanel x:Name="RoundsGrid">
+                            <TextBlock Text="Rounds : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <ListView ItemTemplate="{StaticResource IterationTemplate}" ItemsSource="{Binding Rounds}" Height="auto" Margin="5"/>
+                        </StackPanel>
+                        <StackPanel  x:Name="PrizesGrid">
+                            <TextBlock Text="Prizes : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <ListView ItemTemplate="{StaticResource IterationTemplate}" ItemsSource="{Binding Prizes}" Height="auto" Margin="5"/>
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
