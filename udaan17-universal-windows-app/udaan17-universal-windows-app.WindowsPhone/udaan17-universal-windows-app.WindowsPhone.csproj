@@ -103,9 +103,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\architects.jpg" />
+    <Content Include="Assets\DepartmentBackgrounds\cultural.png" />
     <Content Include="Assets\DepartmentBackgrounds\embeddrones.png" />
     <Content Include="Assets\DepartmentBackgrounds\fabfacturers.png" />
     <Content Include="Assets\DepartmentBackgrounds\keycoders.png" />
+    <Content Include="Assets\DepartmentBackgrounds\resonizers.png" />
     <Content Include="Assets\DepartmentBackgrounds\rezonizers.png" />
     <Content Include="Assets\DepartmentBackgrounds\nights.png" />
     <Content Include="Assets\DepartmentBackgrounds\nontech.png" />

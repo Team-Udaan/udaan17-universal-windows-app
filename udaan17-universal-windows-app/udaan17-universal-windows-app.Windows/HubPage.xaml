@@ -13,17 +13,32 @@
     <Page.Resources>
         <!-- Grid-appropriate 310 by 260 pixel item template as seen in section 4 -->
         <DataTemplate x:Key="Standard310x260ItemTemplate">
-            <Grid Height="250" Width="310" Margin="5,10,5,10">
+            <Grid Height="270" Width="190" Margin="5,0,5,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Border Background="Black" Height="150" Opacity="60">
+                <Border Background="Transparent" Height="190">
                     <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding Alias}"/>
                 </Border>
-                <StackPanel Grid.Row="1" Margin="0,10,0,0">
+                <StackPanel Grid.Row="1">
                     <TextBlock Text="{Binding Alias}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="NoWrap"/>
                     <TextBlock Text="{Binding Title}" Style="{StaticResource SubheaderTextBlockStyle}" MaxHeight="60" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="EventViewItemTemplate">
+            <Grid Height="80" Width="350" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="White" Width="70" Height="70">
+                        <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
+                    </Border>
+                <StackPanel Grid.Column="1" Margin="5">
+                    <TextBlock Grid.Column="1" Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}"  TextWrapping="NoWrap"/>
+                    <TextBlock Grid.Column="1" Text="{Binding OneLiner}" Style="{StaticResource SubheaderTextBlockStyle}" FontSize="20" TextWrapping="NoWrap"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -38,7 +53,7 @@
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
-        <Hub SectionHeaderClick="Hub_SectionHeaderClick">
+        <Hub>
             <Hub.Background>
                 <ImageBrush ImageSource="Assets/cover-photo-color.jpg" Stretch="UniformToFill" Opacity="0.6"/>
             </Hub.Background>
@@ -68,7 +83,7 @@
                     </Grid>
                 </DataTemplate>
             </HubSection>
-            <HubSection Width="auto" Header="Coming up...">
+            <!--HubSection Width="auto" Header="Coming up...">
                 <DataTemplate>
                     <GridView
                         x:Name="ComingUp"
@@ -90,13 +105,19 @@
                     </GridView>
                         
                 </DataTemplate>
-            </HubSection>
+            </HubSection-->
             <HubSection x:Uid="TechEvents" Header="Tech Events" Padding="40,40,40,32">
                 <DataTemplate>
-                    <GridView
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Background="Black" Opacity=".5" Grid.Row="1" Grid.RowSpan="2"/>
+                        <GridView Grid.Row="1"
                         x:Name="itemGridView"
                         ItemsSource="{Binding TechEvents}"
-                        Margin="-9,-14,0,0"
+                        Margin="10"
                         AutomationProperties.AutomationId="ItemGridView"
                         AutomationProperties.Name="Items In Group"
                         ItemTemplate="{StaticResource Standard310x260ItemTemplate}"
@@ -104,100 +125,52 @@
                         IsSwipeEnabled="false"
                         IsItemClickEnabled="True"
                         ItemClick="ItemView_ItemClick">
-                    </GridView>
+                        </GridView>
+                    </Grid>
                 </DataTemplate>
             </HubSection>
-            <HubSection x:Uid="NonTechHub" Header="Non-Tech Events" Padding="40,40,40,32" DataContext="{Binding NonTechEvents}" Background="Transparent">
+            <HubSection x:Uid="NonTechEvents" Header="Non-Tech Events" Padding="40,40,40,32" DataContext="{Binding NonTechEvents}" Background="Transparent">
                 <DataTemplate>
-                    <GridView
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" Grid.RowSpan="2" Background="Black" Opacity=".5"/>
+                        <GridView Grid.Row="1"
                         x:Name="itemGridView"
                         ItemsSource="{Binding Events}"
-                        Margin="-9,-14,0,0"
+                        Margin="10"
                         AutomationProperties.AutomationId="ItemGridView"
                         AutomationProperties.Name="Items In Group"
                         SelectionMode="None"
                         IsSwipeEnabled="false"
                         IsItemClickEnabled="True"
-                        ItemClick="ItemView_EventItemClick">
-                        <GridView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Height="70" Width="auto" Margin="10" MinWidth="300">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Border Background="White" Width="70" Height="70">
-                                        <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
-                                    </Border>
-                                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" VerticalAlignment="Top" Width="auto" MinWidth="250"/>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </GridView.ItemTemplate>
-                    </GridView>
-                </DataTemplate>
-            </HubSection>
-            <HubSection x:Uid="GirlsSpecial" Header="Girls Special" Padding="40,40,40,32" DataContext="{Binding GirlsSpecial}">
-                <DataTemplate>
-                    <GridView
-                        x:Name="itemGridView"
-                        ItemsSource="{Binding Events}"
-                        Margin="-9,-14,0,0"
-                        AutomationProperties.AutomationId="ItemGridView"
-                        AutomationProperties.Name="Items In Group"
-                        SelectionMode="None"
-                        IsSwipeEnabled="false"
-                        IsItemClickEnabled="True"
-                        ItemClick="ItemView_EventItemClick">
-                        <GridView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Height="70" Width="auto" Margin="10" MinWidth="300">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Border Background="White" Width="70" Height="70">
-                                        <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
-                                    </Border>
-                                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" VerticalAlignment="Top" Width="auto" MinWidth="250"/>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </GridView.ItemTemplate>
-                    </GridView>
+                        ItemClick="ItemView_EventItemClick"
+                        ItemTemplate="{StaticResource EventViewItemTemplate}"/>
+                    </Grid>
                 </DataTemplate>
             </HubSection>
             <HubSection x:Uid="Cultural" Header="Cultural" Padding="40,40,40,32" DataContext="{Binding Cultural}">
                 <DataTemplate>
-                    <GridView
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" Grid.RowSpan="2" Background="Black" Opacity=".5"/>
+                        <GridView Grid.Row="1"
                         x:Name="itemGridView"
                         ItemsSource="{Binding Events}"
-                        Margin="-9,-14,0,0"
+                        Margin="10"
                         AutomationProperties.AutomationId="ItemGridView"
                         AutomationProperties.Name="Items In Group"
                         SelectionMode="None"
                         IsSwipeEnabled="false"
                         IsItemClickEnabled="True"
-                        ItemClick="ItemView_EventItemClick">
-                        <GridView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Height="70" Width="auto" Margin="10" MinWidth="300">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Border Background="White" Width="70" Height="70">
-                                        <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
-                                    </Border>
-                                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" VerticalAlignment="Top" Width="auto" MinWidth="250"/>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </GridView.ItemTemplate>
-                    </GridView>
+                        ItemClick="ItemView_EventItemClick"
+                        ItemTemplate="{StaticResource EventViewItemTemplate}"/>
+                    </Grid>
                 </DataTemplate>
             </HubSection>
         </Hub>

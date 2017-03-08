@@ -5,87 +5,120 @@
       "alias": "SkyScrapers",
       "heads": [],
       "coHeads": [],
-      "events": [
-        {
-          "name": "Mind - play",
-          "participants": "2",
-          "fees": "20",
-          "description": "Got a sharp mind! Let's play.",
-          "prizes": [],
-          "rounds": [
-            "Multi-tasking - Small tasks to check Multi-tasking skills of the participants.",
-            "In second round the will be teams will be given clues related to 7 different venues in the college , then one member from that team which solves a clue will go to that venue and perform a task there given by the volunteer. Similarly, every member reaching there would be given different tasks. Now, as they solve the second\nclue, the other member of the team will go and perform the task.",
-            "Group Tasks - In this round one team member will be blind folded and other will guide him in a code language provided by us. "
-          ],
-          "managers": [
-            {
-              "name": "Shivani Dimke",
-              "mobile": "7043969813"
+       "events":[  
+            {  
+               "name":"Insight",
+               "participants":"2",
+               "fees":"40",
+               "description":"A lot can happen in middle of nowhere.",
+               "prizes":[  
+                  "1500",
+                  "1000"
+               ],
+               "rounds":[  
+                  "30 marks questionnaire (MCQ, Fill in the blanks, One word answer) related to a documentary on Civil Engineering marvels which will be shown to the participants beforehand.",
+                  "Technical debate having 5 - 7 minutes / round. Total debate time is 2 hours.",
+                  "10 - 12 teams will be screened for technical presentation round. Total 7 minutes will be given (5 minutes for presentation and 2 minutes for questionnaire). Topics will be provided to the participants with enough time for preparation. Participants can present in form of PPT / Chart / Poster / Any."
+               ],
+               "managers":[  
+                  {  
+                     "name":"Ayman Shairazi",
+                     "mobile":"8460009354"
+                  },
+                  {  
+                     "name":"Avasar Padaliya",
+                     "mobile":"9426977409"
+                  },
+                  {  
+                     "name":"Pranay Badgujar",
+                     "mobile":"7096738634"
+                  }
+               ]
             },
-            {
-              "name": "Parth Pandya",
-              "mobile": "9409017889"
+            {  
+               "name":"Soil E Bridge",
+               "participants":"3",
+               "fees":"60",
+               "description":"Kya aap ke bridge mein STRAW hai ?",
+               "prizes":[  
+                  "1500",
+                  "1000"
+               ],
+               "rounds":[  
+                  "On the first day, the participants will have to construct components of bridge like Piers, Abutments, Span sections and blocks.",
+                  "Participants will have to assemble the components and finish the model."
+               ],
+               "managers":[  
+                  {  
+                     "name":"Akash Lodaya",
+                     "mobile":"8306706269"
+                  },
+                  {  
+                     "name":"Hitendra Suthar",
+                     "mobile":"9173526010"
+                  },
+                  {  
+                     "name":"Maulik Gangani",
+                     "mobile":"7016160074"
+                  }
+               ]
             },
-            {
-              "name": "Ravirajsingh Jaliya",
-              "mobile": "9723245473"
+            {  
+               "name":"Survey Hunt",
+               "participants":"2",
+               "fees":"40",
+               "description":"Let's survey the Treasure.",
+               "prizes":[  
+
+               ],
+               "rounds":[  
+                  "Quiz based on basics of surveying, principles of surveying and basics of Civil Engineering. (Most questions will be designed while keeping first year students in mind)",
+                  "Participants will be given a puzzle based on principles of instruments of surveying. They need to solve it to find the instrument described in the passage. (Participants will have limited amount of time to solve this puzzle)",
+                  "Participants will be given a problem statement with missing data. They have to find the missing data using the instrument found in previous round. The team which solves this puzzle will be given a clue and that clue will lead to the final treasure."
+               ],
+               "managers":[  
+                  {  
+                     "name":"Himanshu Laddha",
+                     "mobile":"9428534925"
+                  },
+                  {  
+                     "name":"Jay Dhabuwala",
+                     "mobile":"7383269650"
+                  },
+                  {  
+                     "name":"Viral Kapadiya",
+                     "mobile":"8488978066"
+                  }
+               ]
+            },
+            {  
+               "name":"Green Brilliance",
+               "participants":"2-3",
+               "fees":"20",
+               "description":"Got a sharp mind ? Let's play.",
+               "prizes":[  
+
+               ],
+               "rounds":[  
+                  "Expert lecture based on green and sustainable construction.",
+                  "Participants will have to give ideas to make BVM campus green, environment friendly and sustainable. They have to detect problems in the campus and give reasonable and applicable solutions for those problems. They can present their ideas in form of PowerPoint presentation / Poster presentation / Any."
+               ],
+               "managers":[  
+                  {  
+                     "name":"Deven Gajjar",
+                     "mobile":"9725039877"
+                  },
+                  {  
+                     "name":"Anand Limbad",
+                     "mobile":"9624998933"
+                  },
+                  {
+                    "name": "Prince Vachhani",
+                    "mobile":""
+                  }
+               ]
             }
-          ]
-        },
-        {
-          "name": "Service Before Self (SSB)",
-          "participants": "2",
-          "fees": "20",
-          "description": "Stars on my shoulders are better than billions in the sky.",
-          "prizes": [],
-          "rounds": [
-            "Screening (logical quiz).",
-            "Physical tasks.",
-            "Group planning exercise.",
-            "Personal interview."
-          ],
-          "managers": [
-            {
-              "name": "Jayesh Tada",
-              "mobile": "9586358299"
-            },
-            {
-              "name": "Hiren Thakkar",
-              "mobile": "9429022441"
-            },
-            {
-              "name": "Vivek Savaliya",
-              "mobile": "7567800675"
-            }
-          ]
-        },
-        {
-          "name": "Talent Hunt",
-          "participants": "1",
-          "fees": "20",
-          "description": "Dare to be Daring.",
-          "prizes": [],
-          "rounds": [
-            "Rapid fire. (10 questions based on current affairs and GK)",
-            "The participants will be given 15 common tasks which they will have to complete within 30 minutes, whosoever completes maximum number of tasks in minimum time will proceed to the next round.",
-            "Each individual will bet on other participant for the task and & win."
-          ],
-          "managers": [
-            {
-              "name": "Priyen Somaiya",
-              "mobile": "8758999101"
-            },
-            {
-              "name": "Vatsal Patel",
-              "mobile": "9624497479"
-            },
-            {
-              "name": "Bhavesh Prajapati",
-              "mobile": "9898715090"
-            }
-          ]
-        }
-      ]
+         ]
     },
     {
       "name": "cpit",

@@ -62,14 +62,6 @@
                         </Grid.RowDefinitions>
                         <Border Grid.RowSpan="2" Opacity="0" Background="Black"/>
                         <StackPanel Orientation="Vertical" Grid.Row="1" Margin="8">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Participants : " Style="{ThemeResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                                <TextBlock Text="{Binding NoOfParticipants}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Fee : ₹" Style="{ThemeResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
-                                <TextBlock Text="{Binding Fee}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0" VerticalAlignment="Center"/>
-                            </StackPanel>
                             <TextBlock Text="Event Description :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,0,0,8" FontWeight="Bold" FontSize="20"/>
                             <TextBlock Text="{Binding Description}" Margin="8,0,0,0" Style="{ThemeResource BaseTextBlockStyle}"/>
                             <StackPanel x:Name="rounds">
@@ -105,6 +97,14 @@
                                         </DataTemplate>
                                     </ListView.ItemTemplate>
                                 </ListView>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Participants : " Style="{ThemeResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
+                                <TextBlock Text="{Binding NoOfParticipants}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Fee : ₹" Style="{ThemeResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20"/>
+                                <TextBlock Text="{Binding Fee}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0" VerticalAlignment="Center"/>
                             </StackPanel>
                             <TextBlock Text="Managers :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,8,0,8" FontWeight="Bold" FontSize="20"/>
                             <ListView Margin="8,0,0,0" ItemsSource="{Binding Managers}">

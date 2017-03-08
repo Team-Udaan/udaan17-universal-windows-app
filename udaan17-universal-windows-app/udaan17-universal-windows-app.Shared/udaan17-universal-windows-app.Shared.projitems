@@ -45,7 +45,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\final-cut.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\final-verdict.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\find-if-you-can.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\green-brillance.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\green-brilliance.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\guru.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\hands-on-experiment.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\hardware-hub.png" />

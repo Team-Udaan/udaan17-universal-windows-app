@@ -40,22 +40,12 @@ namespace udaan17_universal_windows_app
         }
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            var comingup = await DataSource.GetUpcomingAsync();
-            this.DefaultViewModel["ComingUp"] = comingup;
             var tevents = await DataSource.GetTeventsAsync();
             this.DefaultViewModel["TechEvents"] = tevents;
-            var ntevents = await DataSource.GetDepartmentAsync("non-tech");
+            var ntevents = await DataSource.GetDepartmentAsync("nonTech");
             this.DefaultViewModel["NonTechEvents"] = ntevents;
             var cultural = await DataSource.GetDepartmentAsync("cultural");
             this.DefaultViewModel["Cultural"] = cultural;
-            var gs = await DataSource.GetDepartmentAsync("girls-special");
-            this.DefaultViewModel["GirlsSpecial"] = gs;
-        }
-        void Hub_SectionHeaderClick(object sender, HubSectionHeaderClickEventArgs e)
-        {
-            HubSection section = e.Section;
-            var group = section.DataContext;
-            this.Frame.Navigate(typeof(SectionPage), ((SampleDataGroup)group).UniqueId);
         }
         void ItemView_ItemClick(object sender, ItemClickEventArgs e)
         {

@@ -15,7 +15,7 @@
         <CollectionViewSource
             x:Name="itemsViewSource"
             Source="{Binding Items}"
-            d:Source="{Binding Groups[0].Items, Source={d:DesignData Source=../udaan17-universal-windows-app.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}"/>
+            />
     </Page.Resources>
 
     <!--
@@ -24,8 +24,7 @@
         * Row 1 contains the rest of the page layout
     -->
     <Grid
-        DataContext="{Binding Group}"
-        d:DataContext="{Binding Groups[5], Source={d:DesignData Source=../udaan17-universal-windows-app.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}">
+        DataContext="{Binding Group}">
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -36,7 +35,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/tech.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill"/>
         </Grid.Background>
         <!-- Horizontal scrolling grid -->
         <GridView
@@ -61,8 +60,11 @@
                         <Border Background="White" Width="110" Height="110">
                             <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
                         </Border>
-                        <TextBlock Grid.Column="1" Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="10,0,0,10"/>
-                    </Grid>
+                        <StackPanel Grid.Column="1" Margin="10,0,0,10">
+                            <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="2"/>
+                            <TextBlock Text="{Binding OneLiner}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="2"/>
+                        </StackPanel>
+                         </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>
             <GridView.Header>
