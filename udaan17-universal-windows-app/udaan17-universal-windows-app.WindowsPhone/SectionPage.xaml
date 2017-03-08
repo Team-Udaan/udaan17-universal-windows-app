@@ -8,7 +8,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     DataContext="{Binding DefaultViewModel.Group, RelativeSource={RelativeSource Self}}"
-    d:DataContext="{Binding Groups[0], Source={d:DesignData Source=../udaan17-universal-windows-app.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <!--Page.Transitions>
         <TransitionCollection>
@@ -42,7 +41,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
+                    <Border Background="Transparent" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
                         <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="79" Width="79"/>
                     </Border>
                     <StackPanel Grid.Column="1" Margin="14.5,0,0,0">
@@ -71,7 +70,7 @@
     -->
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/caption-america.png" Stretch="UniformToFill" Opacity="0.4"/>
+            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill" Opacity="0.4"/>
         </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>

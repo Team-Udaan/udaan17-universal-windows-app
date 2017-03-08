@@ -82,6 +82,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Architects.xaml.cs">
+      <DependentUpon>Architects.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HubPage.xaml.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
     </Compile>
@@ -99,9 +102,15 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\caption-america.png" />
-    <Content Include="Assets\iron-man.jpg" />
-    <Content Include="Assets\iron-man.png" />
+    <Content Include="Assets\architects.jpg" />
+    <Content Include="Assets\DepartmentBackgrounds\embeddrones.png" />
+    <Content Include="Assets\DepartmentBackgrounds\fabfacturers.png" />
+    <Content Include="Assets\DepartmentBackgrounds\keycoders.png" />
+    <Content Include="Assets\DepartmentBackgrounds\rezonizers.png" />
+    <Content Include="Assets\DepartmentBackgrounds\nights.png" />
+    <Content Include="Assets\DepartmentBackgrounds\nontech.png" />
+    <Content Include="Assets\DepartmentBackgrounds\machinists.png" />
+    <Content Include="Assets\DepartmentBackgrounds\skyscrapers.png" />
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
     <Content Include="Assets\SplashScreen.scale-240.png" />
@@ -112,6 +121,10 @@
     <Content Include="Assets\HubBackground.theme-light.png" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Architects.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HubPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

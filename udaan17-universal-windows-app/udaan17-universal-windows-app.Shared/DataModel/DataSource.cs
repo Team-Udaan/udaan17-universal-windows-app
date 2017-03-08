@@ -87,6 +87,7 @@ namespace udaan17_universal_windows_app.Data
                         {
                             e.Prizes.Add(new Iteration() { no = e.Prizes.Count + 1+") ", Value = prize.GetString() });
                         }
+                        e.Background = d.Background;
                         d.Events.Add(e);
                     }
                     foreach (JsonValue head in obj["heads"].GetArray())
@@ -134,6 +135,7 @@ namespace udaan17_universal_windows_app.Data
                         {
                             e.Prizes.Add(new Iteration() { no = e.Prizes.Count + 1 + ") ", Value = prize.GetString() });
                         }
+                        e.Background = dep.Background;
                         dep.Events.Add(e);
                     }
                     this.Events.Add(dep);
@@ -170,7 +172,7 @@ namespace udaan17_universal_windows_app.Data
         {
             await _DataSource.GetDataAsync();
             var matches = _DataSource.Events.SelectMany(group => group.Events).Where((item) => item.name.Equals(uniqueId));
-            if (matches.Count() == 1) return matches.First();
+            if (matches.Count() >= 1) return matches.First();
             return null;
         }
         public static async Task<List<Event>> GetUpcomingAsync()

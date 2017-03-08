@@ -1,15 +1,13 @@
 ﻿using udaan17_universal_windows_app.Common;
-using udaan17_universal_windows_app.Data;
-
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Windows.Input;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -17,27 +15,23 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
-// The Universal Hub Application project template is documented at http://go.microsoft.com/fwlink/?LinkID=391955
+using udaan17_universal_windows_app.Data;
 
 namespace udaan17_universal_windows_app
 {
-    /// <summary>
-    /// A page that displays details for a single item within a group.
-    /// </summary>
-    public sealed partial class ItemPage : Page
+    public sealed partial class Architects : Page
     {
-        private readonly NavigationHelper navigationHelper;
-        private readonly ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private NavigationHelper navigationHelper;
+        private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        public ItemPage()
+        public Architects()
         {
             this.InitializeComponent();
 
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
-        } 
+        }
         public NavigationHelper NavigationHelper
         {
             get { return this.navigationHelper; }
@@ -48,16 +42,11 @@ namespace udaan17_universal_windows_app
         }
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            var item = await DataSource.GetEventAsync((string)e.NavigationParameter);
+            var item = await DataSource.GetDevsAsync();
             this.DefaultViewModel["Item"] = item;
-
-            if (item.Rounds.Count == 0) rounds.Visibility = Visibility.Collapsed;
-            if (item.Prizes.Count == 0) Prizes.Visibility = Visibility.Collapsed;
-
         }
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
-            // TODO: Save the unique state of the page here.
         }
 
         #region NavigationHelper registration
@@ -66,14 +55,15 @@ namespace udaan17_universal_windows_app
         /// The methods provided in this section are simply used to allow
         /// NavigationHelper to respond to the page's navigation methods.
         /// <para>
-        /// Page specific logic should be placed in event handlers for the
+        /// Page specific logic should be placed in event handlers for the  
         /// <see cref="NavigationHelper.LoadState"/>
         /// and <see cref="NavigationHelper.SaveState"/>.
-        /// The navigation parameter is available in the LoadState method
+        /// The navigation parameter is available in the LoadState method 
         /// in addition to page state preserved during an earlier session.
         /// </para>
         /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.</param>
+        /// <param name="e">Provides data for navigation methods and event
+        /// handlers that cannot cancel the navigation request.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);

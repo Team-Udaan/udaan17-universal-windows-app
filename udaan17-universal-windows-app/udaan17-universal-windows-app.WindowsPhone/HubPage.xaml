@@ -6,7 +6,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
-    d:DataContext="{Binding Source={d:DesignData Source=../udaan17-universal-windows-app.Shared/DataModel/SampleData.json, Type=data:SampleDataSource}}"
     xmlns:data="using:udaan17_universal_windows_app.Data"
     mc:Ignorable="d">
 
@@ -40,7 +39,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
+                    <Border Background="Transparent" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
                         <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="79" Width="79"/>
                     </Border>
                     <StackPanel Grid.Column="1" Margin="14.5,0,0,0">
@@ -57,7 +56,7 @@
             <Hub.Background>
                 <ImageBrush ImageSource="Assets/cover-photo-color.jpg" Stretch="UniformToFill" Opacity="0.4"/>
             </Hub.Background>
-            <HubSection x:Uid="ComingUp" Header="Coming up..." DataContext="{Binding ComingUp}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+            <!--HubSection x:Uid="ComingUp" Header="Coming up..." DataContext="{Binding ComingUp}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
                     <ListView
                         ItemsSource="{Binding}"
@@ -73,7 +72,7 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </DataTemplate>
-            </HubSection>
+            </HubSection-->
 
             <HubSection x:Uid="TechEvents" Header="Tech Events" Width="Auto"
                          DataContext="{Binding TechEvents}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
@@ -129,4 +128,10 @@
             </HubSection>
         </Hub>
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar x:Name="myCommandBar">
+            <AppBarButton x:Name="pinAppBtn" Label="About Us" Icon="Help" Click="pinAppBtn_Click"/>
+            <AppBarButton x:Name="review" Label="Rate App" Icon="Favorite" Click="review_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

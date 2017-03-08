@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="udaan17_universal_windows_app.Architects"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:udaan17_universal_windows_app"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Black"
+    DataContext="{Binding DefaultViewModel.Item, RelativeSource={RelativeSource Self}}">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/architects.jpg" Stretch="Uniform" Opacity=".5"/>
+        </Grid.Background>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="udaan '17" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="&lt;Architects/&gt;" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ScrollViewer>
+
+                <StackPanel>
+                    <!--TextBlock Text="Team Udaan" Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" FontSize="20"/-->
+                    <!--StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Version : " Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" VerticalAlignment="Center"/>
+                        <TextBlock Text="  1.0.0.1" Style="{ThemeResource ComboBoxPlaceholderTextBlockStyle}"/>
+                    </StackPanel-->
+                    <ListView x:Name="listView" ItemsSource="{Binding}" Background="Transparent">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Background="Transparent">
+                                    <TextBlock Text="{Binding Name}" Style="{ThemeResource ListViewItemTextBlockStyle}" Foreground="{ThemeResource PhoneAccentBrush}"/>
+                                    <TextBlock Text="Contact : " Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" Margin="10,0,0,0"/>
+                                    <TextBlock Text="{Binding Contact}" Style="{ThemeResource ComboBoxPlaceholderTextBlockStyle}" Margin="25,0,0,0"/>
+                                    <TextBlock Text="E-mail : " Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" Margin="10,0,0,0"/>
+                                    <HyperlinkButton
+                                        NavigateUri="{Binding Mailto}"
+                                        Content="{Binding Email}" 
+                                        Foreground="{ThemeResource PhoneAccentBrush}"
+                                        FontSize="{ThemeResource ContentControlFontSize}"
+                                        Margin="25,0,0,0" HorizontalAlignment="Left"/> <TextBlock Text="GitHub : " Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" Margin="10,0,0,0"/>
+                                    <HyperlinkButton
+                                        NavigateUri="{Binding Git}"
+                                        Content="{Binding Git}" 
+                                        Foreground="{ThemeResource PhoneAccentBrush}"
+                                        FontSize="{ThemeResource ContentControlFontSize}"
+                                        Margin="25,0,0,0" HorizontalAlignment="Left"/>
+                                    <Line Stretch="Fill" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" X2="2" Margin="0,5,0,0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

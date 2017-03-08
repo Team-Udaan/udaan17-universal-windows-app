@@ -52,9 +52,8 @@ namespace udaan17_universal_windows_app
 
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var comingup = await DataSource.GetUpcomingAsync();
-            this.DefaultViewModel["ComingUp"] = comingup;
+            //var comingup = await DataSource.GetUpcomingAsync();
+            //this.DefaultViewModel["ComingUp"] = comingup;
             var tevents = await DataSource.GetTeventsAsync();
             this.DefaultViewModel["TechEvents"] = tevents;
             var ntevents = await DataSource.GetDepartmentAsync("nonTech");
@@ -78,15 +77,6 @@ namespace udaan17_universal_windows_app
         private void GroupSection_EventItemClick(object sender, ItemClickEventArgs e)
         {
             var itemId = ((Event)e.ClickedItem).name;
-            if (!Frame.Navigate(typeof(ItemPage), itemId))
-            {
-                throw new Exception(this.resourceLoader.GetString("NavigationFailedExceptionMessage"));
-            }
-        }
-
-        private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var itemId = ((SampleDataItem)e.ClickedItem).UniqueId;
             if (!Frame.Navigate(typeof(ItemPage), itemId))
             {
                 throw new Exception(this.resourceLoader.GetString("NavigationFailedExceptionMessage"));
@@ -118,5 +108,18 @@ namespace udaan17_universal_windows_app
         }
 
         #endregion
+
+        private void pinAppBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Frame.Navigate(typeof(Architects)))
+            {
+                throw new Exception(this.resourceLoader.GetString("NavigationFailedExceptionMessage"));
+            }
+        }
+
+        private void review_Click(object sender, RoutedEventArgs e)
+        {
+            //await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" +));
+        }
     }
 }
