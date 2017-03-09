@@ -81,7 +81,13 @@
         <Hub x:Name="DeptHub" Header="{Binding Alias}">
             <HubSection x:Uid="Events" Header="Events" DataContext="{Binding Events}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
-                    <ListView
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Background="Black" Opacity=".5" Grid.RowSpan="2"/>
+                        <ListView Grid.Row="1" Margin="10,5,5,5"
                         x:Name="itemListView"
                         AutomationProperties.AutomationId="ItemListView"
                         AutomationProperties.Name="Items In Group"
@@ -92,6 +98,7 @@
                         SelectionMode="None"
                         IsSwipeEnabled="false"
                         ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"/>
+                    </Grid>
                 </DataTemplate>
             </HubSection>
             <HubSection x:Uid="Heads" x:Name="Heads" Header="Heads" DataContext="{Binding}" Width="auto" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">

@@ -41,7 +41,6 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-
                     <Border Background="Transparent" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
                         <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="79" Width="79"/>
                     </Border>
@@ -95,7 +94,13 @@
             <HubSection x:Uid="NonTechEvents" Header="Non Tech Events"
                         DataContext="{Binding NonTechEvents}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
-                    <ListView 
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Background="Black" Opacity=".5" Grid.RowSpan="2"/>
+                        <ListView Grid.Row="1" Margin="10,5,5,5"
                         AutomationProperties.AutomationId="ItemListViewSection3"
                         AutomationProperties.Name="Items In Group"
                         SelectionMode="None"
@@ -104,13 +109,20 @@
                         ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"
                         ItemClick="GroupSection_EventItemClick"
                         ContinuumNavigationTransitionInfo.ExitElementContainer="True">
-                    </ListView>
+                        </ListView>
+                    </Grid>
                 </DataTemplate>
             </HubSection>
             <HubSection x:Uid="Cultural" Header="Cultural"
                         DataContext="{Binding Cultural}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
-                    <ListView 
+                    <Grid Margin="0,0,10,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Background="Black" Opacity=".5" Grid.RowSpan="2"/>
+                        <ListView Grid.Row="1" Margin="10,5,5,5"
                         AutomationProperties.AutomationId="ItemListViewSection3"
                         AutomationProperties.Name="Items In Group"
                         SelectionMode="None"
@@ -119,7 +131,8 @@
                         ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"
                         ItemClick="GroupSection_EventItemClick"
                         ContinuumNavigationTransitionInfo.ExitElementContainer="True">
-                    </ListView>
+                        </ListView>
+                    </Grid>
                 </DataTemplate>
             </HubSection>
         </Hub>
