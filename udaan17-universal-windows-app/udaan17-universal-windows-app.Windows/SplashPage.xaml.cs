@@ -48,8 +48,9 @@ namespace udaan17_universal_windows_app
             imageAnimation.Completed += ImageAnimation_Completed;
         }
 
-        private void ImageAnimation_Completed(object sender, object e)
+        private async void ImageAnimation_Completed(object sender, object e)
         {
+            await Task.Delay(300);
             Frame.Navigate(typeof(HubPage));
             Frame.BackStack.RemoveAt(Frame.BackStackDepth - 1);
         }

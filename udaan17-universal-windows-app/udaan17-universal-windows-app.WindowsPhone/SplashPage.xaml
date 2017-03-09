@@ -21,10 +21,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Rectangle x:Name="One" Grid.Column="0" Fill="#009746" Height="50" Width="50" HorizontalAlignment="Right"/>
-                <Rectangle x:Name="Seven" Grid.Column="1" Fill="#0f7cad" Height="50" Width="50" HorizontalAlignment="Left"/>
-                <TextBlock Text="1" Grid.Column="0" HorizontalAlignment="Right" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" Margin="0,6,8,0" Foreground="Black"/>
-                <TextBlock Text="7" Grid.Column="1" HorizontalAlignment="Left" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" Margin="8,6,0,0" Foreground="Black"/>
+                <Rectangle x:Name="One" Grid.Column="0" Fill="#009746" Height="50" Width="80" HorizontalAlignment="Right"/>
+                <Rectangle x:Name="Seven" Grid.Column="1" Fill="#0f7cad" Height="50" Width="70" HorizontalAlignment="Left"/>
+                <TextBlock Text="20" Grid.Column="0" HorizontalAlignment="Right" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" Margin="0,6,8,0" Foreground="Black"/>
+                <TextBlock Text="17" Grid.Column="1" HorizontalAlignment="Left" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" Margin="8,6,0,0" Foreground="Black"/>
             </Grid>
             <Grid.Resources>
                 <Storyboard x:Name="imageAnimation">
@@ -39,7 +39,7 @@
                                      EnableDependentAnimation="True"
                                                        Duration="0:0:2"
                                                        From="0.0"
-                                                       To="50.0">
+                                                       To="80.0">
                         <DoubleAnimation.EasingFunction>
                             <BounceEase Bounces="3" 
                                 Bounciness="3"/>
@@ -50,7 +50,7 @@
                                      EnableDependentAnimation="True"
                                                        Duration="0:0:2"
                                                        From="0.0"
-                                                       To="50.0">
+                                                       To="75.0">
                         <DoubleAnimation.EasingFunction>
                             <BounceEase Bounces="3" 
                                 Bounciness="3"/>

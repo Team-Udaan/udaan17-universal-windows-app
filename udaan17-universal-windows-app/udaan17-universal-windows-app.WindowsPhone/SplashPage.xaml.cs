@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -50,8 +51,9 @@ namespace udaan17_universal_windows_app
             imageAnimation.Completed += ImageAnimation_Completed;
         }
 
-        private void ImageAnimation_Completed(object sender, object e)
+        private async void ImageAnimation_Completed(object sender, object e)
         {
+            await Task.Delay(300);
             Frame.Navigate(typeof(HubPage));
             Frame.BackStack.RemoveAt(Frame.BackStackDepth - 1);
         }
