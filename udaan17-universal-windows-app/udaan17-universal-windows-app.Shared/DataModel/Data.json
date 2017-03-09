@@ -3,128 +3,122 @@
     {
       "name": "civil",
       "alias": "SkyScrapers",
-      "heads": [],
-      "coHeads": [],
-       "events":[  
-            {  
-               "name":"Insight",
-               "participants":"2",
-               "fees":"40",
-               "description":"A lot can happen in middle of nowhere.",
-               "prizes":[  
-                  "1500",
-                  "1000"
-               ],
-               "rounds":[  
-                  "30 marks questionnaire (MCQ, Fill in the blanks, One word answer) related to a documentary on Civil Engineering marvels which will be shown to the participants beforehand.",
-                  "Technical debate having 5 - 7 minutes / round. Total debate time is 2 hours.",
-                  "10 - 12 teams will be screened for technical presentation round. Total 7 minutes will be given (5 minutes for presentation and 2 minutes for questionnaire). Topics will be provided to the participants with enough time for preparation. Participants can present in form of PPT / Chart / Poster / Any."
-               ],
-               "managers":[  
-                  {  
-                     "name":"Ayman Shairazi",
-                     "mobile":"8460009354"
-                  },
-                  {  
-                     "name":"Avasar Padaliya",
-                     "mobile":"9426977409"
-                  },
-                  {  
-                     "name":"Pranay Badgujar",
-                     "mobile":"7096738634"
-                  }
-               ]
+      "events": [
+        {
+          "name": "Insight",
+          "participants": "2",
+          "fees": "40",
+          "description": "A lot can happen in middle of nowhere.",
+          "prizes": [
+            "1500",
+            "1000"
+          ],
+          "rounds": [
+            "30 marks questionnaire (MCQ, Fill in the blanks, One word answer) related to a documentary on Civil Engineering marvels which will be shown to the participants beforehand.",
+            "Technical debate having 5 - 7 minutes / round. Total debate time is 2 hours.",
+            "10 - 12 teams will be screened for technical presentation round. Total 7 minutes will be given (5 minutes for presentation and 2 minutes for questionnaire). Topics will be provided to the participants with enough time for preparation. Participants can present in form of PPT / Chart / Poster / Any."
+          ],
+          "managers": [
+            {
+              "name": "Ayman Shairazi",
+              "mobile": "8460009354"
             },
-            {  
-               "name":"Soil E Bridge",
-               "participants":"3",
-               "fees":"60",
-               "description":"Kya aap ke bridge mein STRAW hai ?",
-               "prizes":[  
-                  "1500",
-                  "1000"
-               ],
-               "rounds":[  
-                  "On the first day, the participants will have to construct components of bridge like Piers, Abutments, Span sections and blocks.",
-                  "Participants will have to assemble the components and finish the model."
-               ],
-               "managers":[  
-                  {  
-                     "name":"Akash Lodaya",
-                     "mobile":"8306706269"
-                  },
-                  {  
-                     "name":"Hitendra Suthar",
-                     "mobile":"9173526010"
-                  },
-                  {  
-                     "name":"Maulik Gangani",
-                     "mobile":"7016160074"
-                  }
-               ]
+            {
+              "name": "Avasar Padaliya",
+              "mobile": "9426977409"
             },
-            {  
-               "name":"Survey Hunt",
-               "participants":"2",
-               "fees":"40",
-               "description":"Let's survey the Treasure.",
-               "prizes":[  
-
-               ],
-               "rounds":[  
-                  "Quiz based on basics of surveying, principles of surveying and basics of Civil Engineering. (Most questions will be designed while keeping first year students in mind)",
-                  "Participants will be given a puzzle based on principles of instruments of surveying. They need to solve it to find the instrument described in the passage. (Participants will have limited amount of time to solve this puzzle)",
-                  "Participants will be given a problem statement with missing data. They have to find the missing data using the instrument found in previous round. The team which solves this puzzle will be given a clue and that clue will lead to the final treasure."
-               ],
-               "managers":[  
-                  {  
-                     "name":"Himanshu Laddha",
-                     "mobile":"9428534925"
-                  },
-                  {  
-                     "name":"Jay Dhabuwala",
-                     "mobile":"7383269650"
-                  },
-                  {  
-                     "name":"Viral Kapadiya",
-                     "mobile":"8488978066"
-                  }
-               ]
-            },
-            {  
-               "name":"Green Brilliance",
-               "participants":"2-3",
-               "fees":"20",
-               "description":"Got a sharp mind ? Let's play.",
-               "prizes":[  
-
-               ],
-               "rounds":[  
-                  "Expert lecture based on green and sustainable construction.",
-                  "Participants will have to give ideas to make BVM campus green, environment friendly and sustainable. They have to detect problems in the campus and give reasonable and applicable solutions for those problems. They can present their ideas in form of PowerPoint presentation / Poster presentation / Any."
-               ],
-               "managers":[  
-                  {  
-                     "name":"Deven Gajjar",
-                     "mobile":"9725039877"
-                  },
-                  {  
-                     "name":"Anand Limbad",
-                     "mobile":"9624998933"
-                  },
-                  {
-                    "name": "Prince Vachhani",
-                    "mobile":""
-                  }
-               ]
+            {
+              "name": "Pranay Badgujar",
+              "mobile": "7096738634"
             }
-         ]
+          ]
+        },
+        {
+          "name": "Soil E Bridge",
+          "participants": "3",
+          "fees": "60",
+          "description": "Kya aap ke bridge mein STRAW hai ?",
+          "prizes": [
+            "1500",
+            "1000"
+          ],
+          "rounds": [
+            "On the first day, the participants will have to construct components of bridge like Piers, Abutments, Span sections and blocks.",
+            "Participants will have to assemble the components and finish the model."
+          ],
+          "managers": [
+            {
+              "name": "Akash Lodaya",
+              "mobile": "8306706269"
+            },
+            {
+              "name": "Hitendra Suthar",
+              "mobile": "9173526010"
+            },
+            {
+              "name": "Maulik Gangani",
+              "mobile": "7016160074"
+            }
+          ]
+        },
+        {
+          "name": "Survey Hunt",
+          "participants": "2",
+          "fees": "40",
+          "description": "Let's survey the Treasure.",
+          "prizes": [],
+          "rounds": [
+            "Quiz based on basics of surveying, principles of surveying and basics of Civil Engineering. (Most questions will be designed while keeping first year students in mind)",
+            "Participants will be given a puzzle based on principles of instruments of surveying. They need to solve it to find the instrument described in the passage. (Participants will have limited amount of time to solve this puzzle)",
+            "Participants will be given a problem statement with missing data. They have to find the missing data using the instrument found in previous round. The team which solves this puzzle will be given a clue and that clue will lead to the final treasure."
+          ],
+          "managers": [
+            {
+              "name": "Himanshu Laddha",
+              "mobile": "9428534925"
+            },
+            {
+              "name": "Jay Dhabuwala",
+              "mobile": "7383269650"
+            },
+            {
+              "name": "Viral Kapadiya",
+              "mobile": "8488978066"
+            }
+          ]
+        },
+        {
+          "name": "Green Brilliance",
+          "participants": "2-3",
+          "fees": "20",
+          "description": "Got a sharp mind ? Let's play.",
+          "prizes": [],
+          "rounds": [
+            "Expert lecture based on green and sustainable construction.",
+            "Participants will have to give ideas to make BVM campus green, environment friendly and sustainable. They have to detect problems in the campus and give reasonable and applicable solutions for those problems. They can present their ideas in form of PowerPoint presentation / Poster presentation / Any."
+          ],
+          "managers": [
+            {
+              "name": "Deven Gajjar",
+              "mobile": "9725039877"
+            },
+            {
+              "name": "Anand Limbad",
+              "mobile": "9624998933"
+            },
+            {
+              "name": "Prince Vachhani",
+              "mobile": ""
+            }
+          ]
+        }
+      ],
+      "heads": [],
+      "coHeads": []
     },
     {
       "name": "cpit",
       "alias": "KeyCoders",
-      "heads": [],
-      "coHeads": [],
       "events": [
         {
           "name": "Hardware Hub",
@@ -266,13 +260,13 @@
             }
           ]
         }
-      ]
+      ],
+      "heads": [],
+      "coHeads": []
     },
     {
       "name": "ee",
       "alias": "Rezonizers",
-      "heads": [],
-      "coHeads": [],
       "events": [
         {
           "name": "Bomb Squad",
@@ -372,13 +366,13 @@
             }
           ]
         }
-      ]
+      ],
+      "heads": [],
+      "coHeads": []
     },
     {
       "name": "etel",
       "alias": "Embeddrones",
-      "heads": [],
-      "coHeads": [],
       "events": [
         {
           "name": "Bot Ball",
@@ -558,13 +552,13 @@
             }
           ]
         }
-      ]
+      ],
+      "heads": [],
+      "coHeads": []
     },
     {
       "name": "mech",
       "alias": "Machinists",
-      "heads": [],
-      "coHeads": [],
       "events": [
         {
           "name": "Optimus Prime",
@@ -595,7 +589,7 @@
           ]
         },
         {
-          "name": "Course De Bateau",
+          "name": "course de bateau",
           "participants": "2",
           "fees": "50",
           "description": "Sail in Water with your brain.",
@@ -648,13 +642,13 @@
             }
           ]
         }
-      ]
+      ],
+      "heads": [],
+      "coHeads": []
     },
     {
       "name": "prod",
       "alias": "FabFacturers",
-      "heads": [],
-      "coHeads": [],
       "events": [
         {
           "name": "Retro Engineering",
@@ -730,7 +724,9 @@
             }
           ]
         }
-      ]
+      ],
+      "heads": [],
+      "coHeads": []
     }
   ],
   "nonTech": [
@@ -873,12 +869,10 @@
           "mobile": ""
         },
         {
-          "name": "Tamoghna Chattopadhyay",
-          "mobile": ""
+          "name": "Tamoghna Chattopadhyay"
         },
         {
-          "name": "Vraj Patel",
-          "mobile": ""
+          "name": "Vraj Patel"
         }
       ]
     },
@@ -919,10 +913,10 @@
       ]
     },
     {
-      "name": "LAN Gaming - NFS Most Wanted",
+      "name": "LAN Gaming - NFS MW",
       "participants": "1",
       "fees": "10",
-      "description": "Gamers get ready it’s our arena but your skills. Showcase what you have as you battle with the best out there in the game of NFS Most Wanted. ",
+      "description": "Gamers get ready it’s our arena but your skills. Showcase what you have as you battle with the best out there in the game of NFS Most Wanted.",
       "prizes": [],
       "rounds": [],
       "managers": [
@@ -1256,7 +1250,7 @@
       ]
     },
     {
-      "name": "Service before self (SSB)",
+      "name": "Service before self",
       "participants": "2",
       "fees": "20",
       "description": "Stars on my shoulders are better than billions in the sky.",
@@ -1455,7 +1449,7 @@
       "name": "View Finder",
       "participants": "1",
       "fees": "30",
-      "description": "MAKE IT A LIVE…\n1. A prank comedy has to be made on chosen subject.  \n2. It should be creative, presentable, imagination with good script.  \n3. Voice-over, music and editing allowed.\n4. Jury may interview the crew members.\n5. The film should be original work by the participants.\n6. Excessive violence, sex, political or religious or religious extremism as determined by judge will result in disqualification. \n7. Video Time duration 1-3 minutes.\n8. Participants have to submit their prank video half an hour before the start of event.",
+      "description": "MAKE IT A LIVE…\n1. A prank comedy has to be made on chosen subject.  \n2. It should be creative, presentable, imagination with good script.  \n3. Voice-over, music and editing allowed.\n4. Jury may interview the crew members.\n5. The film should be original work by the participants.\n6. Excessive violence, sex, political or religious or religious extremism as determined by judge will result in disqualification. \n7. Video Time duration 1-3 minutes.\n8. Participants have to submit their prank video half an hour before the start of event.",
       "prizes": [],
       "rounds": [],
       "managers": [
@@ -1464,8 +1458,7 @@
           "mobile": "7600878168"
         },
         {
-          "name": "Bhadresh Katara",
-          "mobile": ""
+          "name": "Bhadresh Katara"
         }
       ]
     }

@@ -81,7 +81,14 @@ namespace udaan17_universal_windows_app.Data
                         foreach (JsonValue manager in eventobj["managers"].GetArray())
                         {
                             JsonObject mgr = manager.GetObject();
-                            e.Managers.Add(new Manager() { name = mgr["name"].GetString(), Contact = mgr["mobile"].GetString() });
+                            var m = new Manager();
+                            try
+                            {
+                                m.name = mgr["name"].GetString();
+                                m.Contact = mgr["mobile"].GetString();
+                            }
+                            catch (Exception) { m.Contact = ""; }
+                            e.Managers.Add(m);
                         }
                         foreach (JsonValue prize in eventobj["prizes"].GetArray())
                         {
@@ -90,16 +97,20 @@ namespace udaan17_universal_windows_app.Data
                         e.Background = d.Background;
                         d.Events.Add(e);
                     }
-                    foreach (JsonValue head in obj["heads"].GetArray())
+                    try
                     {
-                        JsonObject hObj = head.GetObject();
-                        d.Heads.Add(new Manager() { name = hObj["name"].GetString(), Contact = hObj["mobile"].GetString() });
+                        foreach (JsonValue head in obj["heads"].GetArray())
+                        {
+                            JsonObject hObj = head.GetObject();
+                            d.Heads.Add(new Manager() { name = hObj["name"].GetString(), Contact = hObj["mobile"].GetString() });
+                        }
+                        foreach (JsonValue head in obj["coHeads"].GetArray())
+                        {
+                            JsonObject hObj = head.GetObject();
+                            d.CoHeads.Add(new Manager() { name = hObj["name"].GetString(), Contact = hObj["mobile"].GetString() });
+                        }
                     }
-                    foreach (JsonValue head in obj["coHeads"].GetArray())
-                    {
-                        JsonObject hObj = head.GetObject();
-                        d.CoHeads.Add(new Manager() { name = hObj["name"].GetString(), Contact = hObj["mobile"].GetString() });
-                    }
+                    catch (Exception) { }
                     this.Events.Add(d);
                     this.TEvents.Add(d);
                 }
@@ -125,7 +136,14 @@ namespace udaan17_universal_windows_app.Data
                         foreach (JsonValue mgrs in o["managers"].GetArray())
                         {
                             JsonObject mgrObj = mgrs.GetObject();
-                            e.Managers.Add(new Manager() { name = mgrObj["name"].GetString(), Contact = mgrObj["mobile"].GetString() });
+                            var m = new Manager();
+                            try
+                            {
+                                m.name = mgrObj["name"].GetString();
+                                m.Contact = mgrObj["mobile"].GetString();
+                            }
+                            catch (Exception) { m.Contact = ""; }
+                            e.Managers.Add(m);
                         }
                         foreach (JsonValue round in o["rounds"].GetArray())
                         {

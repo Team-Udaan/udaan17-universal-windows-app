@@ -62,7 +62,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\math-e-magic.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\mechanophilia.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\mind---play.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\LAN-Gaming---NFS-Most-Wanted.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\LAN-Gaming---NFS-MW.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\optimus-prime.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\petrolhead.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\prank-comedy-video.png" />
@@ -71,7 +71,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\race-to-glory.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\retro-engineering.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\roadies.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\Service-before-self-(SSB).png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\Service-before-self.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\shararati-cricket.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\sherlock-in-the-city.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\soil-e-bridge.png" />
