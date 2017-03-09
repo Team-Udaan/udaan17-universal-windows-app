@@ -29,7 +29,7 @@
     <Grid
         DataContext="{Binding Item}">
         <Grid.Background>
-            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill" Opacity="0.6"/>
+            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill" Opacity="0.4"/>
         </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>

@@ -13,17 +13,17 @@
     <Page.Resources>
         <!-- Grid-appropriate 310 by 260 pixel item template as seen in section 4 -->
         <DataTemplate x:Key="Standard310x260ItemTemplate">
-            <Grid Height="270" Width="190" Margin="5,0,5,0">
+            <Grid Height="265" Width="310" Margin="5,0,5,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Border Background="Transparent" Height="190">
-                    <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding Alias}"/>
+                <Border Background="Transparent" Height="180">
+                    <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Alias}"/>
                 </Border>
-                <StackPanel Grid.Row="1">
+                <StackPanel Grid.Row="1" Margin="5,0,0,0">
                     <TextBlock Text="{Binding Alias}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" TextWrapping="NoWrap"/>
-                    <TextBlock Text="{Binding Title}" Style="{StaticResource SubheaderTextBlockStyle}" MaxHeight="60" />
+                    <TextBlock Text="{Binding Title}" Style="{StaticResource SubheaderTextBlockStyle}" MaxHeight="50" />
                 </StackPanel>
             </Grid>
         </DataTemplate>

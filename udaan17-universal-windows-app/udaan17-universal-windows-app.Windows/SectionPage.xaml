@@ -51,7 +51,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill" Opacity=".5"/>
+            <ImageBrush ImageSource="{Binding Background}" Stretch="UniformToFill" Opacity=".4"/>
         </Grid.Background>
         <!-- Horizontal scrolling grid -->
         <GridView
