@@ -1,8 +1,210 @@
 ﻿{
   "tech": [
     {
+      "name": "cpit",
+      "alias": "KeyCoders",
+      "heads": [
+        {
+          "name": "Abhishek Mehta",
+          "mobile": "8866093093"
+        },
+        {
+          "name": "Mayank Mittal",
+          "mobile": "9428234766"
+        },
+        {
+          "name": "Kunal Thanki",
+          "mobile": "9510104059"
+        },
+        {
+          "name": "Heet Kalaria",
+          "mobile": "9033661622"
+        }
+      ],
+      "coHeads": [
+        {
+          "name": "Ashay Pathak",
+          "mobile": "8734015725"
+        },
+        {
+          "name": "Karan Raina",
+          "mobile": "9727093095"
+        },
+        {
+          "name": "Vatsal Patel",
+          "mobile": "8460411152"
+        },
+        {
+          "name": "Aseem Thakkar",
+          "mobile": "9426068144"
+        }
+      ],
+      "events": [
+        {
+          "name": "Hardware Hub",
+          "participants": "2",
+          "fees": "40",
+          "description": "Mettle inside.",
+          "prizes": [
+            "750",
+            "500"
+          ],
+          "rounds": [
+            "MCQ Quiz on basic computer hardware.",
+            "Computer related hardware/device will be shown on projector, of which the participants will have to give the correct answer. Buzzer round will be held between participating teams and they will get a broken piece of the picture on every correct answer they give. This way every team will have to fight for making their whole picture by earning broken pieces and give a correct guess before other teams. (Two chances will be given to guess the picture)",
+            "Surprise Round!"
+          ],
+          "managers": [
+            {
+              "name": "Rushi Patel",
+              "mobile": "7600940020"
+            },
+            {
+              "name": "Shrey Amin",
+              "mobile": "7359720041"
+            },
+            {
+              "name": "Heta Desai",
+              "mobile": "9638508639"
+            }
+          ]
+        },
+        {
+          "name": "Ex-QUIZ-IT",
+          "participants": "2",
+          "fees": "20",
+          "description": "Raising the Bar. (Note: There is no restriction of having 2 students in the team if the participant is confident then he/she can take part individually)",
+          "prizes": [],
+          "rounds": [
+            "The first round will be a pen and paper based quiz on IT Trivia which includes basic general knowledge about the world of Computer Science.",
+            "Top selected teams will be then made to face off each other in a proper quiz with buzzers and scores, the quiz will be conducted by our quiz master and the questions would be based on the world of computer science."
+          ],
+          "managers": [
+            {
+              "name": "Himanshu Patel",
+              "mobile": "9724397402"
+            },
+            {
+              "name": "Harsh Shah",
+              "mobile": "7046106890"
+            }
+          ]
+        },
+        {
+          "name": "League of Coders",
+          "participants": "1",
+          "fees": "20",
+          "description": "Bid your way to code your world. (Note: Participants are requested to get their own device with the necessary tools installed else we will provide the computer but then the choice of technology will be limited.)",
+          "prizes": [],
+          "rounds": [
+            "Pen and paper based technical quiz which for testing the participant's knowledge about coding.",
+            "Top rankers of the quiz will be made captains of the group and will be given virtual money, they have to use that money to bid for the remaining coders who will be divided in different brackets based on their score also their preferred technology stack would be announced, the captains have to smartly use the amount and form a team that they feel will help them win the event.At the end each team will have to build an application as a solution to the problem given by us."
+          ],
+          "managers": [
+            {
+              "name": "Rohit Patel",
+              "mobile": "9426210564"
+            },
+            {
+              "name": "Khushbu Chauhan",
+              "mobile": "9925811344"
+            },
+            {
+              "name": "Rahul Vazar",
+              "mobile": "8141475425"
+            }
+          ]
+        },
+        {
+          "name": "Barter the partner",
+          "participants": "2",
+          "fees": "20",
+          "description": "Presence of mind within a storm of chaos.",
+          "prizes": [],
+          "rounds": [
+            "You will have to solve clues and hunt in the bvm campus.",
+            "You will have to draw, mimic and explain the technical terms without speaking.",
+            "You and your partner will have to code, one at a time and your program will be switched after random amount of time."
+          ],
+          "managers": [
+            {
+              "name": "Siddharth Goswami",
+              "mobile": "9723461024"
+            },
+            {
+              "name": "Gazala Malvasi",
+              "mobile": "9624885250"
+            }
+          ]
+        },
+        {
+          "name": "Behind the Dots",
+          "participants": "1",
+          "fees": "20",
+          "description": "Tracing the stack.",
+          "prizes": [],
+          "rounds": [
+            "Algorithm and data structures based quiz.",
+            "You will be given a case study, everyone will have to individually frame an algorithm and then a group discussion will be carried out on that algorithms.",
+            "Top students will be given a problem for which algorithm is to be made and coding has to be done. The student with most optimal code will be declared winner."
+          ],
+          "managers": [
+            {
+              "name": "Nilesh Kevlani",
+              "mobile": "8000747878"
+            },
+            {
+              "name": "Pancham Khaitan",
+              "mobile": "7405440221"
+            }
+          ]
+        },
+        {
+          "name": "InQuest",
+          "participants": "2-3",
+          "fees": "20",
+          "description": "In the world of technology, people make the difference.",
+          "prizes": [],
+          "rounds": [
+            "Pictionary about recent IT startups, firms, their CEOs and their reforms.",
+            "All the top selected students will have to come up with a business proposal of their idea and present it in front of the BVM Incubation Centre and the whole business proposal should include the technical and financial details of the idea, if you don’t have your own idea we will be giving you our idea and you have to come up with the whole proposal for the same."
+          ],
+          "managers": [
+            {
+              "name": "Hardik Patel",
+              "mobile": "8866467948"
+            },
+            {
+              "name": "Darshan Dalal",
+              "mobile": "8460157727"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "civil",
       "alias": "SkyScrapers",
+      "heads": [
+        {
+          "name": "Amit Ratnani",
+          "mobile": "7600120963"
+        },
+        {
+          "name": "Vaibhav Savani",
+          "mobile": "7405139514"
+        }
+      ],
+      "coHeads": [
+        {
+          "name": "Deep Lakkad",
+          "mobile": "9687350604"
+        },
+        {
+          "name": "Pradeep Dodiya",
+          "mobile": "9714986909"
+        }
+      ],
       "events": [
         {
           "name": "Insight",
@@ -91,7 +293,7 @@
           "name": "Green Brilliance",
           "participants": "2-3",
           "fees": "20",
-          "description": "Got a sharp mind ? Let's play.",
+          "description": "Green and sustainable world",
           "prizes": [],
           "rounds": [
             "Expert lecture based on green and sustainable construction.",
@@ -108,276 +310,56 @@
             },
             {
               "name": "Prince Vachhani",
-              "mobile": ""
+              "mobile": "9624198788"
             }
           ]
         }
-      ],
-      "heads": [],
-      "coHeads": []
-    },
-    {
-      "name": "cpit",
-      "alias": "KeyCoders",
-      "events": [
-        {
-          "name": "Hardware Hub",
-          "participants": "2",
-          "fees": "40",
-          "description": "Mettle inside.",
-          "prizes": [
-            "750",
-            "500"
-          ],
-          "rounds": [
-            "MCQ Quiz on basic computer hardware.",
-            "Computer related hardware/device will be shown on projector, of which the participants will have to give the correct answer. Buzzer round will be held between participating teams and they will get a broken piece of the picture on every correct answer they give. This way every team will have to fight for making their whole picture by earning broken pieces and give a correct guess before other teams. (Two chances will be given to guess the picture)",
-            "Surprise Round!"
-          ],
-          "managers": [
-            {
-              "name": "Rushi Patel",
-              "mobile": "7600940020"
-            },
-            {
-              "name": "Shrey Amin",
-              "mobile": "7359720041"
-            },
-            {
-              "name": "Heta Desai",
-              "mobile": "9638508639"
-            }
-          ]
-        },
-        {
-          "name": "Ex-QUIZ-IT",
-          "participants": "2",
-          "fees": "20",
-          "description": "Raising the Bar. (Note: There is no restriction of having 2 students in the team if the participant is confident then he/she can take part individually)",
-          "prizes": [],
-          "rounds": [
-            "The first round will be a pen and paper based quiz on IT Trivia which includes basic general knowledge about the world of Computer Science.",
-            "Top selected teams will be then made to face off each other in a proper quiz with buzzers and scores, the quiz will be conducted by our quiz master and the questions would be based on the world of computer science."
-          ],
-          "managers": [
-            {
-              "name": "Himanshu Patel",
-              "mobile": "9724397402"
-            },
-            {
-              "name": "Harsh Shah",
-              "mobile": "7046106890"
-            }
-          ]
-        },
-        {
-          "name": "League of Coders",
-          "participants": "1",
-          "fees": "20",
-          "description": "Bid your way to code your world. (Note: Participants are requested to get their own device with the necessary tools installed else we will provide the computer but then the choice of technology will be limited.)",
-          "prizes": [],
-          "rounds": [
-            "Pen and paper based technical quiz which for testing the participant's knowledge about coding.",
-            "Top rankers of the quiz will be made captains of the group and will be given virtual money, they have to use that money to bid for the remaining coders who will be divided in different brackets based on their score also their preferred technology stack would be announced, the captains have to smartly use the amount and form a team that they feel will help them win the event.At the end each team will have to build an application as a solution to the problem given by us."
-          ],
-          "managers": [
-            {
-              "name": "Rohit Patel",
-              "mobile": "9426210564"
-            },
-            {
-              "name": "Khushbu Chauhan",
-              "mobile": "9925811344"
-            },
-            {
-              "name": "Rahul Vizar",
-              "mobile": ""
-            }
-          ]
-        },
-        {
-          "name": "Barter the partner",
-          "participants": "2",
-          "fees": "20",
-          "description": "Presence of mind within a storm of chaos.",
-          "prizes": [],
-          "rounds": [
-            "You will have to solve clues and hunt in the bvm campus.",
-            "You will have to draw, mimic and explain the technical terms without speaking.",
-            "You and your partner will have to code, one at a time and your program will be switched after random amount of time."
-          ],
-          "managers": [
-            {
-              "name": "Siddharth Goswami",
-              "mobile": "9723461024"
-            },
-            {
-              "name": "Gazala Malvasi",
-              "mobile": "9624885250"
-            }
-          ]
-        },
-        {
-          "name": "Behind the Dots",
-          "participants": "1",
-          "fees": "20",
-          "description": "Tracing the stack.",
-          "prizes": [],
-          "rounds": [
-            "Algorithm and data structures based quiz.",
-            "You will be given a case study, everyone will have to individually frame an algorithm and then a group discussion will be carried out on that algorithms.",
-            "Top students will be given a problem for which algorithm is to be made and coding has to be done. The student with most optimal code will be declared winner."
-          ],
-          "managers": [
-            {
-              "name": "Nilesh Kevlani",
-              "mobile": "8000747878"
-            },
-            {
-              "name": "Pancham Khaitan",
-              "mobile": "7405440221"
-            }
-          ]
-        },
-        {
-          "name": "InQuest",
-          "participants": "2-3",
-          "fees": "20",
-          "description": "In the world of technology, people make the difference.",
-          "prizes": [],
-          "rounds": [
-            "Pictionary about recent IT startups, firms, their CEOs and their reforms.",
-            "All the top selected students will have to come up with a business proposal of their idea and present it in front of the BVM Incubation Centre and the whole business proposal should include the technical and financial details of the idea, if you don’t have your own idea we will be giving you our idea and you have to come up with the whole proposal for the same."
-          ],
-          "managers": [
-            {
-              "name": "Hardik Patel",
-              "mobile": "8866467948"
-            },
-            {
-              "name": "Darshan Dalal",
-              "mobile": "8460157727"
-            }
-          ]
-        }
-      ],
-      "heads": [],
-      "coHeads": []
-    },
-    {
-      "name": "ee",
-      "alias": "Rezonizers",
-      "events": [
-        {
-          "name": "Bomb Squad",
-          "participants": "1",
-          "fees": "40",
-          "description": "Crack the circuit and diffuse the bomb.",
-          "prizes": [
-            "500",
-            "250"
-          ],
-          "rounds": [
-            "Quiz based on basic Electrical engineering and digital electronics.",
-            "Technical treasure hunt.",
-            "Crack the security system to diffuse a virtual bomb."
-          ],
-          "managers": [
-            {
-              "name": "Krunal Jajal",
-              "mobile": "9428661026"
-            },
-            {
-              "name": "Vaibhav Patel",
-              "mobile": "9978472173"
-            },
-            {
-              "name": "Parth Panchal",
-              "mobile": "9033338787"
-            }
-          ]
-        },
-        {
-          "name": "Ideate",
-          "participants": "2",
-          "fees": "20",
-          "description": "Be innovative, be genius!!!",
-          "prizes": [],
-          "rounds": [
-            "Subdivision 1:- You have to solve 5 real life problems related to Electrical Engineering.\nSubdivision 2:- Topic will be given and you have to prepare an innovative abstract in a given time limit. Participants will be shortlisted based on their cumulative performance.",
-            "Participants will have to present the given topic, followed by which they would have to answer the questions raised by the jury."
-          ],
-          "managers": [
-            {
-              "name": "Rahul Katara",
-              "mobile": "8460929417"
-            },
-            {
-              "name": "Vraj Khunt",
-              "mobile": "9723837360"
-            }
-          ]
-        },
-        {
-          "name": "Electrica Ladder",
-          "participants": "2",
-          "fees": "30",
-          "description": "This event is based on your basic technical knowledge of Electrical Engineering.",
-          "prizes": [],
-          "rounds": [
-            "There will be a crossword puzzle which you have to solve within a given time limit.",
-            "There will be an ORAL quiz consisting of Buzzer round, Direct questions, etc. based on your basic knowledge of electrical engineering.",
-            "Snake and ladder game not based on luck but based only on your technical knowledge."
-          ],
-          "managers": [
-            {
-              "name": "Vishal Katira",
-              "mobile": "9725845568"
-            },
-            {
-              "name": "Shalin Gandhi",
-              "mobile": "9427178331"
-            },
-            {
-              "name": "Prashant Makwana",
-              "mobile": "8866912670"
-            }
-          ]
-        },
-        {
-          "name": "Hands on experiment",
-          "participants": "2",
-          "fees": "30",
-          "description": "It’s time to implement your practical knowledge.",
-          "prizes": [],
-          "rounds": [
-            "Basic pen and paper quiz (different for all years).",
-            "Surprise round based on basic circuits of hardware.",
-            "Perform electrical experiment in electrical lab (different for all years)."
-          ],
-          "managers": [
-            {
-              "name": "Rupesh Gelani",
-              "mobile": "9638370324"
-            },
-            {
-              "name": "Jinesh Thakkar",
-              "mobile": "9033875080"
-            }
-          ]
-        }
-      ],
-      "heads": [],
-      "coHeads": []
+      ]
     },
     {
       "name": "etel",
       "alias": "Embeddrones",
+      "heads": [
+        {
+          "name": "Prachi Jhala",
+          "mobile": "9978718283"
+        },
+        {
+          "name": "Ankur Busa",
+          "mobile": "9725926075"
+        },
+        {
+          "name": "Harshvardhan Patel",
+          "mobile": "7405922499"
+        },
+        {
+          "name": "Jay Jataniya",
+          "mobile": "9033560213"
+        }
+      ],
+      "coHeads": [
+        {
+          "name": "Megh Shah",
+          "mobile": "8866068981"
+        },
+        {
+          "name": "Sakshi MISSING",
+          "mobile": "9723666208"
+        },
+        {
+          "name": "Megha Patel",
+          "mobile": "9099267371"
+        },
+        {
+          "name": "Rishabh Mehta",
+          "mobile": "9638571788"
+        }
+      ],
       "events": [
         {
           "name": "Bot Ball",
           "participants": "2",
-          "fees": "50/head",
+          "fees": "100",
           "description": "The legend of Bots and Balls!",
           "prizes": [
             "1500",
@@ -488,7 +470,7 @@
         {
           "name": "Race to Glory",
           "participants": "3",
-          "fees": "30/head",
+          "fees": "90",
           "description": "Damsel in distress! Save your princess!\nOperating condition:\tWired / Wireless. Any kind of matter/material can be used to build it.\nDimension: 25 cm * 25 cm * 25 cm ± Δ10 %",
           "prizes": [
             "1500",
@@ -552,13 +534,31 @@
             }
           ]
         }
-      ],
-      "heads": [],
-      "coHeads": []
+      ]
     },
     {
       "name": "mech",
       "alias": "Machinists",
+      "heads": [
+        {
+          "name": "Prashant Goti",
+          "mobile": "9825189691"
+        },
+        {
+          "name": "Anurag Raulji",
+          "mobile": "MISSING"
+        }
+      ],
+      "coHeads": [
+        {
+          "name": "Harshil Jani",
+          "mobile": "8460666218"
+        },
+        {
+          "name": "Mihir Gol",
+          "mobile": "9638745793"
+        }
+      ],
       "events": [
         {
           "name": "Optimus Prime",
@@ -598,7 +598,7 @@
             "250"
           ],
           "rounds": [
-            "Elimination round related to fluid mechanics fight among the robots.",
+            "Elimination round based on fluid mechanics quiz.",
             "Boat is to be prepared from the given materials. Judging criteria will be announced  at the time of event."
           ],
           "managers": [
@@ -642,13 +642,31 @@
             }
           ]
         }
-      ],
-      "heads": [],
-      "coHeads": []
+      ]
     },
     {
       "name": "prod",
       "alias": "FabFacturers",
+      "heads": [
+        {
+          "name": "Vishal Lapsiwala",
+          "mobile": "9712138577"
+        },
+        {
+          "name": "MISSING",
+          "mobile": "MISSING"
+        }
+      ],
+      "coHeads": [
+        {
+          "name": "Kishan Bhuva",
+          "mobile": "9586145122"
+        },
+        {
+          "name": "Harsh Vora",
+          "mobile": "7405992501"
+        }
+      ],
       "events": [
         {
           "name": "Retro Engineering",
@@ -711,7 +729,7 @@
           "rounds": [
             "Shooting of table-tennis ball using a pneumatic gun prepared by the participants from home. Judging criteria will be based on maximum distance covered.",
             "Shooting of pyramids made of glasses.",
-            "Automobile Problem will be given and solution is to be presented by the participants."
+            "Circular target board shooting."
           ],
           "managers": [
             {
@@ -724,9 +742,131 @@
             }
           ]
         }
+      ]
+    },
+    {
+      "name": "ee",
+      "alias": "Rezonizers",
+      "heads": [
+        {
+          "name": "Harsh Bhatt",
+          "mobile": "8460678411"
+        },
+        {
+          "name": "Viral Bhimani",
+          "mobile": "8671921333"
+        }
       ],
-      "heads": [],
-      "coHeads": []
+      "coHeads": [
+        {
+          "name": "Jaimin Brambhatt",
+          "mobile": "7048422669"
+        },
+        {
+          "name": "Dhruv Padasumbiya",
+          "mobile": "9409016021"
+        }
+      ],
+      "events": [
+        {
+          "name": "Bomb Squad",
+          "participants": "1",
+          "fees": "40",
+          "description": "Crack the circuit and diffuse the bomb.",
+          "prizes": [
+            "500",
+            "250"
+          ],
+          "rounds": [
+            "Quiz based on basic Electrical engineering and digital electronics.",
+            "Technical treasure hunt.",
+            "Crack the security system to diffuse a virtual bomb."
+          ],
+          "managers": [
+            {
+              "name": "Krunal Jajal",
+              "mobile": "9428661026"
+            },
+            {
+              "name": "Vaibhav Patel",
+              "mobile": "9978472173"
+            },
+            {
+              "name": "Parth Panchal",
+              "mobile": "9033338787"
+            }
+          ]
+        },
+        {
+          "name": "Ideate",
+          "participants": "2",
+          "fees": "20",
+          "description": "Be innovative, be genius!!!",
+          "prizes": [],
+          "rounds": [
+            "Subdivision 1:- You have to solve 5 real life problems related to Electrical Engineering.\nSubdivision 2:- Topic will be given and you have to prepare an innovative abstract in a given time limit. Participants will be shortlisted based on their cumulative performance.",
+            "Participants will have to present the given topic, followed by which they would have to answer the questions raised by the jury."
+          ],
+          "managers": [
+            {
+              "name": "Rahul Katara",
+              "mobile": "8460929417"
+            },
+            {
+              "name": "Vraj Khunt",
+              "mobile": "9723837360"
+            }
+          ]
+        },
+        {
+          "name": "Electrica Ladder",
+          "participants": "2",
+          "fees": "30",
+          "description": "This event is based on your basic technical knowledge of Electrical Engineering.",
+          "prizes": [],
+          "rounds": [
+            "There will be a crossword puzzle which you have to solve within a given time limit.",
+            "There will be an ORAL quiz consisting of Buzzer round, Direct questions, etc. based on your basic knowledge of electrical engineering.",
+            "Snake and ladder game not based on luck but based only on your technical knowledge."
+          ],
+          "managers": [
+            {
+              "name": "Vishal Katira",
+              "mobile": "9725845568"
+            },
+            {
+              "name": "Shalin Gandhi",
+              "mobile": "9427178331"
+            },
+            {
+              "name": "Prashant Makwana",
+              "mobile": "8866912670"
+            }
+          ]
+        },
+        {
+          "name": "Hands on experiment",
+          "participants": "2",
+          "fees": "30",
+          "description": "It’s time to implement your practical knowledge.",
+          "prizes": [],
+          "rounds": [
+            "Basic pen and paper quiz (different for all years).",
+            "Surprise round based on basic circuits of hardware.",
+            "Perform electrical experiment in electrical lab (different for all years)."
+          ],
+          "managers": [
+            {
+              "name": "Rupesh Gelani",
+              "mobile": "9638370324"
+            },
+            {
+              "name": "Jinesh Thakkar",
+              "mobile": "9033875080"
+            }
+          ]
+        }
+      ]
     }
   ],
   "nonTech": [
@@ -791,7 +931,7 @@
       ],
       "managers": [
         {
-          "name": "Ramchandani Ashish",
+          "name": "Ashish Ramchandani",
           "mobile": "9427689857"
         },
         {
@@ -866,18 +1006,20 @@
       "managers": [
         {
           "name": "Sagar Patel",
-          "mobile": ""
+          "mobile": "9033833914"
         },
         {
-          "name": "Tamoghna Chattopadhyay"
+          "name": "Tamoghna Chattopadhyay",
+          "mobile": "9409029845"
         },
         {
-          "name": "Vraj Patel"
+          "name": "Vraj Patel",
+          "mobile": "9429959551"
         }
       ]
     },
     {
-      "name": "LAN Gaming - CS 1.6",
+      "name": "CS 1.6",
       "participants": "3-6",
       "fees": "10",
       "description": "Gamers get ready it’s our arena but your skills. Showcase what you have as you battle with the best out there in the game of Counter Strike 1.6.",
@@ -895,7 +1037,7 @@
       ]
     },
     {
-      "name": "LAN Gaming - FIFA 13",
+      "name": "FIFA 13",
       "participants": "1",
       "fees": "10",
       "description": "Note: Participants will be given Game pads for FIFA and they have to play using that.",
@@ -913,10 +1055,10 @@
       ]
     },
     {
-      "name": "LAN Gaming - NFS MW",
+      "name": "NFS MW",
       "participants": "1",
       "fees": "10",
-      "description": "Gamers get ready it’s our arena but your skills. Showcase what you have as you battle with the best out there in the game of NFS Most Wanted.",
+      "description": "Gamers get ready it’s our arena but your skills. Showcase what you have as you battle with the best out there in the game of NFS Most Wanted. ",
       "prizes": [],
       "rounds": [],
       "managers": [
@@ -960,7 +1102,7 @@
       "prizes": [],
       "rounds": [
         "Individual participants would be expected to write down the correct spellings of the words pronounced by the volunteer. The ones who get the maximum correct answers will clear the round.",
-        "Alphabets would be displayed haphazardly( jumbled) and the individual participants would have to form the maximum number of meaningful words. One who does clears.",
+        "Alphabets would be displayed haphazardly (jumbled) and the individual participants would have to form the maximum number of meaningful words. One who does clears.",
         "Public speaking. Any language of participant’s choice."
       ],
       "managers": [
@@ -1082,7 +1224,7 @@
       ]
     },
     {
-      "name": "Philosopher Stone",
+      "name": "Philosopher's Stone",
       "participants": "2-3",
       "fees": "20",
       "description": "",
@@ -1227,7 +1369,7 @@
       "name": "Mind - Play",
       "participants": "2",
       "fees": "20",
-      "description": "Got a sharp mind! Let's Play.",
+      "description": "Got a sharp mind ? Let's Play.",
       "prizes": [],
       "rounds": [
         "Multi-tasking.\nSmall tasks to check Multi-tasking skills of the participants.",
@@ -1263,7 +1405,7 @@
       ],
       "managers": [
         {
-          "name": "Tada Jayesh",
+          "name": "Jayesh Tada",
           "mobile": "9586358299"
         },
         {
@@ -1343,6 +1485,10 @@
         {
           "name": "Harshang Patel",
           "mobile": "9429958709"
+        },
+        {
+          "name": "Mohit Jiyani",
+          "mobile": "9409488005"
         }
       ]
     }
@@ -1357,7 +1503,7 @@
       "rounds": [
         "The first round will be Crossword round.",
         "The Second round will be buzzer round on different Bollywood topics.",
-        ""
+        "Surprise Round."
       ],
       "managers": [
         {
@@ -1374,7 +1520,7 @@
       "name": "Final Cut",
       "participants": "5",
       "fees": "20",
-      "description": "Be the director of your film.\n1. A prank comedy has to be made on chosen subject.\n2. It should be creative, presentable, imagination with good script.\n3. Voice-over, music and editing allowed.\n4. Jury may interview the crew members.\n5. The film should be original work by the participants.\n6. Excessive violence, sex, political or religious or religious extremism as determined by judge will result in disqualification.\n7. Video Time duration 1-10 minutes. (Max. 10 minutes)\n8. Participants have to submit their prank video half an hour before the start of the event.",
+      "description": "Be the director of your film.\n1. A short film has to be made on chosen subject.\n2. It should be creative, presentable, imagination with good script.\n3. Voice-over, music and editing allowed.\n4. Jury may interview the crew members.\n5. The film should be original work by the participants.\n6. Excessive violence, sex, political or religious or religious extremism as determined by judge will result in disqualification.\n7. Video Time duration 1-10 minutes. (Max. 10 minutes)\n8. Participants have to submit their video on the first day of Udaan.",
       "prizes": [],
       "rounds": [],
       "managers": [
@@ -1384,12 +1530,12 @@
         },
         {
           "name": "Meet Pachchigar",
-          "mobile": ""
+          "mobile": "9825151237"
         }
       ]
     },
     {
-      "name": "Antakshari",
+      "name": "Antakshri",
       "participants": "2",
       "fees": "40",
       "description": "Naye puraane gaane back to back.\nThe competition will be organized into 3 segments.",
@@ -1412,7 +1558,7 @@
     {
       "name": "Prank Comedy Video",
       "participants": "4",
-      "fees": "40",
+      "fees": "20",
       "description": "One that makes you laugh for a while.\n\n1. A prank comedy has to be made on the chosen subject.\n2. It should be creative, presentable, imagination with good script.\n3. Voice-over, music and editing allowed",
       "prizes": [],
       "rounds": [
@@ -1449,16 +1595,20 @@
       "name": "View Finder",
       "participants": "1",
       "fees": "30",
-      "description": "MAKE IT A LIVE…\n1. A prank comedy has to be made on chosen subject.  \n2. It should be creative, presentable, imagination with good script.  \n3. Voice-over, music and editing allowed.\n4. Jury may interview the crew members.\n5. The film should be original work by the participants.\n6. Excessive violence, sex, political or religious or religious extremism as determined by judge will result in disqualification. \n7. Video Time duration 1-3 minutes.\n8. Participants have to submit their prank video half an hour before the start of event.",
+      "description": "MAKE IT A LIVE…\nviewfinder17@gmail.com",
       "prizes": [],
-      "rounds": [],
+      "rounds": [
+        "Send your maximum of 4 Photographs to the email mentioned above by 21st March, 2017. Among them, 2 Photographs should be related to the given theme and next 2 photographs from your collection with EXIF and CAPTION.\nTHEME: COLOR AND EMOTION",
+        "On the spot round.\nSelected participants from Round 1 will be given a theme on the same day. (23rd March, 2017)"
+      ],
       "managers": [
         {
-          "name": "Subham Dhar ",
+          "name": "Subham Dhar",
           "mobile": "7600878168"
         },
         {
-          "name": "Bhadresh Katara"
+          "name": "Bhadresh Katara",
+          "mobile": "7874337695"
         }
       ]
     }

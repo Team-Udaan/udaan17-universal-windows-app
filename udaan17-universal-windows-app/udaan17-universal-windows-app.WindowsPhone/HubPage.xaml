@@ -26,9 +26,12 @@
 
             <!-- Grid-appropriate item template as seen in section 2 -->
             <DataTemplate x:Key="Standard200x180TileItemTemplate">
-                <Grid Margin="0,0,9.5,9.5" Background="{ThemeResource PhoneAccentBrush}">
-                    <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="138.5" Width="138.5"/>
-                    <TextBlock Text="{Binding Alias}" VerticalAlignment="Bottom" Margin="9.5,0,0,6.5" Style="{ThemeResource BaseTextBlockStyle}"/>
+                <Grid Margin="0,0,9.5,9.5" Background="Transparent">
+                    <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding Title}" Height="auto" Width="auto" MaxHeight="200"/>
+                    <StackPanel VerticalAlignment="Bottom" Margin="9.5,0,0,20">
+                        <TextBlock Text="{Binding Alias}"  Style="{ThemeResource SubheaderTextBlockStyle}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Title}"  Style="{ThemeResource BaseTextBlockStyle}"/>
+                    </StackPanel>
                 </Grid>
             </DataTemplate>
 
@@ -77,22 +80,15 @@
             <HubSection x:Uid="TechEvents" Header="Tech Events" Width="Auto"
                          DataContext="{Binding TechEvents}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
-                    <GridView
+                    <ListView
                         Margin="0,9.5,0,0"
                         ItemsSource="{Binding}"
-                        AutomationProperties.AutomationId="ItemGridView"
-                        AutomationProperties.Name="Items In Group"
                         ItemTemplate="{StaticResource Standard200x180TileItemTemplate}"
                         SelectionMode="None"
                         IsItemClickEnabled="True"
                         ItemClick="GroupSection_ItemClick"
                         ContinuumNavigationTransitionInfo.ExitElementContainer="True">
-                        <GridView.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <ItemsWrapGrid />
-                            </ItemsPanelTemplate>
-                        </GridView.ItemsPanel>
-                    </GridView>
+                    </ListView>
                 </DataTemplate>
             </HubSection>
 

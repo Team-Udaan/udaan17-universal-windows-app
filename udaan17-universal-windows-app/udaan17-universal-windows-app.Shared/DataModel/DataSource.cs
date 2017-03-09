@@ -175,7 +175,7 @@ namespace udaan17_universal_windows_app.Data
             foreach (JsonValue item in Data["devs"].GetArray())
             {
                 JsonObject o = item.GetObject();
-                _devs.Add(new Devs(o["name"].GetString(), o["email"].GetString(), o["github"].GetString(), o["mobile"].GetString()));
+                _devs.Add(new Devs(o["name"].GetString(), o["email"].GetString(), o["github"].GetString(), o["mobile"].GetString(), o["title"].GetString()));
             }
         }
 
@@ -240,14 +240,16 @@ namespace udaan17_universal_windows_app.Data
         public string Git { get; set; }
         public string Contact { get; set; }
         public string Mailto { get; set; }
+        public string Title { get; set; }
 
-        public Devs(string n, string e, string g, string c)
+        public Devs(string name, string email, string git, string contact, string title)
         {
-            Name = n;
-            Email = e;
-            Git = g;
-            Contact = c;
-            Mailto = "mailto:" + e;
+            Name = name;
+            Email = email;
+            Git = git;
+            Contact = contact;
+            Mailto = "mailto:" + email;
+            Title = title;
         }
     }
     public class Event

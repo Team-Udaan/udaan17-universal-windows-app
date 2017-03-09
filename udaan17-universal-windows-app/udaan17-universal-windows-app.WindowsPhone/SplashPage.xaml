@@ -50,7 +50,7 @@
                                      EnableDependentAnimation="True"
                                                        Duration="0:0:2"
                                                        From="0.0"
-                                                       To="75.0">
+                                                       To="80.0">
                         <DoubleAnimation.EasingFunction>
                             <BounceEase Bounces="3" 
                                 Bounciness="3"/>

@@ -116,6 +116,15 @@
     <Content Include="Assets\DepartmentBackgrounds\nontech.png" />
     <Content Include="Assets\DepartmentBackgrounds\machinists.png" />
     <Content Include="Assets\DepartmentBackgrounds\skyscrapers.png" />
+    <Content Include="Assets\DepartmentLogos\cultural.png" />
+    <Content Include="Assets\DepartmentLogos\embeddrones.png" />
+    <Content Include="Assets\DepartmentLogos\fabfacturers.png" />
+    <Content Include="Assets\DepartmentLogos\keycoders.png" />
+    <Content Include="Assets\DepartmentLogos\machinists.png" />
+    <Content Include="Assets\DepartmentLogos\nights.png" />
+    <Content Include="Assets\DepartmentLogos\nontech.png" />
+    <Content Include="Assets\DepartmentLogos\rezonizers.png" />
+    <Content Include="Assets\DepartmentLogos\skyscrapers.png" />
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
     <Content Include="Assets\SplashScreen.scale-240.png" />

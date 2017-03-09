@@ -16,18 +16,16 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DataModel\DataSource.cs" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\blue.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\cover-photo-color.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\Embeddrones.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\FabFacturers.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\Keycoders.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\Machinists.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\Rezonizers.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\SkyScrapers.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\embeddrones.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\fabfacturers.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\keycoders.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\machinists.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\rezonizers.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\skyscrapers.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\devs.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\git.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\green.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\antakshari.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\antakshri.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\barter-the-partner.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\behind-the-dots.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\bolly-mix-bolly.png" />
@@ -36,14 +34,14 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\bot-ball.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\bvm-mun.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\course-de-bateau.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\LAN-Gaming---CS-1.6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\CS-1.6.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\dalal-street!.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\dictionary.com.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\electro-broker.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\electrica-ladder.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\Electro-Diagnosis.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\ex-quiz-it.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\LAN-Gaming---FIFA-13.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\FIFA-13.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\final-cut.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\final-verdict.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\find-if-you-can.png" />
@@ -62,7 +60,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\math-e-magic.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\mechanophilia.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\mind---play.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\LAN-Gaming---NFS-MW.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\NFS-MW.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\optimus-prime.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\petrolhead.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\prank-comedy-video.png" />
@@ -80,7 +78,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\survey-hunt.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\takeshi's-castle.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\talent-hunt.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\img\Philosopher-Stone.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\Philosopher's-Stone.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\the-tech-box.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\the-techbox.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\treasure-hunt.png" />
