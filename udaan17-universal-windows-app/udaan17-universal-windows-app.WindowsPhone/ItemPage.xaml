@@ -107,7 +107,7 @@
                                 <TextBlock Text="{Binding Fee}" Style="{ThemeResource BaseTextBlockStyle}" Margin=" 7,0,0,0" VerticalAlignment="Center"/>
                             </StackPanel>
                             <TextBlock Text="Managers :" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,8,0,8" FontWeight="Bold" FontSize="20"/>
-                            <ListView Margin="8,0,0,0" ItemsSource="{Binding Managers}">
+                            <ListView Margin="8,0,0,0" ItemsSource="{Binding Managers}" SelectionChanged="ListView_SelectionChanged">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>

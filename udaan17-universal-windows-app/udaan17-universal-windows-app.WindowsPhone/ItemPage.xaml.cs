@@ -59,7 +59,10 @@ namespace udaan17_universal_windows_app
         {
             // TODO: Save the unique state of the page here.
         }
-
+        private void PlaceCall(string contact, string name)
+        {
+            Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallUI(contact, name);
+        }
         #region NavigationHelper registration
 
         /// <summary>
@@ -85,5 +88,12 @@ namespace udaan17_universal_windows_app
         }
 
         #endregion
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var manager = e.AddedItems[0] as Manager;
+            if (manager.Contact != "")
+                PlaceCall(manager.Contact, manager.name);
+        }
     }
 }

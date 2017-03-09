@@ -48,6 +48,9 @@ namespace udaan17_universal_windows_app
             this.defaultViewModel["Heads"] = group.Heads;
             this.defaultViewModel["CoHeads"] = group.CoHeads;
             this.DefaultViewModel["Items"] = group.Events;
+            if (group.Heads.Count == 0 && group.CoHeads.Count == 0)
+                Heads.Visibility = Visibility.Collapsed;
+            
         }
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
@@ -88,5 +91,16 @@ namespace udaan17_universal_windows_app
         }
 
         #endregion
+
+        private void headsView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var manager = e.AddedItems[0] as Manager;
+            if (manager.Contact != "")
+                PlaceCall(manager.Contact, manager.name);
+        }
+        private void PlaceCall(string contact, string name)
+        {
+            Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallUI(contact, name);
+        }
     }
 }

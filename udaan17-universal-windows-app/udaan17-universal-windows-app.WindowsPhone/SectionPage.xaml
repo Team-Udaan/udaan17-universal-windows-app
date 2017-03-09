@@ -94,7 +94,7 @@
                         ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"/>
                 </DataTemplate>
             </HubSection>
-            <HubSection x:Uid="Heads" Header="Heads" DataContext="{Binding}" Width="auto" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+            <HubSection x:Uid="Heads" x:Name="Heads" Header="Heads" DataContext="{Binding}" Width="auto" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -110,7 +110,8 @@
                             IsItemClickEnabled="True"
                             SelectionMode="None"
                             IsSwipeEnabled="false"
-                            ItemTemplate="{StaticResource HeadsViewItemTemplate}"/>
+                            ItemTemplate="{StaticResource HeadsViewItemTemplate}"
+                                  SelectionChanged="headsView_SelectionChanged"/>
                         <TextBlock Text="Co-Heads" Style="{ThemeResource BodyTextBlockStyle}" Grid.Row="1" VerticalAlignment="Center" FontWeight="Bold"/>
                         <ListView Grid.Row="2"
                             x:Name="coHeadsView"
@@ -120,7 +121,8 @@
                             IsItemClickEnabled="True"
                             SelectionMode="None"
                             IsSwipeEnabled="false"
-                            ItemTemplate="{StaticResource HeadsViewItemTemplate}"/>
+                            ItemTemplate="{StaticResource HeadsViewItemTemplate}"
+                                  SelectionChanged="headsView_SelectionChanged"/>
                     </Grid>
                 </DataTemplate>
             </HubSection>

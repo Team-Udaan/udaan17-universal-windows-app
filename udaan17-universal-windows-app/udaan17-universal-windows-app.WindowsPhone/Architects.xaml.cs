@@ -49,6 +49,11 @@ namespace udaan17_universal_windows_app
         {
         }
 
+        
+        private void PlaceCall(string contact, string name)
+        {
+            Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallUI(contact, name);
+        }
         #region NavigationHelper registration
 
         /// <summary>
@@ -75,5 +80,20 @@ namespace udaan17_universal_windows_app
         }
 
         #endregion
+
+        private void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            string name;
+            string Contact;
+            StackPanel s;
+            try
+            {
+                s = (e.OriginalSource as TextBlock).Parent as StackPanel;
+                name = (s.Children[0] as TextBlock).Text;
+                Contact = (s.Children[2] as TextBlock).Text;
+                PlaceCall(Contact, name);
+            }
+            catch (Exception) { }
+        }
     }
 }
