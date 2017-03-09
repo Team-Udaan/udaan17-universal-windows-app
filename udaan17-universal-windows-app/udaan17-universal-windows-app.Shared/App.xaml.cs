@@ -79,7 +79,7 @@ namespace udaan17_universal_windows_app
                 rootFrame.Navigated += this.RootFrame_FirstNavigated;
 #endif
                 
-                if (!rootFrame.Navigate(typeof(HubPage), e.Arguments))
+                if (!rootFrame.Navigate(typeof(SplashPage), e.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }

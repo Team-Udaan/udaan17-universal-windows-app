@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="udaan17_universal_windows_app.SplashPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:udaan17_universal_windows_app"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="Logo" Source="/Assets/mainlogo.png" VerticalAlignment="Bottom" Stretch="Uniform" Opacity="0"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle x:Name="One" Grid.Column="0" Fill="#009746" Height="50" Width="50" HorizontalAlignment="Right"/>
+                <Rectangle x:Name="Seven" Grid.Column="1" Fill="#0f7cad" Height="50" Width="50" HorizontalAlignment="Left"/>
+                <TextBlock Text="1" Grid.Column="0" HorizontalAlignment="Right" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" Margin="0,6,8,0" Foreground="Black"/>
+                <TextBlock Text="7" Grid.Column="1" HorizontalAlignment="Left" FontWeight="ExtraBold" FontSize="50" VerticalAlignment="Center" Margin="8,6,0,0" Foreground="Black"/>
+            </Grid>
+            <Grid.Resources>
+                <Storyboard x:Name="imageAnimation">
+                    <DoubleAnimation Storyboard.TargetName="Logo" 
+                                 Storyboard.TargetProperty="Opacity"
+                                     EnableDependentAnimation="True"
+                                 From="0.0"
+                                 To="1.0"
+                                 Duration="0:0:2"/>
+                    <DoubleAnimation Storyboard.TargetName="One"
+                                         Storyboard.TargetProperty="Width"
+                                     EnableDependentAnimation="True"
+                                                       Duration="0:0:2"
+                                                       From="0.0"
+                                                       To="50.0">
+                        <DoubleAnimation.EasingFunction>
+                            <BounceEase Bounces="3" 
+                                Bounciness="3"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimation Storyboard.TargetName="Seven"
+                                         Storyboard.TargetProperty="Width"
+                                     EnableDependentAnimation="True"
+                                                       Duration="0:0:2"
+                                                       From="0.0"
+                                                       To="50.0">
+                        <DoubleAnimation.EasingFunction>
+                            <BounceEase Bounces="3" 
+                                Bounciness="3"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                </Storyboard>
+            </Grid.Resources>
+        </Grid>
+    </Grid>
+</Page>

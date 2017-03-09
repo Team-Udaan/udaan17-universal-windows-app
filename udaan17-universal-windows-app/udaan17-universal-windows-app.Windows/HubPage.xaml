@@ -33,7 +33,7 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Border Background="White" Width="70" Height="70">
+                    <Border Background="Transparent" Width="70" Height="70">
                         <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding name}"/>
                     </Border>
                 <StackPanel Grid.Column="1" Margin="5">

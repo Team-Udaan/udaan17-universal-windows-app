@@ -16,6 +16,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DataModel\DataSource.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\blue.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\cover-photo-color.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\Embeddrones.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\FabFacturers.png" />
@@ -25,6 +26,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\SkyScrapers.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\devs.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\git.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\green.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\antakshari.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\barter-the-partner.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\behind-the-dots.png" />
