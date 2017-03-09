@@ -42,7 +42,7 @@ namespace udaan17_universal_windows_app
         {
             var item = await DataSource.GetEventAsync((string)e.NavigationParameter);
             this.DefaultViewModel["Item"] = item;
-            if (item.Rounds.Count == 0) RoundsGrid.Visibility = Visibility.Collapsed;
+            if (item.Rounds.Count == 0) RoundsGrid.Text += "\nN/A";
             if (item.Prizes.Count == 0) PrizesGrid.Visibility = Visibility.Collapsed;
         }
 

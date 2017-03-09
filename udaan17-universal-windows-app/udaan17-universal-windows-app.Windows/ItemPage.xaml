@@ -47,57 +47,79 @@
         -->
         <Grid Grid.Row="1" x:Name="contentRegion">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Margin="79,4,79,0">
-                <Border Height="400" Margin="0,0,0,20" Background="Transparent">
-                    <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding Title}"/>
-                </Border>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel>
-                        <TextBlock Text="Participants" Style="{StaticResource SubheaderTextBlockStyle}" Margin="5" FontWeight="Bold"/>
-                        <TextBlock Text="Fee" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="5"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1">
-                        <TextBlock Text=":" FontWeight="Bold" Margin="5" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                        <TextBlock Text=":" FontWeight="Bold" Margin="5" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="2">
-                        <TextBlock Text="{Binding NoOfParticipants}" Style="{StaticResource SubheaderTextBlockStyle}" Margin="5"/>
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <TextBlock Text="₹" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,2,0,2"/>
-                            <TextBlock Text="{Binding Fee}" Margin="4,2,0,2" Style="{StaticResource SubheaderTextBlockStyle}"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Margin="79,4,79,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Background="Black" Opacity=".5" Grid.Row="0" Grid.RowSpan="2"/>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Height="250" Margin="15,15,15,20" Background="Transparent">
+                        <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding Title}"/>
+                    </Border>
+                    <Grid Grid.Row="1" VerticalAlignment="Top" Margin="15,0,15,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="Participants" Style="{StaticResource SubheaderTextBlockStyle}" Margin="5" FontWeight="Bold"/>
+                            <TextBlock Text="Fee" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="5"/>
                         </StackPanel>
-                    </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text=":" FontWeight="Bold" Margin="5" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                            <TextBlock Text=":" FontWeight="Bold" Margin="5" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="{Binding NoOfParticipants}" Style="{StaticResource SubheaderTextBlockStyle}" Margin="5"/>
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <TextBlock Text="₹" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,2,0,2"/>
+                                <TextBlock Text="{Binding Fee}" Margin="4,2,0,2" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Margin="5,0,0,0">
+                            <TextBlock Text="Event Description : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <TextBlock Text="{Binding Description}" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
-            </StackPanel>
-            <Grid Grid.Column="1">
+            </Grid>
+            <Grid Grid.Column="1" Grid.RowSpan="3" x:Name="PRGrid">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Disabled">
                     <StackPanel Orientation="Vertical" Margin="10">
-                        <TextBlock Text="Event Description : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
-                        <TextBlock Text="{Binding Description}" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                        <StackPanel x:Name="RoundsGrid">
-                            <TextBlock Text="Rounds : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <ListView ItemTemplate="{StaticResource IterationTemplate}" ItemsSource="{Binding Rounds}" Height="auto" Margin="5"/>
+                        <StackPanel >
+                            <TextBlock x:Name="RoundsGrid" Text="Rounds : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <ListView ItemTemplate="{StaticResource IterationTemplate}" ItemsSource="{Binding Rounds}" Height="auto" Margin="5" SelectionMode="None"/>
                         </StackPanel>
-                        <StackPanel  x:Name="PrizesGrid">
-                            <TextBlock Text="Prizes : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <ListView ItemTemplate="{StaticResource IterationTemplate}" ItemsSource="{Binding Prizes}" Height="auto" Margin="5"/>
+                        <StackPanel>
+                            <TextBlock x:Name="PrizesGrid" Text="Prizes : " Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <ListView ItemTemplate="{StaticResource IterationTemplate}" ItemsSource="{Binding Prizes}" Height="auto" Margin="5" SelectionMode="None"/>
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
             </Grid>
-            <Grid Grid.Column="2">
-                <StackPanel Orientation="Vertical" Margin="4">
+            <Grid Grid.Column="2" Grid.RowSpan="3">
+                <StackPanel Orientation="Vertical" Margin="-2,43,10,-35">
                     <TextBlock Text="Managers : " FontWeight="Bold" Style="{StaticResource SubheaderTextBlockStyle}" Margin="20,0,0,4"/>
-                    <ListView ItemsSource="{Binding Managers}" Margin="0,4,0,0">
+                    <ListView ItemsSource="{Binding Managers}" Margin="0,4,0,0" SelectionMode="None">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid Height="auto" Width="480" Margin="10">
