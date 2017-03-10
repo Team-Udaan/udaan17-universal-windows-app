@@ -249,6 +249,10 @@ namespace udaan17_universal_windows_app.Data
             Git = git;
             Contact = contact;
             Mailto = "mailto:" + email;
+#if WINDOWS_PHONE_APP
+            Mailto = "mailto:?to="+email;
+#endif
+
             Title = title;
         }
     }

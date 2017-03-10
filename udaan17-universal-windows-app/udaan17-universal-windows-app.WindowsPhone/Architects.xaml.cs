@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using udaan17_universal_windows_app.Data;
+using Windows.ApplicationModel.Email;
 
 namespace udaan17_universal_windows_app
 {
@@ -81,17 +82,35 @@ namespace udaan17_universal_windows_app
 
         #endregion
 
-        private void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Phone_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            string name;
             string Contact;
             StackPanel s;
             try
             {
-                s = (e.OriginalSource as TextBlock).Parent as StackPanel;
-                name = (s.Children[0] as TextBlock).Text;
-                Contact = (s.Children[2] as TextBlock).Text;
-                PlaceCall(Contact, name);
+                s = ((e.OriginalSource as Image).Parent as Border).Parent as StackPanel;
+                Contact = (s.Children[1] as TextBlock).Text;
+                var d = (DefaultViewModel["Item"] as List<Devs>).Select(dev => dev).Where(item => Contact.Equals(item.Contact));
+                PlaceCall(Contact, d.First().Name);
+            }
+            catch (Exception) { }
+        }
+        private async void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            string Contact;
+            StackPanel s;
+            try
+            {
+                s = ((e.OriginalSource as Image).Parent as Border).Parent as StackPanel;
+                Contact = (s.Children[1] as TextBlock).Text;
+                var d = (DefaultViewModel["Item"] as List<Devs>).Select(dev => dev).Where(item => Contact.Equals(item.Contact));
+                EmailRecipient sendTo = new EmailRecipient()
+                {
+                    Address = d.First().Email
+                };
+                EmailMessage mail = new EmailMessage();
+                mail.To.Add(sendTo);
+                await EmailManager.ShowComposeNewEmailAsync(mail);
             }
             catch (Exception) { }
         }

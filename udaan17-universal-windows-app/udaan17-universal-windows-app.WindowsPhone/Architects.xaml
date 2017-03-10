@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="Black"
-    DataContext="{Binding DefaultViewModel.Item, RelativeSource={RelativeSource Self}}">
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">
+
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/architects.jpg" Stretch="Uniform" Opacity=".5"/>
@@ -38,29 +39,44 @@
                         <TextBlock Text="Version : " Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" VerticalAlignment="Center"/>
                         <TextBlock Text="  1.0.0.1" Style="{ThemeResource ComboBoxPlaceholderTextBlockStyle}"/>
                     </StackPanel-->
-                    <ListView x:Name="listView" ItemsSource="{Binding}" Background="Transparent">
+                    <ListView x:Name="listView" ItemsSource="{Binding Item}" Background="Transparent">
                         <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Background="Transparent" Tapped="StackPanel_Tapped">
-                                    <TextBlock Text="{Binding Name}" Style="{ThemeResource ListViewItemTextBlockStyle}" Foreground="{ThemeResource PhoneAccentBrush}"/>
-                                    <TextBlock Text="{Binding }" Margin="25,0,0,0" Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}"/>
-                                    <TextBlock Text="Contact : " Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" Margin="10,0,0,0"/>
-                                    <TextBlock Text="{Binding Contact}" Margin="25,0,0,0" Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}"/>
-                                    <TextBlock Text="E-mail : " Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" Margin="10,0,0,0"/>
-                                    <HyperlinkButton
-                                        NavigateUri="{Binding Mailto}"
-                                        Content="{Binding Email}" 
-                                        Foreground="{ThemeResource PhoneAccentBrush}"
-                                        FontSize="{ThemeResource ContentControlFontSize}"
-                                        Margin="25,0,0,0" HorizontalAlignment="Left"/> <TextBlock Text="GitHub : " Style="{ThemeResource FlyoutPickerTitleTextBlockStyle}" Margin="10,0,0,0"/>
-                                    <HyperlinkButton
-                                        NavigateUri="{Binding Git}"
-                                        Content="{Binding Git}" 
-                                        Foreground="{ThemeResource PhoneAccentBrush}"
-                                        FontSize="{ThemeResource ContentControlFontSize}"
-                                        Margin="25,0,0,0" HorizontalAlignment="Left"/>
-                                    <Line Stretch="Fill" Stroke="{ThemeResource AppBarItemForegroundThemeBrush}" X2="2" Margin="0,5,0,0"/>
-                                </StackPanel>
+                            <DataTemplate >
+                                <Grid Width="350">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Border Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="2" Background="Black" Opacity=".5"/>
+                                    <Grid Grid.Column="0" Grid.RowSpan="5" Margin="5,5,0,5" Background="White">
+                                        <Image Source="{Binding Category}"/>
+                                    </Grid>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Name}" Style="{ThemeResource SubheaderTextBlockStyle}" Foreground="White" HorizontalAlignment="Right" Margin="0,5,15,2"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Title}" Style="{ThemeResource TitleTextBlockStyle}" Foreground="White" HorizontalAlignment="Right" Margin="0,0,15,2"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="1" Margin="0,0,5,5" VerticalAlignment="Bottom">
+                                        <Border BorderBrush="White" BorderThickness="0" Margin="10,0,10,0">
+                                            <Image Source="/Assets/Phone.png" Height="40" Width="40" Tapped="Phone_Tapped"/>
+                                        </Border>
+                                        <TextBlock Text="{Binding Contact}" Visibility="Collapsed"/>
+                                        <Border BorderBrush="White" BorderThickness="0" Margin="10,0,10,0">
+                                            <Image Source="/Assets/Mail.png" Height="40" Width="40" Tapped="Image_Tapped"/>
+                                        </Border>
+                                        <Border BorderBrush="White" BorderThickness="0" Margin="10,0,10,0">
+                                            <HyperlinkButton NavigateUri="{Binding Git}">
+                                                <HyperlinkButton.Content>
+                                                    <Image Source="/Assets/Git.png" Height="40" Width="40"/>
+                                                </HyperlinkButton.Content>
+                                            </HyperlinkButton>
+                                        </Border>
+                                    </StackPanel>
+                                </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
