@@ -10,6 +10,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <DataTemplate x:Key="DevItemTemplate">
+            <Grid Height="150" Width="400">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="2" Background="Black" Opacity=".5"/>
+                <Grid Grid.Column="0" Grid.RowSpan="5" Margin="5,5,0,5" Background="White">
+                    <Image Source="{Binding Category}"/>
+                </Grid>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Name}" Style="{ThemeResource SubheaderTextBlockStyle}" Foreground="White" HorizontalAlignment="Right" Margin="0,5,15,2"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Title}" Style="{ThemeResource TitleTextBlockStyle}" Foreground="White" HorizontalAlignment="Right" Margin="0,0,15,2"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Contact}" Style="{ThemeResource TitleTextBlockStyle}" HorizontalAlignment="Right" Margin="0,0,15,2"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="1" Margin="0,0,5,5" VerticalAlignment="Bottom">
+                    <Border BorderBrush="White" BorderThickness="0">
+                        <HyperlinkButton NavigateUri="{Binding MailTo}">
+                            <HyperlinkButton.Content>
+                                <Image Source="/Assets/Mail.png" Height="30" Width="30"/>
+                            </HyperlinkButton.Content>
+                        </HyperlinkButton>
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="0">
+                        <HyperlinkButton NavigateUri="{Binding Git}">
+                            <HyperlinkButton.Content>
+                                <Image Source="/Assets/Git.png" Height="30" Width="30"/>
+                            </HyperlinkButton.Content>
+                        </HyperlinkButton>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
     <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the back button and page title
@@ -26,7 +66,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/Devs.jpg" Stretch="UniformToFill" Opacity=".5"/>
+            <ImageBrush ImageSource="Assets/architects.jpg" Stretch="UniformToFill" Opacity=".5"/>
         </Grid.Background>
         <!--
             TODO: Content should be placed within the following grid 
@@ -52,36 +92,12 @@
             
         </Grid>
         <Grid Grid.Row="1">
-            <GridView ItemsSource="{Binding Item}">
+            <GridView ItemsSource="{Binding Item}" ItemTemplate="{StaticResource DevItemTemplate}">
                 <GridView.Header>
                     <Grid Width="120">
-                        
-                    </Grid> 
+
+                    </Grid>
                 </GridView.Header>
-                <GridView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Width="400">
-                            <StackPanel Orientation="Vertical">
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="Assets/profile.jpg" Height="50" Width="50" Margin="0,0,5,0"/>
-                                    <TextBlock Text="{Binding Name}" Style="{StaticResource SubheaderTextBlockStyle}" FontWeight="Bold" Margin="15,0,0,0"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="Assets/mail.jpeg" Height="50" Width="50" Margin="0,0,5,0"/>
-                                    <HyperlinkButton Content="{Binding Email}" FontSize="20" NavigateUri="{Binding Mailto}"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="Assets/phone.jpg" Height="50" Width="50" Margin="0,0,5,0"/>
-                                    <TextBlock Text="{Binding Contact}" Style="{StaticResource SubheaderTextBlockStyle}" Margin="15,0,0,0"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="Assets/git.png" Height="50" Width="50" Margin="0,0,5,0"/>
-                                    <HyperlinkButton Content="{Binding Git}" NavigateUri="{Binding Git}" FontSize="20"/>
-                                </StackPanel>
-                            </StackPanel>
-                        </Grid>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
             </GridView>
         </Grid>
     </Grid>

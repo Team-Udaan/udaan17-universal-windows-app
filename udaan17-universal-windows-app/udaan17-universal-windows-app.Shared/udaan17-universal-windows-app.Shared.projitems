@@ -16,6 +16,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DataModel\DataSource.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\architects.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\cover-photo-color.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\embeddrones.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\fabfacturers.png" />
@@ -24,7 +25,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\rezonizers.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\skyscrapers.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\devs.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\git.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Git.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\antakshri.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\barter-the-partner.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\behind-the-dots.png" />
@@ -83,11 +84,10 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\the-techbox.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\treasure-hunt.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\view-finder.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\mail.jpeg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Mail.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\MainLogo.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\non-tech.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\phone.jpg" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\profile.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Phone.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\tech.png" />
     <Content Include="$(MSBuildThisFileDirectory)DataModel\Data.json" />
     <Content Include="$(MSBuildThisFileDirectory)DataModel\developers.json" />
