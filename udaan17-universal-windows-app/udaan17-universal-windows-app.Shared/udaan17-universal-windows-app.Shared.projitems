@@ -24,6 +24,11 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\machinists.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\rezonizers.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\skyscrapers.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\android.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\backend.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\ui.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\web.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\windows.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\devs.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Git.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\antakshari.png" />

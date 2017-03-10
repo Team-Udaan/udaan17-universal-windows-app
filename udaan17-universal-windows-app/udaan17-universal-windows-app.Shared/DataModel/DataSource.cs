@@ -186,7 +186,7 @@ namespace udaan17_universal_windows_app.Data
             foreach (JsonValue item in Data["devs"].GetArray())
             {
                 JsonObject o = item.GetObject();
-                _devs.Add(new Devs(o["name"].GetString(), o["email"].GetString(), o["github"].GetString(), o["mobile"].GetString(), o["title"].GetString()));
+                _devs.Add(new Devs(o["name"].GetString(), o["email"].GetString(), o["github"].GetString(), o["mobile"].GetString(), o["title"].GetString(), o["color"].GetString()));
             }
         }
 
@@ -300,8 +300,9 @@ namespace udaan17_universal_windows_app.Data
         public string Contact { get; set; }
         public string Mailto { get; set; }
         public string Title { get; set; }
+        public string Category { get; set; }
 
-        public Devs(string name, string email, string git, string contact, string title)
+        public Devs(string name, string email, string git, string contact, string title, string cat)
         {
             Name = name;
             Email = email;
@@ -311,7 +312,7 @@ namespace udaan17_universal_windows_app.Data
 #if WINDOWS_PHONE_APP
             Mailto = "mailto:?to="+email;
 #endif
-
+            Category = "/Assets/DevLogos/" + cat + ".png";
             Title = title;
         }
     }
