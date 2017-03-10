@@ -20,7 +20,7 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="#464646">
+    <Grid Background="Black">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
@@ -34,8 +34,8 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle x:Name="One" Grid.Column="0" Fill="#009746" Height="80" Width="0" HorizontalAlignment="Right"/>
                 <Rectangle x:Name="Seven" Grid.Column="1" Fill="#0f7cad" Height="80" Width="0" HorizontalAlignment="Left"/>
-                <TextBlock Text="20" Grid.Column="0" HorizontalAlignment="Right" FontWeight="ExtraBold" FontSize="70" VerticalAlignment="Center" Margin="0,6,15,0" Foreground="#464646"/>
-                <TextBlock Text="17" Grid.Column="1" HorizontalAlignment="Left" FontWeight="ExtraBold" FontSize="70" VerticalAlignment="Center" Margin="15,6,0,0" Foreground="#464646"/>
+                <TextBlock Text="20" Grid.Column="0" HorizontalAlignment="Right" FontWeight="ExtraBold" FontSize="70" VerticalAlignment="Center" Margin="0,6,15,0" Foreground="Black"/>
+                <TextBlock Text="17" Grid.Column="1" HorizontalAlignment="Left" FontWeight="ExtraBold" FontSize="70" VerticalAlignment="Center" Margin="15,6,0,0" Foreground="Black"/>
             </Grid>
             <Grid.Resources>
                 <Storyboard x:Name="imageAnimation">

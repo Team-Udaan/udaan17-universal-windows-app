@@ -26,6 +26,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\skyscrapers.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\devs.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Git.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\img\antakshari.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\antakshri.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\barter-the-partner.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\img\behind-the-dots.png" />

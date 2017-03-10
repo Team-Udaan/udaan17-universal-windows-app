@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
+using Windows.Storage;
+using System.Net;
+using udaan17_universal_windows_app.Data;
 
 namespace udaan17_universal_windows_app
 {
@@ -50,10 +53,12 @@ namespace udaan17_universal_windows_app
 
         private async void ImageAnimation_Completed(object sender, object e)
         {
-            await Task.Delay(300);
+            await DataSource.CheckDataAsync();
             Frame.Navigate(typeof(HubPage));
             Frame.BackStack.RemoveAt(Frame.BackStackDepth - 1);
         }
+
+       
 
         private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
