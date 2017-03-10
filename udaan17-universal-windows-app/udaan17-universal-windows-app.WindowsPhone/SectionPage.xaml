@@ -52,7 +52,7 @@
             </DataTemplate>
 
             <DataTemplate x:Key="HeadsViewItemTemplate">
-                <Grid>
+                <Grid Margin="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -110,26 +110,16 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <ListView Grid.Row="0"
-                            x:Name="headsView"
-                            AutomationProperties.AutomationId="ItemListView"
-                            AutomationProperties.Name="Items In Group"
+                            x:Name="heads"
                             ItemsSource="{Binding Heads}"
-                            IsItemClickEnabled="True"
-                            SelectionMode="None"
-                            IsSwipeEnabled="false"
                             ItemTemplate="{StaticResource HeadsViewItemTemplate}"
-                                  SelectionChanged="headsView_SelectionChanged"/>
+                                  SelectionChanged="heads_SelectionChanged"/>
                         <TextBlock Text="Co-Heads" Style="{ThemeResource BodyTextBlockStyle}" Grid.Row="1" VerticalAlignment="Center" FontWeight="Bold"/>
                         <ListView Grid.Row="2"
                             x:Name="coHeadsView"
-                            AutomationProperties.AutomationId="ItemListView"
-                            AutomationProperties.Name="Items In Group"
                             ItemsSource="{Binding CoHeads}"
-                            IsItemClickEnabled="True"
-                            SelectionMode="None"
-                            IsSwipeEnabled="false"
                             ItemTemplate="{StaticResource HeadsViewItemTemplate}"
-                                  SelectionChanged="headsView_SelectionChanged"/>
+                                  SelectionChanged="heads_SelectionChanged"/>
                     </Grid>
                 </DataTemplate>
             </HubSection>

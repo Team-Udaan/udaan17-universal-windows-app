@@ -92,15 +92,17 @@ namespace udaan17_universal_windows_app
 
         #endregion
 
-        private void headsView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        
+        private void PlaceCall(string contact, string name)
+        {
+            Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallUI(contact, name);
+        }
+
+        private void heads_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var manager = e.AddedItems[0] as Manager;
             if (manager.Contact != "")
                 PlaceCall(manager.Contact, manager.name);
-        }
-        private void PlaceCall(string contact, string name)
-        {
-            Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallUI(contact, name);
         }
     }
 }

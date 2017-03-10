@@ -19,7 +19,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
-
+using Windows.ApplicationModel;
+using Windows.System;
 
 namespace udaan17_universal_windows_app
 {
@@ -117,9 +118,10 @@ namespace udaan17_universal_windows_app
             }
         }
 
-        private void review_Click(object sender, RoutedEventArgs e)
+        private async void review_Click(object sender, RoutedEventArgs e)
         {
             //await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" +));
+            await Launcher.LaunchUriAsync(new Uri($"ms-windows-store://review/?PFN={Package.Current.Id.FamilyName}"));
         }
     }
 }
