@@ -42,8 +42,9 @@ namespace udaan17_universal_windows_app
         {
             var item = await DataSource.GetEventAsync((string)e.NavigationParameter);
             this.DefaultViewModel["Item"] = item;
-            if (item.Rounds.Count == 0) RoundsGrid.Text += "\nN/A";
-            if (item.Prizes.Count == 0) PrizesGrid.Visibility = Visibility.Collapsed;
+            if (item.Description == "") EDStack.Visibility = Visibility.Collapsed;
+            if (item.Rounds.Count == 0) RoundsStack.Visibility = Visibility.Collapsed;
+            if (item.Prizes.Count == 0) PrizesStack.Visibility = Visibility.Collapsed;
         }
 
         #region NavigationHelper registration

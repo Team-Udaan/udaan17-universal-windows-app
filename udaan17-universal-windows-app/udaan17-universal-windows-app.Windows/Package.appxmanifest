@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="udaan17_universal_windows_app.Windows.App">
-      <m2:VisualElements DisplayName="udaan17-universal-windows-app.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="udaan17-universal-windows-app.Windows" ForegroundText="light" BackgroundColor="#464646">
+      <m2:VisualElements DisplayName="Udaan '17" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="udaan17-universal-windows-app.Windows" ForegroundText="light" BackgroundColor="#464646">
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
     </Application>
