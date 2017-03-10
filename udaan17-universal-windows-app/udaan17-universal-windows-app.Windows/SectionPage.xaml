@@ -90,8 +90,8 @@
                                         <DataTemplate>
                                             <Grid Height="auto" Width="480">
                                                 <StackPanel VerticalAlignment="Top">
-                                                    <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" IsTapEnabled="False"/>
-                                                    <TextBlock Text="{Binding Contact}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" IsTapEnabled="False"/>
+                                                    <TextBlock Text="{Binding name}" FontSize="20" TextWrapping="NoWrap" IsTapEnabled="False"/>
+                                                    <TextBlock Text="{Binding Contact}" FontSize="20" TextWrapping="NoWrap" IsTapEnabled="False"/>
                                                 </StackPanel>
                                             </Grid>
                                         </DataTemplate>
@@ -105,8 +105,8 @@
                                         <DataTemplate>
                                             <Grid Height="auto" Width="480">
                                                 <StackPanel VerticalAlignment="Top">
-                                                    <TextBlock Text="{Binding name}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" IsTapEnabled="False"/>
-                                                    <TextBlock Text="{Binding Contact}" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="NoWrap" IsTapEnabled="False"/>
+                                                    <TextBlock Text="{Binding name}" FontSize="20" TextWrapping="NoWrap" IsTapEnabled="False"/>
+                                                    <TextBlock Text="{Binding Contact}" FontSize="20" TextWrapping="NoWrap" IsTapEnabled="False"/>
                                                 </StackPanel>
                                             </Grid>
                                         </DataTemplate>
