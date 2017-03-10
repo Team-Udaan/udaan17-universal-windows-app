@@ -85,7 +85,7 @@
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" Margin="40,0,0,0">
                                 <TextBlock Text="Heads : " FontWeight="Bold" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                                <ListView ItemsSource="{Binding Heads}" Margin="0,4,0,0" SelectionMode="None">
+                                <ListView ItemsSource="{Binding Heads}" Margin="0,4,0,0" SelectionMode="None" IsItemClickEnabled="False">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <Grid Height="auto" Width="480">

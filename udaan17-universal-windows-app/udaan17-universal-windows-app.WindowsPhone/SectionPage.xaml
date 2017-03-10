@@ -78,7 +78,7 @@
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
-        <Hub x:Name="DeptHub" Header="{Binding Alias}">
+        <Hub x:Name="DeptHub" Header="{Binding Alias}" Margin="0,20,0,0">
             <HubSection x:Uid="Events" Header="Events" DataContext="{Binding Events}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
                     <Grid>
