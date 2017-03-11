@@ -70,7 +70,7 @@
             ItemClick="ItemView_ItemClick"
             ItemTemplate="{StaticResource ItemViewTemplate}">
             <GridView.Header>
-                <Grid Margin="0,4,14,0">
+                <Grid Margin="0,4,14,0" Height="auto">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0"/>
                         <RowDefinition Height="*"/>
