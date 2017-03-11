@@ -29,13 +29,16 @@ namespace udaan17_universal_windows_app.Data
         {
             get { return this._tevents; }
         }
-
-        public int Count { get { return _events.Count + _devs.Count; } }
+        private ObservableCollection<Team> _team = new ObservableCollection<Team>();
+        public ObservableCollection<Team> TeamUdaan
+        {
+            get { return this._team; }
+        }
+        public int Count { get { return _events.Count + _devs.Count + _team.Count; } }
 
         public static async Task<IEnumerable<Department>> GetDepartmentsAsync()
         {
             await _DataSource.GetDataAsync();
-
             return _DataSource.Events;
         }
 
@@ -169,6 +172,8 @@ namespace udaan17_universal_windows_app.Data
                     }
                     this.Events.Add(dep);
                 }
+                //Load TeamUdaan data
+                //LoadTeam(Data);
             }
             catch(KeyNotFoundException ex)
             {
@@ -188,6 +193,27 @@ namespace udaan17_universal_windows_app.Data
                 JsonObject o = item.GetObject();
                 _devs.Add(new Devs(o["name"].GetString(), o["email"].GetString(), o["github"].GetString(), o["mobile"].GetString(), o["title"].GetString(), o["color"].GetString()));
             }
+        }
+        private void LoadTeam(JsonObject data)
+        {
+            foreach (JsonValue teamCat in data["teamUdaan"].GetArray())
+            {
+                Team team = new Team();
+                team.Members = new List<Manager>();
+                JsonObject category = teamCat.GetObject();
+                team.Title = category["category"].GetString();
+                foreach (JsonValue item in category["members"].GetArray())
+                {
+                    JsonObject member = item.GetObject();
+                    team.Members.Add(new Manager() { name = member["name"].GetString(), Contact = member["title"].GetString() });
+                }
+
+            }
+        }
+        public static async Task<List<Team>> GetTeamAsync()
+        {
+            await _DataSource.GetDataAsync();
+            return _DataSource._team.ToList();
         }
 
         public static async Task<Department> GetDepartmentAsync(string uniqueId)
@@ -349,5 +375,11 @@ namespace udaan17_universal_windows_app.Data
     {
         public string no { get; set; }
         public string Value { get; set; }
+    }
+
+    public class Team
+    {
+        public string Title { get; set; }
+        public List<Manager> Members { get; set; }
     }
 }
