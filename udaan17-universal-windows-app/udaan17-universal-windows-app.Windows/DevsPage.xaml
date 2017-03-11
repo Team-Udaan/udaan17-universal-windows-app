@@ -80,7 +80,7 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-                        <TextBlock x:Name="pageTitle" x:Uid="Header" Text="Team Udaan" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        <TextBlock Text="About Us" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         VerticalAlignment="Top" IsHitTestVisible="false" TextWrapping="NoWrap" />
                     </Grid>
                 </Hub.Header>
@@ -92,7 +92,7 @@
                         <GridView ItemsSource="{Binding Item}" ItemTemplate="{StaticResource DevItemTemplate}"/>
                     </DataTemplate>
                 </HubSection>
-                <HubSection Header="Team">
+                <HubSection Header="Team Udaan">
                     <HubSection.Background>
                         <ImageBrush ImageSource="/Assets/MainLogo.png" Stretch="Uniform" Opacity=".5"/>
                     </HubSection.Background>

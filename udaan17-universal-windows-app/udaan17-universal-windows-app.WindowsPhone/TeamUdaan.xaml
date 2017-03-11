@@ -31,7 +31,7 @@
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
             <TextBlock Text="Udaan '17" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
-            <TextBlock Text="Team Udaan" Margin="0,-6.5,0,0" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            <TextBlock Text="About Us" Margin="0,-6.5,0,0" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
@@ -84,7 +84,7 @@
                         </ListView>
                     </DataTemplate>
                 </HubSection>
-                <HubSection x:Uid="Team" Header="Team" DataContext="{Binding}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+                <HubSection x:Uid="Team" Header="Team Udaan" DataContext="{Binding}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                     <DataTemplate>
                         <ListView x:Name="teamView" Background="Transparent" ItemsSource="{Binding Team}">
                             <ListView.ItemTemplate>

@@ -23,7 +23,6 @@
         <m3:InitialRotationPreference>
           <m3:Rotation Preference="portrait" />
         </m3:InitialRotationPreference>
-        <m3:SplashScreen BackgroundColor="#000000" Image="" />
       </m3:VisualElements>
     </Application>
   </Applications>
