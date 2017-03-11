@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="udaan17_universal_windows_app.TeamUdaan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:udaan17_universal_windows_app"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="HubSectionHeaderTemplate">
+            <TextBlock Margin="0,0,0,-9.5" Text="{Binding}"/>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Udaan '17" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="Team Udaan" Margin="0,-6.5,0,0" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="0,9.5,19,0">
+            <Hub x:Name="DeptHub" Margin="0,20,0,0">
+                <HubSection x:Uid="Developers" Header="Developers" DataContext="{Binding}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+                    <DataTemplate>
+                        <ListView x:Name="devsView" ItemsSource="{Binding Devs}">
+                            <ListView.Background>
+                                <ImageBrush ImageSource="/Assets/architects.jpg" Stretch="Uniform" Opacity=".5"/>
+                            </ListView.Background>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Width="370">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="3*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Grid.Column="0" Grid.ColumnSpan="3" Background="Black" Opacity=".5"/>
+                                        <Grid Grid.Column="1" Margin="5,5,0,5" Background="Transparent">
+                                            <Image Source="{Binding Category}" MaxHeight="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <Grid Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                            <StackPanel HorizontalAlignment="Right">
+                                                <TextBlock Text="{Binding Name}" Style="{ThemeResource SubheaderTextBlockStyle}" Foreground="White" HorizontalAlignment="Right" Margin="0,5,15,2"/>
+                                                <TextBlock Text="{Binding Title}" Style="{ThemeResource TitleTextBlockStyle}" Foreground="White" HorizontalAlignment="Right" Margin="0,0,15,2"/>
+                                                <Grid HorizontalAlignment="Right" Margin="0,0,5,5" VerticalAlignment="Bottom">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Border Grid.Column="0" BorderBrush="White" BorderThickness="0" Margin="20,0,20,0">
+                                                        <Image Source="/Assets/Phone.png" Height="40" Width="40" Tapped="Phone_Tapped"/>
+                                                    </Border>
+                                                    <TextBlock Grid.Column="1" Text="{Binding Contact}" Visibility="Collapsed"/>
+                                                    <Image Grid.Column="1" Source="/Assets/Mail.png" Height="40" Width="40" Tapped="Image_Tapped" Margin="20,0,20,0"/>
+                                                    <HyperlinkButton NavigateUri="{Binding Git}" Grid.Column="2" Margin="20,0,5,0">
+                                                        <HyperlinkButton.Content>
+                                                            <Image Source="/Assets/Git.png" Height="40" Width="40"/>
+                                                        </HyperlinkButton.Content>
+                                                    </HyperlinkButton>
+                                                </Grid>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </DataTemplate>
+                </HubSection>
+                <HubSection x:Uid="Team" Header="Team" DataContext="{Binding}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+                    <DataTemplate>
+                        <ListView x:Name="teamView" Background="Transparent" ItemsSource="{Binding Team}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Title}" Style="{StaticResource BaseTextBlockStyle}" FontWeight="Bold" Margin="0,4,0,4"/>
+                                        <ListView Margin="5,0,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Margin="0,1,0,1">
+                                                        <TextBlock Text="{Binding name}"/>
+                                                        <TextBlock Text="{Binding Contact}"/>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </DataTemplate>
+                </HubSection>
+            </Hub>
+        </Grid>
+    </Grid>
+</Page>

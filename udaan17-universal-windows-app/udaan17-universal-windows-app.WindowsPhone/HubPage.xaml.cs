@@ -112,7 +112,7 @@ namespace udaan17_universal_windows_app
 
         private void pinAppBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (!Frame.Navigate(typeof(Architects)))
+            if (!Frame.Navigate(typeof(TeamUdaan)))
             {
                 throw new Exception(this.resourceLoader.GetString("NavigationFailedExceptionMessage"));
             }

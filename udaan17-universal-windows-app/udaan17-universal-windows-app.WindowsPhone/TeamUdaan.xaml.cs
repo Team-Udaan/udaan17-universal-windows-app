@@ -20,12 +20,12 @@ using Windows.ApplicationModel.Email;
 
 namespace udaan17_universal_windows_app
 {
-    public sealed partial class Architects : Page
+    public sealed partial class TeamUdaan : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        public Architects()
+        public TeamUdaan()
         {
             this.InitializeComponent();
 
@@ -43,14 +43,14 @@ namespace udaan17_universal_windows_app
         }
         private async void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            var item = await DataSource.GetDevsAsync();
-            this.DefaultViewModel["Item"] = item;
+            var devs = await DataSource.GetDevsAsync();
+            this.DefaultViewModel["Devs"] = devs;
+            //var team = await DataSource.GetTeamAsync();
+            //this.defaultViewModel["Team"] = team;
         }
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
         }
-
-        
         private void PlaceCall(string contact, string name)
         {
             Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallUI(contact, name);
