@@ -84,7 +84,7 @@
                         </Grid.RowDefinitions>
                         <Border Background="Black" Opacity=".5" Grid.RowSpan="2" Margin="50,0,0,0"/>
                         <Image Grid.Row="1" Source="Assets/MainLogo.png" Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <Button Grid.Row="1" Content="&lt; Architects /&gt;" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="Button_Click" Margin="0,0,0,20"/>
+                        <Button Grid.Row="1" Content="About Us" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="Button_Click" Margin="0,0,0,20"/>
                     </Grid>
                 </DataTemplate>
             </HubSection>

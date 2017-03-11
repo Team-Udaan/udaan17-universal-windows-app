@@ -45,7 +45,7 @@
                             </ListView.Background>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Width="370">
+                                    <Grid Width="350">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="0"/>
                                             <ColumnDefinition Width="*"/>
