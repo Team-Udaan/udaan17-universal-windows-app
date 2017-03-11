@@ -144,17 +144,14 @@
     <Content Include="Assets\DepartmentLogos\Machinists.png" />
     <Content Include="Assets\DepartmentLogos\Rezonizers.png" />
     <Content Include="Assets\DepartmentLogos\SkyScrapers.png" />
-    <Content Include="Assets\devs.jpg" />
-    <Content Include="Assets\git.png" />
-    <Content Include="Assets\Logo.scale-100.png" />
-    <Content Include="Assets\mail.jpeg" />
     <Content Include="Assets\MainLogo.png" />
-    <Content Include="Assets\phone.jpg" />
-    <Content Include="Assets\profile.jpg" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\Square70x70Logo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
-    <Content Include="Assets\WideLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-140.png" />
+    <Content Include="Assets\StoreLogo.scale-180.png" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="DevsPage.xaml">
