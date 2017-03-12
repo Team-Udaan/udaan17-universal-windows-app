@@ -145,6 +145,7 @@
     <Page.BottomAppBar>
         <CommandBar x:Name="myCommandBar">
             <AppBarButton x:Name="pinAppBtn" Label="About Us" Icon="Help" Click="pinAppBtn_Click"/>
+            <AppBarButton x:Name="teamUdaan" Label="Team Udaan" Icon="Favorite" Click="teamUdaan_Click"/>
             <AppBarButton x:Name="review" Label="Rate App" Icon="Favorite" Click="review_Click"/>
         </CommandBar>
     </Page.BottomAppBar>

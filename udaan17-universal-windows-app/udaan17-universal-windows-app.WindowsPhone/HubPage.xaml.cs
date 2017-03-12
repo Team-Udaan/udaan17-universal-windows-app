@@ -123,5 +123,13 @@ namespace udaan17_universal_windows_app
             //await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" +));
             await Launcher.LaunchUriAsync(new Uri($"ms-windows-store://review/?PFN={Package.Current.Id.FamilyName}"));
         }
+
+        private void teamUdaan_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Frame.Navigate(typeof(TeamPage)))
+            {
+                throw new Exception(this.resourceLoader.GetString("NavigationFailedExceptionMessage"));
+            }
+        }
     }
 }
