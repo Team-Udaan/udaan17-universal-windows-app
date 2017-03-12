@@ -100,18 +100,13 @@
                         <GridView x:Name="teamView" Background="Transparent" ItemsSource="{Binding Team}" SelectionMode="None">
                             <GridView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid VerticalAlignment="Top" Height="auto">
+                                    <Grid VerticalAlignment="Top" Height="200">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="auto"/>
                                             <RowDefinition Height="*"/>
                                         </Grid.RowDefinitions>
                                         <TextBlock Grid.Row="0" Text="{Binding Title}" Style="{StaticResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20" VerticalAlignment="Top"/>
-                                        <ListView Grid.Row="1" Margin="10,0,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}" SelectionMode="None" VerticalAlignment="Top">
-                                            <ListView.ItemContainerStyle>
-                                                <Style TargetType="ListViewItem">
-                                                    <Setter Property="VerticalContentAlignment" Value="Stretch" />
-                                                </Style>
-                                            </ListView.ItemContainerStyle>
+                                        <ListView Grid.Row="1" Margin="10,3,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}" SelectionMode="None" VerticalAlignment="Stretch">
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackPanel Margin="0,1,0,1" Width="200">
