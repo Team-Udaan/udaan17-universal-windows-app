@@ -632,18 +632,18 @@
                             
                             <GridView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid VerticalAlignment="Top" Height="200">
+                                    <Grid VerticalAlignment="Top" Height="250">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="auto"/>
                                             <RowDefinition Height="*"/>
                                         </Grid.RowDefinitions>
                                         <TextBlock Grid.Row="0" Text="{Binding Title}" Style="{StaticResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20" VerticalAlignment="Top"/>
-                                        <ListView Grid.Row="1" Margin="10,3,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}" SelectionMode="None" VerticalAlignment="Stretch" ItemContainerStyle="{StaticResource ListViewItemStyle1}">
+                                        <ListView Grid.Row="1" Margin="10,3,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}" SelectionMode="None" ScrollViewer.VerticalScrollBarVisibility="Disabled" ItemContainerStyle="{StaticResource ListViewItemStyle1}">
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackPanel Margin="0,1,0,1" Width="230">
-                                                        <TextBlock Text="{Binding name}"/>
-                                                        <TextBlock Text="{Binding Contact}"/>
+                                                        <TextBlock Text="{Binding name}" FontSize="17"/>
+                                                        <TextBlock Text="{Binding Contact}" FontSize="17"/>
                                                     </StackPanel>
                                                 </DataTemplate>
                                             </ListView.ItemTemplate>

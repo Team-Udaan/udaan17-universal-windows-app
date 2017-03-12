@@ -1632,15 +1632,15 @@
       "members": [
         {
           "name": "Krushal Kakadiya",
-          "title": ""
+          "title": "Head"
         },
         {
           "name": "Pratik Patel",
-          "title": ""
+          "title": "Head"
         },
         {
           "name": "Parth Joshi",
-          "title": ""
+          "title": "Co-Head"
         }
       ]
     },
@@ -1648,12 +1648,20 @@
       "category": "Publicity",
       "members": [
         {
+          "name": "Aksh Sharma",
+          "title": "Head"
+        },
+        {
           "name": "Shyam Govani",
           "title": "Head"
         },
         {
-          "name": "Aksh Sharma",
+          "name": "Anshul Thakkar",
           "title": "Co-Head"
+        },
+        {
+          "name": "Rejoice Parackal",
+          "title": "Head"
         }
       ]
     },
@@ -1675,6 +1683,10 @@
         },
         {
           "name": "Dhruvit Kardani",
+          "title": "Head"
+        },
+        {
+          "name": "Umang Patel",
           "title": "Co-Head"
         }
       ]
@@ -1688,6 +1700,10 @@
         },
         {
           "name": "Shrey Vaidya",
+          "title": "Head"
+        },
+        {
+          "name": "Hardik Shilu",
           "title": "Co-Head"
         }
       ]
@@ -1701,6 +1717,10 @@
         },
         {
           "name": "Maunil Swadas",
+          "title": "Head"
+        },
+        {
+          "name": "Vatsal Trivedi",
           "title": "Co-Head"
         }
       ]
@@ -1711,6 +1731,10 @@
         {
           "name": "Kevin Harkhani",
           "title": "Head"
+        },
+        {
+          "name": "Tushar Gonavala",
+          "title": "Co-Head"
         }
       ]
     },
@@ -1720,18 +1744,13 @@
         {
           "name": "Nikunj Rathod",
           "title": "Head"
-        }
-      ]
-    },
-    {
-      "category": "Developers",
-      "members": [
-        {
-          "name": "Dhruvin Gandhi",
-          "title": "Head"
         },
         {
-          "name": "Maunil Swadas",
+          "name": "Vatsal Rami",
+          "title": "Co-Head"
+        },
+        {
+          "name": "King Tandel",
           "title": "Co-Head"
         }
       ]
@@ -1745,6 +1764,14 @@
         },
         {
           "name": "Keval Mandaliya",
+          "title": "Head"
+        },
+        {
+          "name": "Punit Suthar",
+          "title": "Co-Head"
+        },
+        {
+          "name": "Vivek Bariya",
           "title": "Co-Head"
         }
       ]
@@ -1758,6 +1785,14 @@
         },
         {
           "name": "Dhvanit Mehta",
+          "title": "Head"
+        },
+        {
+          "name": "Kishan Patel",
+          "title": "Co-Head"
+        },
+        {
+          "name": "Meet Pachchigar",
           "title": "Co-Head"
         }
       ]
