@@ -18,6 +18,9 @@
     <PackageCertificateKeyFile>udaan17-universal-windows-app.Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -158,6 +161,7 @@
     <Content Include="Assets\SmallLogo.targetsize-256.png" />
     <Content Include="Assets\SmallLogo.targetsize-32.png" />
     <Content Include="Assets\SmallLogo.targetsize-48.png" />
+    <Content Include="Assets\SplashLogo.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\Square310x310Logo.scale-100.png" />
     <Content Include="Assets\Square310x310Logo.scale-140.png" />
