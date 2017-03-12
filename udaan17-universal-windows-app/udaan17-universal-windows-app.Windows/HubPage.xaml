@@ -84,8 +84,11 @@
                         </Grid.RowDefinitions>
                         <Border Background="Black" Opacity=".5" Grid.RowSpan="2" Margin="50,0,0,0"/>
                         <Image Grid.Row="1" Source="Assets/MainLogo.png" Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                        <Button Grid.Row="1" Content="About Us" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="Button_Click" Margin="0,0,0,20"/>
-                    </Grid>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,20" HorizontalAlignment="Center">
+                            <Button  Content="About Us" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="Button_Click" Margin="5,0,5,0"/>
+                            <Button x:Name="rate" Content="Rate App" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="rate_Click" Margin="5,0,5,0"/>
+                        </StackPanel>
+                            </Grid>
                 </DataTemplate>
             </HubSection>
             <!--HubSection Width="auto" Header="Coming up...">

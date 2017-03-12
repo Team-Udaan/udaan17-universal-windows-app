@@ -14,7 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using udaan17_universal_windows_app.Data;
 using udaan17_universal_windows_app.Common;
-
+using Windows.ApplicationModel;
+using Windows.System;
 
 namespace udaan17_universal_windows_app
 {
@@ -83,6 +84,11 @@ namespace udaan17_universal_windows_app
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(DevsPage));
+        }
+
+        private async void rate_Click(object sender, RoutedEventArgs e)
+        {
+            await Launcher.LaunchUriAsync(new Uri($"ms-windows-store://review/?PFN={Package.Current.Id.FamilyName}"));
         }
     }
 }
