@@ -98,12 +98,17 @@
     <Content Include="$(MSBuildThisFileDirectory)DataModel\Data.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)DataModel\developers.json" />
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\developers.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\team.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
   </ItemGroup>
 </Project>

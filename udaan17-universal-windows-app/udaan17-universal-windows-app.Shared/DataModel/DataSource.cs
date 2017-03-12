@@ -174,7 +174,7 @@ namespace udaan17_universal_windows_app.Data
                     this.Events.Add(dep);
                 }
                 //Load TeamUdaan data
-                LoadTeam(Data);
+                await LoadTeam();
             }
             catch (KeyNotFoundException) { }
             //Load Developers data
@@ -192,9 +192,13 @@ namespace udaan17_universal_windows_app.Data
                 _devs.Add(new Devs(o["name"].GetString(), o["email"].GetString(), o["github"].GetString(), o["mobile"].GetString(), o["title"].GetString(), o["color"].GetString()));
             }
         }
-        private void LoadTeam(JsonObject data)
+        private async Task LoadTeam()
         {
-            foreach (JsonValue teamCat in data["teamUdaan"].GetArray())
+            Uri dataUri = new Uri("ms-appx:///DataModel/team.json");
+            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            string jsonText = await FileIO.ReadTextAsync(file);
+            JsonArray Data = JsonArray.Parse(jsonText);
+            foreach (JsonValue teamCat in Data)
             {
                 Team team = new Team();
                 team.Members = new List<Manager>();
