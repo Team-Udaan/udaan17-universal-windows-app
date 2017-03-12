@@ -95,7 +95,9 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\non-tech.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Phone.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\tech.png" />
-    <Content Include="$(MSBuildThisFileDirectory)DataModel\Data.json" />
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\Data.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)DataModel\developers.json" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />

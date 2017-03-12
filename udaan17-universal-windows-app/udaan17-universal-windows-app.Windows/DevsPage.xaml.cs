@@ -39,14 +39,10 @@ namespace udaan17_universal_windows_app
         }
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            //object navigationParameter;
-            //if (e.PageState != null && e.PageState.ContainsKey("SelectedItem"))
-            //{
-            //    navigationParameter = e.PageState["SelectedItem"];
-            //}
-
             var item = await DataSource.GetDevsAsync();
             this.DefaultViewModel["Item"] = item;
+            var team = await DataSource.GetTeamAsync();
+            this.DefaultViewModel["Team"] = team;
         }
 
         #region NavigationHelper registration

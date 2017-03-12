@@ -89,7 +89,7 @@
                         <ImageBrush ImageSource="Assets/architects.jpg" Stretch="UniformToFill" Opacity=".5"/>
                     </HubSection.Background>
                     <DataTemplate>
-                        <GridView ItemsSource="{Binding Item}" ItemTemplate="{StaticResource DevItemTemplate}"/>
+                        <GridView ItemsSource="{Binding Item}" ItemTemplate="{StaticResource DevItemTemplate}" SelectionMode="None"/>
                     </DataTemplate>
                 </HubSection>
                 <HubSection Header="Team Udaan">
@@ -97,25 +97,34 @@
                         <ImageBrush ImageSource="/Assets/MainLogo.png" Stretch="Uniform" Opacity=".5"/>
                     </HubSection.Background>
                     <DataTemplate>
-                        <ListView x:Name="teamView" Background="Transparent" ItemsSource="{Binding Team}">
-                            <ListView.ItemTemplate>
+                        <GridView x:Name="teamView" Background="Transparent" ItemsSource="{Binding Team}" SelectionMode="None">
+                            <GridView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Title}" Style="{StaticResource BaseTextBlockStyle}" FontWeight="Bold" Margin="0,4,0,4"/>
-                                        <ListView Margin="5,0,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}">
+                                    <Grid VerticalAlignment="Top" Height="auto">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Grid.Row="0" Text="{Binding Title}" Style="{StaticResource BaseTextBlockStyle}" FontWeight="Bold" FontSize="20" VerticalAlignment="Top"/>
+                                        <ListView Grid.Row="1" Margin="10,0,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}" SelectionMode="None" VerticalAlignment="Top">
+                                            <ListView.ItemContainerStyle>
+                                                <Style TargetType="ListViewItem">
+                                                    <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                                                </Style>
+                                            </ListView.ItemContainerStyle>
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>
-                                                    <StackPanel Margin="0,1,0,1">
+                                                    <StackPanel Margin="0,1,0,1" Width="200">
                                                         <TextBlock Text="{Binding name}"/>
                                                         <TextBlock Text="{Binding Contact}"/>
                                                     </StackPanel>
                                                 </DataTemplate>
                                             </ListView.ItemTemplate>
                                         </ListView>
-                                    </StackPanel>
+                                    </Grid>
                                 </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
+                            </GridView.ItemTemplate>
+                        </GridView>
                     </DataTemplate>
                 </HubSection>
             </Hub>

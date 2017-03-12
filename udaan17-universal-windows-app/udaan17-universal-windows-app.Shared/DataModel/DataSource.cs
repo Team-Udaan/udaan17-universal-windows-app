@@ -88,7 +88,7 @@ namespace udaan17_universal_windows_app.Data
                         }
                         foreach (JsonValue jval in eventobj["rounds"].GetArray())
                         {
-                            e.Rounds.Add(new Iteration() { no = e.Rounds.Count + 1+") ", Value = jval.GetString() });
+                            e.Rounds.Add(new Iteration() { no = e.Rounds.Count + 1 + ") ", Value = jval.GetString() });
                         }
                         e.NoOfParticipants = eventobj["participants"].GetString();
                         e.Managers = new List<Manager>();
@@ -106,7 +106,7 @@ namespace udaan17_universal_windows_app.Data
                         }
                         foreach (JsonValue prize in eventobj["prizes"].GetArray())
                         {
-                            e.Prizes.Add(new Iteration() { no = e.Prizes.Count + 1+") ", Value = prize.GetString() });
+                            e.Prizes.Add(new Iteration() { no = e.Prizes.Count + 1 + ") ", Value = prize.GetString() });
                         }
                         e.Background = d.Background;
                         d.Events.Add(e);
@@ -143,7 +143,8 @@ namespace udaan17_universal_windows_app.Data
                         try
                         {
                             e.OneLiner = e.Description.Split('\n')[0];
-                        }catch (Exception)
+                        }
+                        catch (Exception)
                         {
                             e.OneLiner = e.Description;
                         }
@@ -173,12 +174,9 @@ namespace udaan17_universal_windows_app.Data
                     this.Events.Add(dep);
                 }
                 //Load TeamUdaan data
-                //LoadTeam(Data);
+                LoadTeam(Data);
             }
-            catch(KeyNotFoundException ex)
-            {
-
-            }
+            catch (KeyNotFoundException) { }
             //Load Developers data
             await LoadDevs();
         }
@@ -207,7 +205,7 @@ namespace udaan17_universal_windows_app.Data
                     JsonObject member = item.GetObject();
                     team.Members.Add(new Manager() { name = member["name"].GetString(), Contact = member["title"].GetString() });
                 }
-
+                _team.Add(team);
             }
         }
         public static async Task<List<Team>> GetTeamAsync()
