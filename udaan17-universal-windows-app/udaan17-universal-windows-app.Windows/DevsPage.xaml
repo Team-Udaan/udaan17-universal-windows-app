@@ -595,11 +595,7 @@
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
-        
-        <!--Grid.Background>
-            <ImageBrush ImageSource="Assets/architects.jpg" Stretch="UniformToFill" Opacity=".5"/>
-        </Grid.Background-->
-        
+
         <Grid x:Name="layoutRoot">
             <Hub>
                 <Hub.Header>
@@ -621,7 +617,7 @@
                 </Hub.Header>
                 <HubSection Header="Developers">
                     <HubSection.Background>
-                        <ImageBrush ImageSource="Assets/deadpool.png" Stretch="UniformToFill" Opacity=".5"/>
+                        <ImageBrush ImageSource="Assets/deadpool.png" Stretch="UniformToFill" Opacity=".8"/>
                     </HubSection.Background>
                     <DataTemplate>
                         <GridView ItemsSource="{Binding Item}" ItemTemplate="{StaticResource DevItemTemplate}" SelectionMode="None"/>
