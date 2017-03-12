@@ -27,7 +27,7 @@
             <!-- Grid-appropriate item template as seen in section 2 -->
             <DataTemplate x:Key="Standard200x180TileItemTemplate">
                 <Grid Margin="0,0,9.5,9.5" Background="Transparent">
-                    <Image Source="{Binding Image}" Stretch="Uniform" AutomationProperties.Name="{Binding Title}" Height="auto" Width="auto" MaxHeight="200"/>
+                    <Image Source="{Binding Image}" Stretch="Fill" AutomationProperties.Name="{Binding Title}" Height="auto" Width="auto" MaxHeight="200" VerticalAlignment="Center"/>
                     <StackPanel VerticalAlignment="Bottom" Margin="9.5,0,0,20">
                         <TextBlock Text="{Binding Alias}"  Style="{ThemeResource SubheaderTextBlockStyle}" FontWeight="Bold"/>
                         <TextBlock Text="{Binding Title}"  Style="{ThemeResource BaseTextBlockStyle}"/>
@@ -87,6 +87,11 @@
                         IsItemClickEnabled="True"
                         ItemClick="GroupSection_ItemClick"
                         ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            </Style>
+                        </ListView.ItemContainerStyle>
                     </ListView>
                 </DataTemplate>
             </HubSection>

@@ -40,12 +40,17 @@
                 <HubSection x:Uid="Developers" Header="Developers" DataContext="{Binding}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                     <DataTemplate>
                         <ListView x:Name="devsView" ItemsSource="{Binding Devs}">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListView.ItemContainerStyle>
                             <ListView.Background>
                                 <ImageBrush ImageSource="/Assets/architects.jpg" Stretch="Uniform" Opacity=".5"/>
                             </ListView.Background>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Width="350">
+                                    <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="0"/>
                                             <ColumnDefinition Width="*"/>
