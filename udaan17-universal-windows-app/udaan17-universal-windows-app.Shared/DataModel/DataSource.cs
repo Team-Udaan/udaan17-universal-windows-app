@@ -106,7 +106,7 @@ namespace udaan17_universal_windows_app.Data
                         }
                         foreach (JsonValue prize in eventobj["prizes"].GetArray())
                         {
-                            e.Prizes.Add(new Iteration() { no = e.Prizes.Count + 1 + ") ", Value = prize.GetString() });
+                            e.Prizes.Add(new Iteration() { no = e.Prizes.Count + 1 + ") ", Value = "₹ " + prize.GetString() });
                         }
                         e.Background = d.Background;
                         d.Events.Add(e);
