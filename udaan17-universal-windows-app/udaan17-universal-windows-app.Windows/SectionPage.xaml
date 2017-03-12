@@ -18,7 +18,7 @@
             />
 
         <DataTemplate x:Key="ItemViewTemplate">
-            <Grid Height="110" Width="480" Margin="10">
+            <Grid Height="110" Width="600">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0"/>
                     <ColumnDefinition Width="Auto"/>

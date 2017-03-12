@@ -71,7 +71,7 @@ namespace udaan17_universal_windows_app.Data
                 foreach (JsonValue val in Data["tech"].GetArray())
                 {
                     JsonObject obj = val.GetObject();
-                    Department d = new Department(obj["name"].GetString(), obj["alias"].GetString());
+                    Department d = new Department(obj["name"].GetString().ToUpper(), obj["alias"].GetString());
                     foreach (JsonValue item in obj["events"].GetArray())
                     {
                         JsonObject eventobj = item.GetObject();
