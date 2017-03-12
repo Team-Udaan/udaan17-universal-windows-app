@@ -91,17 +91,20 @@
                 </HubSection>
                 <HubSection x:Uid="Team" Header="Team Udaan" DataContext="{Binding}" HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                     <DataTemplate>
-                        <ListView x:Name="teamView" Background="Transparent" ItemsSource="{Binding Team}">
+                        <ListView x:Name="teamView" ItemsSource="{Binding Team}">
+                            <ListView.Background>
+                                <ImageBrush ImageSource="/Assets/MainLogo.png" Stretch="Uniform" Opacity=".5"/>
+                            </ListView.Background>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Title}" Style="{StaticResource BaseTextBlockStyle}" FontWeight="Bold" Margin="0,4,0,4"/>
-                                        <ListView Margin="5,0,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}">
+                                    <StackPanel Margin=" 0,8,0,8">
+                                        <TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" Margin="0,4,0,4"/>
+                                        <ListView Margin="5,4,0,0" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Members}">
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackPanel Margin="0,1,0,1">
-                                                        <TextBlock Text="{Binding name}"/>
-                                                        <TextBlock Text="{Binding Contact}"/>
+                                                        <TextBlock Text="{Binding name}" Style="{StaticResource TitleTextBlockStyle}"/>
+                                                        <TextBlock Text="{Binding Contact}" Style="{StaticResource TitleTextBlockStyle}"/>
                                                     </StackPanel>
                                                 </DataTemplate>
                                             </ListView.ItemTemplate>
