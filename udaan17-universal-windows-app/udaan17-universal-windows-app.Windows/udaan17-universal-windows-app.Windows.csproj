@@ -129,6 +129,7 @@
     <None Include="udaan17-universal-windows-app.Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\deadpool.png" />
     <Content Include="Assets\DepartmentBackgrounds\cultural.png" />
     <Content Include="Assets\DepartmentBackgrounds\embeddrones.png" />
     <Content Include="Assets\DepartmentBackgrounds\fabfacturers.png" />
@@ -148,6 +149,7 @@
     <Content Include="Assets\Logo.scale-140.png" />
     <Content Include="Assets\Logo.scale-180.png" />
     <Content Include="Assets\Logo.scale-80.png" />
+    <Content Include="Assets\shield.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-140.png" />
     <Content Include="Assets\SmallLogo.scale-180.png" />
