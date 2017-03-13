@@ -90,5 +90,10 @@ namespace udaan17_universal_windows_app
         {
             await Launcher.LaunchUriAsync(new Uri($"ms-windows-store://review/?PFN={Package.Current.Id.FamilyName}"));
         }
+
+        private void TeamButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TeamUdaanPage));
+        }
     }
 }

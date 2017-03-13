@@ -1,10 +1,9 @@
-﻿using System;
+﻿using udaan17_universal_windows_app.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using udaan17_universal_windows_app.Common;
-using udaan17_universal_windows_app.Data;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -14,14 +13,16 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using udaan17_universal_windows_app.Data;
 
 namespace udaan17_universal_windows_app
 {
-    public sealed partial class DevsPage : Page
+    public sealed partial class TeamUdaanPage : Page
     {
+
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-        
+
         public ObservableDictionary DefaultViewModel
         {
             get { return this.defaultViewModel; }
@@ -31,17 +32,21 @@ namespace udaan17_universal_windows_app
             get { return this.navigationHelper; }
         }
 
-        public DevsPage()
+
+        public TeamUdaanPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
+            this.navigationHelper.SaveState += navigationHelper_SaveState;
         }
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            var item = await DataSource.GetDevsAsync();
-            this.DefaultViewModel["Item"] = item;
-            
+            var team = await DataSource.GetTeamAsync();
+            this.DefaultViewModel["Team"] = team;
+        }
+        private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
+        {
         }
 
         #region NavigationHelper registration
@@ -66,6 +71,5 @@ namespace udaan17_universal_windows_app
         }
 
         #endregion
-
     }
 }

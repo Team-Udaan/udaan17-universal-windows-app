@@ -86,7 +86,8 @@
                         <Image Grid.Row="1" Source="Assets/MainLogo.png" Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                         <StackPanel Grid.Row="1" Margin="0,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <Button  Content="About Us" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="Button_Click" Margin="5,0,5,0"/>
+                                <Button x:Name="TeamButton" Content="Team Udaan" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="TeamButton_Click" Margin="5,0,5,0"/>
+                                <Button x:Name="DevsButton"  Content="Developers" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="Button_Click" Margin="5,0,5,0"/>
                                 <Button x:Name="rate" Content="Rate App" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Click="rate_Click" Margin="5,0,5,0"/>
                             </StackPanel>
                             <!--TextBlock Text="Made with ❤ by Team Udaan" Style="{ThemeResource SubheaderTextBlockStyle}"/-->
