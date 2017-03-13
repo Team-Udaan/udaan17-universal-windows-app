@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="fb21cbaf-9a48-4cd0-a83e-67f07e9a5ee6" Publisher="CN=Dhruv" Version="1.0.0.0" />
+  <Identity Name="25069UdaanBVM.Udaan17" Publisher="CN=E1D5C4F0-E4A9-4A03-AD20-29FAADE938FE" Version="1.1.0.0" />
   <Properties>
-    <DisplayName>udaan17-universal-windows-app.Windows</DisplayName>
-    <PublisherDisplayName>Dhruv</PublisherDisplayName>
+    <DisplayName>Udaan '17</DisplayName>
+    <PublisherDisplayName>Udaan BVM</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
