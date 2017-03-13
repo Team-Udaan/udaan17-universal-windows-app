@@ -133,6 +133,7 @@
     <Content Include="Assets\DepartmentLogos\rezonizers.png" />
     <Content Include="Assets\DepartmentLogos\skyscrapers.png" />
     <Content Include="Assets\developers.png" />
+    <Content Include="Assets\devs.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\Logo.scale-140.png" />
     <Content Include="Assets\Logo.scale-240.png" />
@@ -147,6 +148,7 @@
     <Content Include="Assets\StoreLogo.scale-140.png" />
     <Content Include="Assets\StoreLogo.scale-240.png" />
     <Content Include="Assets\team-udaan.png" />
+    <Content Include="Assets\team.png" />
     <Content Include="Assets\WideLogo.scale-100.png" />
     <Content Include="Assets\WideLogo.scale-140.png" />
     <Content Include="Assets\WideLogo.scale-240.png" />

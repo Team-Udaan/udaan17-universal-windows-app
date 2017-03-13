@@ -1,14 +1,19 @@
 [
   {
-    "category": "Student Representatives",
+    "category": "General Secretary",
     "members": [
       {
         "name": "Alay Patel",
-        "title": "General Secretary"
-      },
+        "title": ""
+      }
+    ]
+  },
+  {
+    "category": "Ladies Representative",
+    "members": [
       {
         "name": "Shweta Thacker",
-        "title": "Ladies Representative"
+        "title": ""
       }
     ]
   },
@@ -25,7 +30,7 @@
       },
       {
         "name": "Parth Joshi",
-        "title": "Co-Head"
+        "title": "Head"
       }
     ]
   },
@@ -46,7 +51,7 @@
       },
       {
         "name": "Rejoice Parackal",
-        "title": "Head"
+        "title": "Co-Head"
       }
     ]
   },
@@ -56,6 +61,14 @@
       {
         "name": "Sarvesh Shukla",
         "title": "Head"
+      },
+      {
+        "name": "Udit Patel",
+        "title": "Co-Head"
+      },
+      {
+        "name": "Shreyansh Aghera",
+        "title": "Co-Head"
       }
     ]
   },
