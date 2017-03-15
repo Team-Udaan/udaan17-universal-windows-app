@@ -120,7 +120,6 @@ namespace udaan17_universal_windows_app
 
         private async void review_Click(object sender, RoutedEventArgs e)
         {
-            //await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" +));
             await Launcher.LaunchUriAsync(new Uri($"ms-windows-store://review/?PFN={Package.Current.Id.FamilyName}"));
         }
 

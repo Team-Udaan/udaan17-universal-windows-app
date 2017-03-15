@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="25069UdaanBVM.Udaan17" Publisher="CN=E1D5C4F0-E4A9-4A03-AD20-29FAADE938FE" Version="1.1.0.0" />
+  <Identity Name="25069UdaanBVM.Udaan17" Publisher="CN=E1D5C4F0-E4A9-4A03-AD20-29FAADE938FE" Version="1.1.0.1" />
   <mp:PhoneIdentity PhoneProductId="ed3832cc-9e9c-4a3c-9330-9a82669d7772" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Udaan '17</DisplayName>
