@@ -26,7 +26,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\DepartmentLogos\skyscrapers.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\android.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\backend.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\ui.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\graphics.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\web.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\DevLogos\windows.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\devs.jpg" />
@@ -95,7 +95,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\non-tech.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Phone.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\tech.png" />
-    <Content Include="$(MSBuildThisFileDirectory)DataModel\Data.json">
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\data.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)DataModel\developers.json">
@@ -106,7 +106,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
-    <Content Include="$(MSBuildThisFileDirectory)DataModel\team.json">
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\teamUdaan.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />

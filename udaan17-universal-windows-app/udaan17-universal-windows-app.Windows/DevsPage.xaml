@@ -59,33 +59,29 @@
         </Grid.ChildrenTransitions>
 
         <Grid x:Name="layoutRoot">
-            <Hub>
-                <Hub.Header>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="80"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button  x:Name="backButton" Style="{StaticResource NavigationBackButtonNormalStyle}"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/deadpool.png" Stretch="UniformToFill" Opacity=".8"/>
+            </Grid.Background>
+            <Grid Grid.Row="0" Margin="40,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button  x:Name="backButton" Style="{StaticResource NavigationBackButtonNormalStyle}"
                         Margin="0,0,39,0" 
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-                        <TextBlock Text="Developers" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        VerticalAlignment="Top" IsHitTestVisible="false" TextWrapping="NoWrap" />
-                    </Grid>
-                </Hub.Header>
-                <HubSection>
-                    <HubSection.Background>
-                        <ImageBrush ImageSource="Assets/deadpool.png" Stretch="UniformToFill" Opacity=".8"/>
-                    </HubSection.Background>
-                    <DataTemplate>
-                        <GridView ItemsSource="{Binding Item}" ItemTemplate="{StaticResource DevItemTemplate}" SelectionMode="None"/>
-                    </DataTemplate>
-                </HubSection>
-            </Hub>
+                <TextBlock Text="Developers" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        VerticalAlignment="Center" IsHitTestVisible="false" TextWrapping="NoWrap" />
+            </Grid>
+            <GridView Margin="40,0,0,0" Grid.Row="1" ItemsSource="{Binding Item}" ItemTemplate="{StaticResource DevItemTemplate}" SelectionMode="None"/>
         </Grid>
     </Grid>
 </Page>

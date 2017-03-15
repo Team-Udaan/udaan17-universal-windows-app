@@ -45,15 +45,8 @@
           "participants": "2",
           "fees": "40",
           "description": "Mettle inside.",
-          "prizes": [
-            "750",
-            "500"
-          ],
-          "rounds": [
-            "MCQ Quiz on basic computer hardware.",
-            "Computer related hardware/device will be shown on projector, of which the participants will have to give the correct answer. Buzzer round will be held between participating teams and they will get a broken piece of the picture on every correct answer they give. This way every team will have to fight for making their whole picture by earning broken pieces and give a correct guess before other teams. (Two chances will be given to guess the picture)",
-            "Surprise Round!"
-          ],
+          "prizes": [ "750", "500" ],
+          "rounds": [ "MCQ Quiz on basic computer hardware.", "Computer related hardware/device will be shown on projector, of which the participants will have to give the correct answer. Buzzer round will be held between participating teams and they will get a broken piece of the picture on every correct answer they give. This way every team will have to fight for making their whole picture by earning broken pieces and give a correct guess before other teams. (Two chances will be given to guess the picture)", "Surprise Round!" ],
           "managers": [
             {
               "name": "Rushi Patel",
@@ -73,12 +66,9 @@
           "name": "Ex-QUIZ-IT",
           "participants": "2",
           "fees": "20",
-          "description": "Raising the Bar. (Note: There is no restriction of having 2 students in the team if the participant is confident then he/she can take part individually)",
+          "description": "Raising the Bar.\n(Note: There is no restriction of having 2 students in the team if the participant is confident then he/she can take part individually)",
           "prizes": [ ],
-          "rounds": [
-            "The first round will be a pen and paper based quiz on IT Trivia which includes basic general knowledge about the world of Computer Science.",
-            "Top selected teams will be then made to face off each other in a proper quiz with buzzers and scores, the quiz will be conducted by our quiz master and the questions would be based on the world of computer science."
-          ],
+          "rounds": [ "The first round will be a pen and paper based quiz on IT Trivia which includes basic general knowledge about the world of Computer Science.", "Top selected teams will be then made to face off each other in a proper quiz with buzzers and scores, the quiz will be conducted by our quiz master and the questions would be based on the world of computer science." ],
           "managers": [
             {
               "name": "Himanshu Patel",
@@ -94,12 +84,9 @@
           "name": "League of Coders",
           "participants": "1",
           "fees": "20",
-          "description": "Bid your way to code your world. (Note: Participants are requested to get their own device with the necessary tools installed else we will provide the computer but then the choice of technology will be limited.)",
+          "description": "Bid your way to code your world.\n (Note: Participants are requested to get their own device with the necessary tools installed else we will provide the computer but then the choice of technology will be limited.)",
           "prizes": [ ],
-          "rounds": [
-            "Pen and paper based technical quiz which for testing the participant's knowledge about coding.",
-            "Top rankers of the quiz will be made captains of the group and will be given virtual money, they have to use that money to bid for the remaining coders who will be divided in different brackets based on their score also their preferred technology stack would be announced, the captains have to smartly use the amount and form a team that they feel will help them win the event.At the end each team will have to build an application as a solution to the problem given by us."
-          ],
+          "rounds": [ "Pen and paper based technical quiz which for testing the participant's knowledge about coding.", "Top rankers of the quiz will be made captains of the group and will be given virtual money, they have to use that money to bid for the remaining coders who will be divided in different brackets based on their score also their preferred technology stack would be announced, the captains have to smartly use the amount and form a team that they feel will help them win the event. At the end each team will have to build an application as a solution to the problem given by us." ],
           "managers": [
             {
               "name": "Rohit Patel",
@@ -121,11 +108,7 @@
           "fees": "20",
           "description": "Presence of mind within a storm of chaos.",
           "prizes": [ ],
-          "rounds": [
-            "You will have to solve clues and hunt in the bvm campus.",
-            "You will have to draw, mimic and explain the technical terms without speaking.",
-            "You and your partner will have to code, one at a time and your program will be switched after random amount of time."
-          ],
+          "rounds": [ "You will have to solve clues and hunt in the bvm campus.", "You will have to draw, mimic and explain the technical terms without speaking.", "You and your partner will have to code, one at a time and your program will be switched after random amount of time." ],
           "managers": [
             {
               "name": "Siddharth Goswami",
@@ -143,11 +126,7 @@
           "fees": "20",
           "description": "Tracing the stack.",
           "prizes": [ ],
-          "rounds": [
-            "Algorithm and data structures based quiz.",
-            "You will be given a case study, everyone will have to individually frame an algorithm and then a group discussion will be carried out on that algorithms.",
-            "Top students will be given a problem for which algorithm is to be made and coding has to be done. The student with most optimal code will be declared winner."
-          ],
+          "rounds": [ "Algorithm and data structures based quiz.", "You will be given a case study, everyone will have to individually frame an algorithm and then a group discussion will be carried out on that algorithms.", "Top students will be given a problem for which algorithm is to be made and coding has to be done. The student with most optimal code will be declared winner." ],
           "managers": [
             {
               "name": "Nilesh Kevlani",
@@ -165,10 +144,7 @@
           "fees": "20",
           "description": "In the world of technology, people make the difference.",
           "prizes": [ ],
-          "rounds": [
-            "Pictionary about recent IT startups, firms, their CEOs and their reforms.",
-            "All the top selected students will have to come up with a business proposal of their idea and present it in front of the BVM Incubation Centre and the whole business proposal should include the technical and financial details of the idea, if you don’t have your own idea we will be giving you our idea and you have to come up with the whole proposal for the same."
-          ],
+          "rounds": [ "Pictionary about recent IT startups, firms, their CEOs and their reforms.", "All the top selected students will have to come up with a business proposal of their idea and present it in front of the BVM Incubation Centre and the whole business proposal should include the technical and financial details of the idea, if you don’t have your own idea we will be giving you our idea and you have to come up with the whole proposal for the same." ],
           "managers": [
             {
               "name": "Hardik Patel",
@@ -211,15 +187,8 @@
           "participants": "2",
           "fees": "40",
           "description": "A lot can happen in middle of nowhere.",
-          "prizes": [
-            "1500",
-            "1000"
-          ],
-          "rounds": [
-            "30 marks questionnaire (MCQ, Fill in the blanks, One word answer) related to a documentary on Civil Engineering marvels which will be shown to the participants beforehand.",
-            "Technical debate having 5 - 7 minutes / round. Total debate time is 2 hours.",
-            "10 - 12 teams will be screened for technical presentation round. Total 7 minutes will be given (5 minutes for presentation and 2 minutes for questionnaire). Topics will be provided to the participants with enough time for preparation. Participants can present in form of PPT / Chart / Poster / Any."
-          ],
+          "prizes": [ "500", "250" ],
+          "rounds": [ "30 marks questionnaire (MCQ, Fill in the blanks, One word answer) related to a documentary on Civil Engineering marvels which will be shown to the participants beforehand.", "Technical debate having 5 - 7 minutes / round. Total debate time is 2 hours.", "10 - 12 teams will be screened for technical presentation round. Total 7 minutes will be given (5 minutes for presentation and 2 minutes for questionnaire). Topics will be provided to the participants with enough time for preparation. Participants can present in form of PPT / Chart / Poster / Any." ],
           "managers": [
             {
               "name": "Ayman Shairazi",
@@ -240,14 +209,8 @@
           "participants": "3",
           "fees": "60",
           "description": "Kya aap ke bridge mein STRAW hai ?",
-          "prizes": [
-            "1500",
-            "1000"
-          ],
-          "rounds": [
-            "On the first day, the participants will have to construct components of bridge like Piers, Abutments, Span sections and blocks.",
-            "Participants will have to assemble the components and finish the model."
-          ],
+          "prizes": [ "1500", "1000" ],
+          "rounds": [ "On the first day, the participants will have to construct components of bridge like Piers, Abutments, Span sections and blocks.", "Participants will have to assemble the components and finish the model." ],
           "managers": [
             {
               "name": "Akash Lodaya",
@@ -269,11 +232,7 @@
           "fees": "40",
           "description": "Let's survey the Treasure.",
           "prizes": [ ],
-          "rounds": [
-            "Quiz based on basics of surveying, principles of surveying and basics of Civil Engineering. (Most questions will be designed while keeping first year students in mind)",
-            "Participants will be given a puzzle based on principles of instruments of surveying. They need to solve it to find the instrument described in the passage. (Participants will have limited amount of time to solve this puzzle)",
-            "Participants will be given a problem statement with missing data. They have to find the missing data using the instrument found in previous round. The team which solves this puzzle will be given a clue and that clue will lead to the final treasure."
-          ],
+          "rounds": [ "Quiz based on basics of surveying, principles of surveying and basics of Civil Engineering. (Most questions will be designed while keeping first year students in mind)", "Participants will be given a puzzle based on principles of instruments of surveying. They need to solve it to find the instrument described in the passage. (Participants will have limited amount of time to solve this puzzle)", "Participants will be given a problem statement with missing data. They have to find the missing data using the instrument found in previous round. The team which solves this puzzle will be given a clue and that clue will lead to the final treasure." ],
           "managers": [
             {
               "name": "Himanshu Laddha",
@@ -295,22 +254,19 @@
           "fees": "20",
           "description": "Green and sustainable world",
           "prizes": [ ],
-          "rounds": [
-            "Expert lecture based on green and sustainable construction.",
-            "Participants will have to give ideas to make BVM campus green, environment friendly and sustainable. They have to detect problems in the campus and give reasonable and applicable solutions for those problems. They can present their ideas in form of PowerPoint presentation / Poster presentation / Any."
-          ],
+          "rounds": [ "Expert lecture based on green and sustainable construction.", "Participants will have to give ideas to make BVM campus green, environment friendly and sustainable. They have to detect problems in the campus and give reasonable and applicable solutions for those problems. They can present their ideas in form of PowerPoint presentation / Poster presentation / Any." ],
           "managers": [
             {
-              "name": "Deven Gajjar",
-              "mobile": "9725039877"
+              "name": "Jigesh Gajera",
+              "mobile": "9925118951"
             },
             {
-              "name": "Anand Limbad",
-              "mobile": "9624998933"
+              "name": "Kedar Dave",
+              "mobile": "9033033228"
             },
             {
               "name": "Prince Vachhani",
-              "mobile": "9624198788"
+              "mobile": "814171770"
             }
           ]
         }
@@ -343,7 +299,7 @@
           "mobile": "8866068981"
         },
         {
-          "name": "Sakshi MISSING",
+          "name": "Sakshi",
           "mobile": "9723666208"
         },
         {
@@ -361,15 +317,8 @@
           "participants": "2",
           "fees": "100",
           "description": "The legend of Bots and Balls!",
-          "prizes": [
-            "1500",
-            "1000"
-          ],
-          "rounds": [
-            "In this round there will be a track, with few water filled pits, on which two teams will compete against each other. Whichever team gets the maximum balls in their court will qualify for next round.",
-            "In this round same track will be extended with few more obstacles, height will be included and here also the qualified teams will have to get maximum balls into their court.",
-            "This will be the final round. New track will be created with increased obstacles like thrusting fan, fire and lot more. This round will challenge the mechanism of robots made and the best team will win. A lot more things will be added at the time of track making."
-          ],
+          "prizes": [ "1500", "1000" ],
+          "rounds": [ "In this round there will be a track, with a few pits, on which two teams will compete against each other. Whichever team gets the maximum balls in their court will qualify for next round.", "In this round same track will be extended with few more obstacles, height will be included and here also the qualified teams will have to get maximum balls into their court.", "This will be the final round. New track will be created with increased obstacles like thrusting fan, fire and lot more. This round will challenge the mechanism of robots made and the best team will win. A lot more things will be added at the time of track making." ],
           "managers": [
             {
               "name": "Ayush Jain",
@@ -387,11 +336,7 @@
           "fees": "30",
           "description": "Are you the winning Technocrat?",
           "prizes": [ ],
-          "rounds": [
-            "Quiz\nTechnical quiz (Pen Paper) based on basic electronics topics such as V-I characteristics, logic gates, digital electronics, etc.",
-            "Treasure Hunt with Virtual Money\nSolve the technical clues to reach the destinations and earn Virtual Money. Money will be distributed on the early bird advantage rule.",
-            "Circuit Implementation\nA main component will be given and using which participants will have to design a circuit on their own. They will have to buy the remaining components using virtual money to complete the circuit and implement it according to its specific application.\nExample: Like IC L293d will be given using which a circuit has to be implemented for the application of controlling motor. "
-          ],
+          "rounds": [ "Quiz\nTechnical quiz (Pen paper) based on basic electronics topics such as V-I characteristics, logic gates, digital electronics, etc.", "Treasure Hunt with Virtual Money.\nSolve the technical clues to reach the destinations and earn Virtual Money. Money will be distributed on the early bird advantage rule.", "Circuit Implementation.\nA main component will be given and using which participants will have to design a circuit on their own. They will have to buy the remaining components using virtual money to complete the circuit and implement it according to its specific application.\nExample: Like IC L293d will be given using which a circuit has to be implemented for the application of controlling motor. " ],
           "managers": [
             {
               "name": "Nirav Patel",
@@ -417,11 +362,7 @@
           "fees": "30",
           "description": "Hidden Talents are like Hidden Faults.",
           "prizes": [ ],
-          "rounds": [
-            "We will be having rapid fire questions, displayed with the help of a power point presentation and contestants need to write their answers.",
-            "This round will test practical ability of contestants. They will be having a circuit to debug, troubleshoot and implement.",
-            "This round is a case study based round where contestants have to research over a topic given to them a day before and present it the next day. "
-          ],
+          "rounds": [ "We will be having rapid fire questions, displayed with the help of a power point presentation and contestants need to write their answers.", "This round will test practical ability of contestants. They will be having a circuit to debug, troubleshoot and implement.", "This round is a case study based round where contestants have to research over a topic given to them a day before and present it the next day. " ],
           "managers": [
             {
               "name": "K. R. Karthic",
@@ -443,11 +384,7 @@
           "fees": "30",
           "description": "Read, Recognise, Reflect!",
           "prizes": [ ],
-          "rounds": [
-            "Electronics based quiz:- pen paper based multiple choice questions related to Electronics. Quiz of 40 questions.",
-            "Disintegrate and identify. The selected teams from Round 1 will be provided with a simple device. They have to dismantle it and explain its working. It is based on concept of reverse engineering. ",
-            "Surprise Round."
-          ],
+          "rounds": [ "Electronics based quiz:- pen paper based multiple choice questions related to Electronics. Quiz of 40 questions.", "Disintegrate and identify. The selected teams from Round 1 will be provided with a simple device. They have to dismantle it and explain its working. It is based on concept of reverse engineering. ", "Surprise Round." ],
           "managers": [
             {
               "name": "Urmi Shah",
@@ -472,15 +409,8 @@
           "participants": "3",
           "fees": "90",
           "description": "Damsel in distress! Save your princess!\nOperating condition:\tWired / Wireless. Any kind of matter/material can be used to build it.\nDimension: 25 cm * 25 cm * 25 cm ± Δ10 %",
-          "prizes": [
-            "1500",
-            "1000"
-          ],
-          "rounds": [
-            "Bots need to cross the hurdles with the least possible time. It will be an elimination round with strength of the bot determining survival of the fittest. Judging criteria will determine the overall winners.",
-            "The round will be a deathly race from the four alternate ways by four bots to reach to the winning spot. Path with harder obstacles. (90 Degree turn, less than 90 Degree turn, slope, rough spots, etc)",
-            "Here, the track will have some turns as well as hurdles like water, up-down, fire, underground, stones, etc. Clear stage “8-4”, kill the dragon and reach to your princess like the “Super Mario”."
-          ],
+          "prizes": [ "1500", "1000" ],
+          "rounds": [ "Bots need to cross the hurdles with the least possible time. It will be an elimination round with strength of the bot determining survival of the fittest. Judging criteria will determine the overall winners.", "The round will be a deathly race from the four alternate ways by four bots to reach to the winning spot. Path with harder obstacles. (90 Degree turn, less than 90 Degree turn, slope, rough spots, etc)", "Here, the track will have some turns as well as hurdles like water, up-down, fire, underground, stones, etc. Clear stage “8-4”, kill the dragon and reach to your princess like the “Super Mario”." ],
           "managers": [
             {
               "name": "Umesh Joshi",
@@ -510,11 +440,7 @@
           "fees": "40",
           "description": "Measure all the way!",
           "prizes": [ ],
-          "rounds": [
-            "Pen-paper based question-answers on basic measurements i.e. voltage, current etc. The questions will be shown on the projector.",
-            "One member is blindfolded, the other one has to explain the component given to him/her through proper non-tech way and after that have to explain the analogy.\nExample: If resistor is the component to be explained then explain it with the analogy of a speed breaker. Speed breaker is used for resisting the speed, therefore resistor.",
-            "Here a simple circuit will be given, teams need to measure certain parameters for the same on CRO, Voltmeter and other such devices i.e. voltage, impedance etc."
-          ],
+          "rounds": [ "Pen-paper based question-answers on basic measurements i.e. voltage, current etc. The questions will be shown on the projector.", "One member is blindfolded, the other one has to explain the component given to him/her through proper non-tech way and after that have to explain the analogy.\nExample: If resistor is the component to be explained then explain it with the analogy of a speed breaker. Speed breaker is used for resisting the speed, therefore resistor.", "Here a simple circuit will be given, teams need to measure certain parameters for the same on CRO, Voltmeter and other such devices i.e. voltage, impedance etc." ],
           "managers": [
             {
               "name": "Pragya Sahu",
@@ -546,7 +472,7 @@
         },
         {
           "name": "Anurag Raulji",
-          "mobile": "MISSING"
+          "mobile": ""
         }
       ],
       "coHeads": [
@@ -565,14 +491,8 @@
           "participants": "2",
           "fees": "50",
           "description": "Fight your opponent's cranes.",
-          "prizes": [
-            "500",
-            "250"
-          ],
-          "rounds": [
-            "Participants will have to make a hydraulic arm robot using materials provided at the time of event.",
-            "Fight using the robots."
-          ],
+          "prizes": [ "500", "250" ],
+          "rounds": [ "Participants will have to make a hydraulic arm robot using materials provided at the time of event.", "Fight using the robots." ],
           "managers": [
             {
               "name": "Dixit Kansagara",
@@ -593,18 +513,12 @@
           "participants": "2",
           "fees": "50",
           "description": "Sail in Water with your brain.",
-          "prizes": [
-            "500",
-            "250"
-          ],
-          "rounds": [
-            "Elimination round based on fluid mechanics quiz.",
-            "Boat is to be prepared from the given materials. Judging criteria will be announced  at the time of event."
-          ],
+          "prizes": [ "500", "250" ],
+          "rounds": [ "Elimination round based on fluid mechanics quiz.", "Boat is to be prepared from the given materials. Judging criteria will be announced  at the time of event." ],
           "managers": [
             {
-              "name": "Milan Kacchhadiya",
-              "mobile": "9925893405"
+              "name": "Nilesh Vishvani",
+              "mobile": "9925341476"
             },
             {
               "name": "Preetam Naik",
@@ -622,11 +536,7 @@
           "fees": "20",
           "description": "Ignite the Henry Ford in you.",
           "prizes": [ ],
-          "rounds": [
-            "Automobile Quiz.",
-            "comparison of car features and related Q&A.",
-            "Automobile problem will be given and solution is to be presented by the participants."
-          ],
+          "rounds": [ "Automobile Quiz.", "comparison of car features and related Q&A.", "Automobile problem will be given and solution is to be presented by the participants." ],
           "managers": [
             {
               "name": "Paras Ramani",
@@ -651,10 +561,6 @@
         {
           "name": "Vishal Lapsiwala",
           "mobile": "9712138577"
-        },
-        {
-          "name": "MISSING",
-          "mobile": "MISSING"
         }
       ],
       "coHeads": [
@@ -674,17 +580,14 @@
           "fees": "30",
           "description": "Be the Phunsukh Wangdu.",
           "prizes": [ ],
-          "rounds": [
-            "Quiz based on concept of reverse engineering.",
-            "It’s a clue solving round. Each team has to solve clues and earn different spare parts. At the end of the round they have to assemble all those parts to form an object."
-          ],
+          "rounds": [ "Quiz based on concept of reverse engineering.", "It’s a clue solving round. Each team has to solve clues and earn different spare parts. At the end of the round they have to assemble all those parts to form an object." ],
           "managers": [
             {
               "name": "Vraj Shah",
               "mobile": "9429783535"
             },
             {
-              "name": "Mayur Ayer",
+              "name": "Mayur Ayar",
               "mobile": "9825810006"
             }
           ]
@@ -694,14 +597,8 @@
           "participants": "2-3",
           "fees": "40",
           "description": "",
-          "prizes": [
-            "500",
-            "250"
-          ],
-          "rounds": [
-            "Jumble words and Sudoku solving.",
-            "It's a treasure hunt event, participants will have to solve a number of clues and at the end of it they will get a key. They will have to find a room using the key where they will get some materials, by assembling those materials they will have to make a kinematic mechanism."
-          ],
+          "prizes": [ "500", "250" ],
+          "rounds": [ "Jumble words and Sudoku solving.", "It's a treasure hunt event, participants will have to solve a number of clues and at the end of it they will get a key. They will have to find a room using the key where they will get some materials, by assembling those materials they will have to make a kinematic mechanism." ],
           "managers": [
             {
               "name": "Abhishek Rana",
@@ -722,15 +619,8 @@
           "participants": "2",
           "fees": "30",
           "description": "Got these at a site called Sniper Paradise.",
-          "prizes": [
-            "1500",
-            "1000"
-          ],
-          "rounds": [
-            "Shooting of table-tennis ball using a pneumatic gun prepared by the participants from home. Judging criteria will be based on maximum distance covered.",
-            "Shooting of pyramids made of glasses.",
-            "Circular target board shooting."
-          ],
+          "prizes": [ "1500", "1000" ],
+          "rounds": [ "Shooting of 40mm mini tennis ball using a pneumatic gun prepared by the participants from home. Judging criteria will be based on maximum distance covered.", "Shooting of pyramids made of glasses.", "Circular target board shooting." ],
           "managers": [
             {
               "name": "Mitesh Malaiya",
@@ -773,15 +663,8 @@
           "participants": "1",
           "fees": "40",
           "description": "Crack the circuit and diffuse the bomb.",
-          "prizes": [
-            "500",
-            "250"
-          ],
-          "rounds": [
-            "Quiz based on basic Electrical engineering and digital electronics.",
-            "Technical treasure hunt.",
-            "Crack the security system to diffuse a virtual bomb."
-          ],
+          "prizes": [ "500", "250" ],
+          "rounds": [ "Quiz based on basic Electrical engineering and digital electronics.", "Technical treasure hunt.", "Crack the security system to diffuse a virtual bomb." ],
           "managers": [
             {
               "name": "Krunal Jajal",
@@ -803,10 +686,7 @@
           "fees": "20",
           "description": "Be innovative, be genius!!!",
           "prizes": [ ],
-          "rounds": [
-            "Subdivision 1:- You have to solve 5 real life problems related to Electrical Engineering.\nSubdivision 2:- Topic will be given and you have to prepare an innovative abstract in a given time limit. Participants will be shortlisted based on their cumulative performance.",
-            "Participants will have to present the given topic, followed by which they would have to answer the questions raised by the jury."
-          ],
+          "rounds": [ "Subdivision 1:- You have to solve 5 real life problems related to Electrical Engineering.\nSubdivision 2:- Topic will be given and you have to prepare an innovative abstract in a given time limit. Participants will be shortlisted based on their cumulative performance.", "Participants will have to present the given topic, followed by which they would have to answer the questions raised by the jury." ],
           "managers": [
             {
               "name": "Rahul Katara",
@@ -824,11 +704,7 @@
           "fees": "30",
           "description": "This event is based on your basic technical knowledge of Electrical Engineering.",
           "prizes": [ ],
-          "rounds": [
-            "There will be a crossword puzzle which you have to solve within a given time limit.",
-            "There will be an ORAL quiz consisting of Buzzer round, Direct questions, etc. based on your basic knowledge of electrical engineering.",
-            "Snake and ladder game not based on luck but based only on your technical knowledge."
-          ],
+          "rounds": [ "There will be a crossword puzzle which you have to solve within a given time limit.", "There will be an ORAL quiz consisting of Buzzer round, Direct questions, etc. based on your basic knowledge of electrical engineering.", "Snake and ladder game not based on luck but based only on your technical knowledge." ],
           "managers": [
             {
               "name": "Vishal Katira",
@@ -850,11 +726,7 @@
           "fees": "30",
           "description": "It’s time to implement your practical knowledge.",
           "prizes": [ ],
-          "rounds": [
-            "Basic pen and paper quiz (different for all years).",
-            "Surprise round based on basic circuits of hardware.",
-            "Perform electrical experiment in electrical lab (different for all years)."
-          ],
+          "rounds": [ "Basic pen and paper quiz (different for all years).", "Surprise round based on basic circuits of hardware.", "Perform electrical experiment in electrical lab (different for all years)." ],
           "managers": [
             {
               "name": "Rupesh Gelani",
@@ -898,11 +770,7 @@
       "fees": "20",
       "description": "Run for fun !!!",
       "prizes": [ ],
-      "rounds": [
-        "Find the different things mentioned in the list from the campus. For example, Wrapper of munch, leaf, et al.",
-        "Take selfies with different people, as mentioned in the list.",
-        "Solve the clues and perform the given task."
-      ],
+      "rounds": [ "Find the different things mentioned in the list from the campus. For example, Wrapper of munch, leaf, et al.", "Take selfies with different people, as mentioned in the list.", "Solve the clues and perform the given task." ],
       "managers": [
         {
           "name": "Milan Budasana",
@@ -924,11 +792,7 @@
       "fees": "20",
       "description": "Give answers and play cricket.",
       "prizes": [ ],
-      "rounds": [
-        "Video, picture, audio, et al. will be shown and questions will be asked, you have to write answers based on your knowledge of cricket.",
-        "A larger team will be made randomly from the selected teams and they will have to play crazy cricket.",
-        "Surprise Round"
-      ],
+      "rounds": [ "Video, picture, audio, et al. will be shown and questions will be asked, you have to write answers based on your knowledge of cricket.", "A larger team will be made randomly from the selected teams and they will have to play crazy cricket.", "Surprise Round" ],
       "managers": [
         {
           "name": "Ashish Ramchandani",
@@ -950,11 +814,7 @@
       "fees": "20",
       "description": "You will have to be ODD to be number ONE.",
       "prizes": [ ],
-      "rounds": [
-        "Simple mathematical quiz for screening out teams which will have negative marking.",
-        "Picture perception round for guessing math related personalities, well known theorems, formulas, etc.",
-        "Keep in mind that ‘if it is easy then it is not true’. So, brace yourself for Surprise Round!"
-      ],
+      "rounds": [ "Simple mathematical quiz for screening out teams which will have negative marking.", "Picture perception round for guessing math related personalities, well known theorems, formulas, etc.", "Keep in mind that ‘if it is easy then it is not true’. So, brace yourself for Surprise Round!" ],
       "managers": [
         {
           "name": "Kunal Sahitya",
@@ -998,11 +858,7 @@
       "fees": "30",
       "description": "Let the Diplomacy prevail.\nNote: Round 1 will be on the first day and selected students will be given issue and their countries the very same day so that they get ample amount of time to prepare for the MUN on the 2nd Day.",
       "prizes": [ ],
-      "rounds": [
-        "Every student will be given a fair chance to speak and give their opinion on a particular issue, moderated by the moderator. The whole proceeding will be judged by the jury. Apart from this each candidate has to give a written diplomatic test which will include situation reaction type MCQ questions and based on the combination of the scores of the test and the discussion a final list of selected students will be prepared.",
-        "All the top selected students will be given a unique opportunity to become diplomats of the countries that we allot to them and the issue would be given on which they have to debate and the entire house has to come up with a final solution to the issue, so get your diplomatic hats on and just debate your way out of trouble.",
-        ""
-      ],
+      "rounds": [ "Every student will be given a fair chance to speak and give their opinion on a particular issue, moderated by the moderator. The whole proceeding will be judged by the jury. Apart from this each candidate has to give a written diplomatic test which will include situation reaction type MCQ questions and based on the combination of the scores of the test and the discussion a final list of selected students will be prepared.", "All the top selected students will be given a unique opportunity to become diplomats of the countries that we allot to them and the issue would be given on which they have to debate and the entire house has to come up with a final solution to the issue, so get your diplomatic hats on and just debate your way out of trouble.", "" ],
       "managers": [
         {
           "name": "Sagar Patel",
@@ -1078,11 +934,7 @@
       "fees": "30",
       "description": "Satyamev Jayate",
       "prizes": [ ],
-      "rounds": [
-        "The first round will be an online quiz based on various things which include the Suits TV series, Constitution of India, Basic knowledge about civics and some situational questions, and based on that top students will go to next round.",
-        "A case will be given beforehand and everyone will be given their roles. Everyone is supposed to prepare for their roles based on the documents we give to you. Finally, the entire Courtroom drama would be played out and those who enact the best will be declared winners. So everyone, ignite the Harvey Specter within.",
-        "Surprise Round!"
-      ],
+      "rounds": [ "The first round will be an online quiz based on various things which include the Suits TV series, Constitution of India, Basic knowledge about civics and some situational questions, and based on that top students will go to next round.", "A case will be given beforehand and everyone will be given their roles. Everyone is supposed to prepare for their roles based on the documents we give to you. Finally, the entire Courtroom drama would be played out and those who enact the best will be declared winners. So everyone, ignite the Harvey Specter within.", "Surprise Round!" ],
       "managers": [
         {
           "name": "Yogin Vekariya",
@@ -1100,11 +952,7 @@
       "fees": "20",
       "description": "Language must not be a barrier.",
       "prizes": [ ],
-      "rounds": [
-        "Individual participants would be expected to write down the correct spellings of the words pronounced by the volunteer. The ones who get the maximum correct answers will clear the round.",
-        "Alphabets would be displayed haphazardly (jumbled) and the individual participants would have to form the maximum number of meaningful words. One who does clears.",
-        "Public speaking. Any language of participant’s choice."
-      ],
+      "rounds": [ "Individual participants would be expected to write down the correct spellings of the words pronounced by the volunteer. The ones who get the maximum correct answers will clear the round.", "Alphabets would be displayed haphazardly (jumbled) and the individual participants would have to form the maximum number of meaningful words. One who does clears.", "Public speaking. Any language of participant’s choice." ],
       "managers": [
         {
           "name": "Kishan Mansuria",
@@ -1122,15 +970,11 @@
     },
     {
       "name": "Student of the year",
-      "participants": "2-3",
+      "participants": "3",
       "fees": "30",
       "description": "Explore the College and show you are the only one.",
       "prizes": [ ],
-      "rounds": [
-        "Written round (Logical questions) for 1 participant  while the other 2 will perform 2 physical tasks.",
-        "The selected teams will be given 3 tasks to complete in a channel. (Eating, Running, Cycling)",
-        "Surprise round in V. V. Nagar. (Beg, Borrow, Steal)"
-      ],
+      "rounds": [ "Written round (Logical questions) for 1 participant  while the other 2 will perform 2 physical tasks.", "The selected teams will be given 3 tasks to complete in a channel. (Eating, Running, Cycling)", "Surprise round in V. V. Nagar. (Beg, Borrow, Steal)" ],
       "managers": [
         {
           "name": "Dhaval Vaghela",
@@ -1156,11 +1000,7 @@
       "fees": "20",
       "description": "",
       "prizes": [ ],
-      "rounds": [
-        "Quiz on Advertisements and their facts.",
-        "Top 10 teams would get a product and they will have to make a Print-ad in the form of a PowerPoint presentation. There will be no elimination in this round.",
-        "Each team would have to debate with one another on their products."
-      ],
+      "rounds": [ "Quiz on Advertisements and their facts.", "Top 10 teams would get a product and they will have to make a Print-ad in the form of a PowerPoint presentation. There will be no elimination in this round.", "Each team would have to debate with one another on their products." ],
       "managers": [
         {
           "name": "Zeel Patel",
@@ -1182,19 +1022,15 @@
       "fees": "20",
       "description": "Be a super hero",
       "prizes": [ ],
-      "rounds": [
-        "Quiz based on Marvel Stories.",
-        "Dumb-Charades \nOne team member will be told a character from the Marvel Stories and he'll have to enact the character, the other team member will have to identify that character and vice-versa.",
-        "We'll form a team. Each participant will be given a character he/she has to act on, and a situation will be given to the team. Now the team has to put on the character given to them and have to act the situation given by us."
-      ],
+      "rounds": [ "Quiz based on Marvel Stories.", "Dumb-Charades \nOne team member will be told a character from the Marvel Stories and he'll have to enact the character, the other team member will have to identify that character and vice-versa.", "Surprise Round." ],
       "managers": [
         {
-          "name": "Zenith Patel",
-          "mobile": "9638968564"
+          "name": "Nikunj Jha",
+          "mobile": "9714991593"
         },
         {
-          "name": "Krunal Patel",
-          "mobile": "9978730018"
+          "name": "Rohit Khairnar",
+          "mobile": "7622885497"
         },
         {
           "name": "Rushi Shah",
@@ -1208,10 +1044,7 @@
       "fees": "20",
       "description": "Be a Bibliographer.",
       "prizes": [ ],
-      "rounds": [
-        "Quiz based on books and famous authors.",
-        "Creative writing on topics given on the spot."
-      ],
+      "rounds": [ "Quiz based on books and famous authors.", "Creative writing on topics given on the spot." ],
       "managers": [
         {
           "name": "Karan Kamani",
@@ -1225,14 +1058,11 @@
     },
     {
       "name": "Philosopher's Stone",
-      "participants": "2-3",
+      "participants": "1",
       "fees": "20",
       "description": "",
       "prizes": [ ],
-      "rounds": [
-        "Quiz based on Indian mythology.",
-        "Surprise Round."
-      ],
+      "rounds": [ "Quiz based on Indian mythology.", "Surprise Round." ],
       "managers": [
         {
           "name": "Mohan Iyer",
@@ -1246,11 +1076,7 @@
       "fees": "40",
       "description": "Beg, Borrow, Bid and Be the ultimate Guru!",
       "prizes": [ ],
-      "rounds": [
-        "The first round examines the participants’ marketing abilities and persuasion tactics. They are supposed to perform odd jobs - such as cleaning cars, polishing shoes, or entertain people within the college by their skills and talents and earn as much money as they can. The teams with a good amount would qualify for the further round. Their activities will be supervised by volunteers and a team is liable to face disqualification if their means of earning money are found to be in-genuine.",
-        "This round would be based upon the quickness and the presence of mind of the participants. In this round, they would be provided with a list of things. For example – they will be asked to get a 50 Paisa coin. They need to get those things within a limit of an hour. They will get virtual money based on how quickly they could bring all the listed stuff (E.g. : 50 Paisa coin brought by a team 1 in 10 minutes will gain them more virtual money than another team 2 getting the coin in 20 minutes) The virtual money will be utilised in the next round.",
-        "Surprise Round."
-      ],
+      "rounds": [ "The first round examines the participants’ marketing abilities and persuasion tactics. They are supposed to perform odd jobs - such as cleaning cars, polishing shoes, or entertain people within the college by their skills and talents and earn as much money as they can. The teams with a good amount would qualify for the further round. Their activities will be supervised by volunteers and a team is liable to face disqualification if their means of earning money are found to be in-genuine.", "This round would be based upon the quickness and the presence of mind of the participants. In this round, they would be provided with a list of things. For example – they will be asked to get a 50 Paisa coin. They need to get those things within a limit of an hour. They will get virtual money based on how quickly they could bring all the listed stuff (E.g. : 50 Paisa coin brought by a team 1 in 10 minutes will gain them more virtual money than another team 2 getting the coin in 20 minutes) The virtual money will be utilised in the next round.", "Surprise Round." ],
       "managers": [
         {
           "name": "Shrey Anjara",
@@ -1272,11 +1098,7 @@
       "fees": "30",
       "description": "Did you miss me ?",
       "prizes": [ ],
-      "rounds": [
-        "Puzzles based on Sherlock and a few riddles to go with them. Shortlisted teams will move to the next round.",
-        "Rack your brain and solve the clues. Each team will be given a mystery which they have to solve to reach the final round. Victim and witnesses will be present at the location of clues.",
-        "How observant are you ? Your Sherlock skills will be tested as you follow a trail of clues left for you by the criminal mastermind. Can you beat time?"
-      ],
+      "rounds": [ "Puzzles based on Sherlock and a few riddles to go with them. Shortlisted teams will move to the next round.", "Rack your brain and solve the clues. Each team will be given a mystery which they have to solve to reach the final round. Victim and witnesses will be present at the location of clues.", "How observant are you ? Your Sherlock skills will be tested as you follow a trail of clues left for you by the criminal mastermind. Can you beat time?" ],
       "managers": [
         {
           "name": "Pratik Vaswani",
@@ -1302,11 +1124,7 @@
       "fees": "20",
       "description": "Ideas are bulletproof!",
       "prizes": [ ],
-      "rounds": [
-        "Part A: Tasks for testing the creativity of the participants.\nPart B: After Part A they can either use the materials provided and/or scraps to create another object after which, they have to narrate story accordingly.",
-        "What if ?\nParticipants will be asked “What if” questions i.e. “What if Earth moves around its axis vertically instead of horizontally”, “What would happen if you shoot a gun in the space” etc. Participants need to come up with their own creative logic to answer the question.",
-        "Specific theme will be given to participants. They need to make short-film or video of captured photos within 1 hour. They can also enact the theme given to them. E.g. “Excitement”, “Last year of college life”, etc."
-      ],
+      "rounds": [ "Part A: Tasks for testing the creativity of the participants.\nPart B: After Part A they can either use the materials provided and/or scraps to create another object after which, they have to narrate story accordingly.", "What if ?\nParticipants will be asked “What if” questions i.e. “What if Earth moves around its axis vertically instead of horizontally”, “What would happen if you shoot a gun in the space” etc. Participants need to come up with their own creative logic to answer the question.", "Specific theme will be given to participants. They need to make short-film or video of captured photos within 1 hour. They can also enact the theme given to them. E.g. “Excitement”, “Last year of college life”, etc." ],
       "managers": [
         {
           "name": "Darshan Asawa",
@@ -1336,12 +1154,7 @@
       "fees": "30",
       "description": "If you think you can do it, Come and Prove it!",
       "prizes": [ ],
-      "rounds": [
-        "In this round all the participants will be given physical tasks like Push-ups, Sit-ups, Skipping, Running etc. and whoever performs well in given time period will be selected for next round.",
-        "In this round selected participants will be grouped in a team of 3-4 members and their legs will be tied using a rope. They have to finish the race in minimum time. Qualified team members will go to collect roadies-token, distributed across the college campus. Team members have to entertain the audience to earn tokens. Highest scorers of this round will go to next round.",
-        "This round consists of Personal Interview. Selected participants will be given forms before the beginning of this round and a panel of judges will take their interviews on the basis of forms and their performance during the interview. ",
-        "Surprise Round."
-      ],
+      "rounds": [ "In this round all the participants will be given physical tasks like Push-ups, Sit-ups, Skipping, Running etc. and whoever performs well in given time period will be selected for next round.", "In this round selected participants will be grouped in a team of 3-4 members and their legs will be tied using a rope. They have to finish the race in minimum time. Qualified team members will go to collect roadies-token, distributed across the college campus. Team members have to entertain the audience to earn tokens. Highest scorers of this round will go to next round.", "This round consists of Personal Interview. Selected participants will be given forms before the beginning of this round and a panel of judges will take their interviews on the basis of forms and their performance during the interview. ", "Surprise Round." ],
       "managers": [
         {
           "name": "Dhrumil Shah",
@@ -1371,11 +1184,7 @@
       "fees": "20",
       "description": "Got a sharp mind ? Let's Play.",
       "prizes": [ ],
-      "rounds": [
-        "Multi-tasking.\nSmall tasks to check Multi-tasking skills of the participants.",
-        "In second round the teams will get clues related to 7 different venues in the college itself, then one member from that team who solves a clue will go to that venue and perform a task there given by the volunteer Similarly, every member reaching there would be given different tasks. Now as they solve the second clue, this time the other member of the team will go and perform the task.",
-        "Group Tasks .\nIn this round one team member will be blind-folded and other will guide him in code language provided by us."
-      ],
+      "rounds": [ "Multi-tasking.\nSmall tasks to check Multi-tasking skills of the participants.", "In second round the teams will get clues related to 7 different venues in the college itself, then one member from that team who solves a clue will go to that venue and perform a task there given by the volunteer Similarly, every member reaching there would be given different tasks. Now as they solve the second clue, this time the other member of the team will go and perform the task.", "Group Tasks .\nIn this round one team member will be blind-folded and other will guide him in code language provided by us." ],
       "managers": [
         {
           "name": "Shivani Dimke",
@@ -1397,12 +1206,7 @@
       "fees": "20",
       "description": "Stars on my shoulders are better than billions in the sky.",
       "prizes": [ ],
-      "rounds": [
-        "Screening (Logical quiz).",
-        "Physical tasks.",
-        "Group planning exercise.",
-        "Personal interview."
-      ],
+      "rounds": [ "Screening (Logical quiz).", "Physical tasks.", "Group planning exercise.", "Personal interview." ],
       "managers": [
         {
           "name": "Jayesh Tada",
@@ -1424,11 +1228,7 @@
       "fees": "20",
       "description": "Dare to be Daring.",
       "prizes": [ ],
-      "rounds": [
-        "Rapid fire (10 questions based on Current affairs and  GK).",
-        "The participants in this round will be given 15 common tasks which they have to complete within 30 minutes, whosoever completes the maximum number of tasks in minimum time will proceed to the next round.",
-        "Each of the individual will bet on other participant for the task and and win."
-      ],
+      "rounds": [ "Rapid fire (10 questions based on Current affairs and  GK).", "The participants in this round will be given 15 common tasks which they have to complete within 30 minutes, whosoever completes the maximum number of tasks in minimum time will proceed to the next round.", "Each of the individual will bet on other participant for the task and and win." ],
       "managers": [
         {
           "name": "Priyen Somaiya",
@@ -1450,11 +1250,7 @@
       "fees": "30",
       "description": "So why should boys have all the fun?",
       "prizes": [ ],
-      "rounds": [
-        "The participants will have newspaper from which they have to make paper quelling in two minutes. The participant who makes more items will be qualified for the next round. Total 20 participants are selected for Round 2.",
-        "We will make groups of 2 participants. From the group, one participant is blind-folded and have to trace a path, another participant will guide her for that. After completion, they have to complete one GK quiz. Fastest ones will qualify for the second round. Total of 8 participants are selected for Round 3.",
-        "There is a form given to each participant which they have to fill and then personality contest in which we will measure their smartness and activeness. Most promising girl will be the winner."
-      ],
+      "rounds": [ "The participants will have newspaper from which they have to make paper quelling in two minutes. The participant who makes more items will be qualified for the next round. Total 20 participants are selected for Round 2.", "We will make groups of 2 participants. From the group, one participant is blind-folded and have to trace a path, another participant will guide her for that. After completion, they have to complete one GK quiz. Fastest ones will qualify for the second round. Total of 8 participants are selected for Round 3.", "There is a form given to each participant which they have to fill and then personality contest in which we will measure their smartness and activeness. Most promising girl will be the winner." ],
       "managers": [
         {
           "name": "Ruchi Patel",
@@ -1472,11 +1268,7 @@
       "fees": "50",
       "description": "Not All TREASURES are Silver and Gold.",
       "prizes": [ ],
-      "rounds": [
-        "Elimination Round.",
-        "Ding-Dong\nEach team will find the clues which will lead them to the final clue and first 15 teams ringing glory bell will go to Round 3.",
-        "Surprise Round."
-      ],
+      "rounds": [ "Elimination Round.", "Ding-Dong\nEach team will find the clues which will lead them to the final clue and first 15 teams ringing glory bell will go to Round 3.", "Surprise Round." ],
       "managers": [
         {
           "name": "Arth Patel",
@@ -1500,11 +1292,7 @@
       "fees": "40",
       "description": "Uncover your Bollywood knowledge with masti and dhamaal.\nThe competition will be organised into 3 segments.",
       "prizes": [ ],
-      "rounds": [
-        "The first round will be Crossword round.",
-        "The Second round will be buzzer round on different Bollywood topics.",
-        "Surprise Round."
-      ],
+      "rounds": [ "The first round will be Crossword round.", "The Second round will be buzzer round on different Bollywood topics.", "Surprise Round." ],
       "managers": [
         {
           "name": "Kishan Patel",
@@ -1526,7 +1314,7 @@
       "managers": [
         {
           "name": "Kavan Amin",
-          "mobile": "9825151237"
+          "mobile": "7046493069"
         },
         {
           "name": "Meet Pachchigar",
@@ -1535,15 +1323,12 @@
       ]
     },
     {
-      "name": "Antakshri",
+      "name": "Antakshari",
       "participants": "2",
       "fees": "40",
       "description": "Naye puraane gaane back to back.\nThe competition will be organized into 3 segments.",
       "prizes": [ ],
-      "rounds": [
-        "The first round will be general Antakshri round.",
-        "Second and third rounds will be surprise rounds, depending on the lyrics and instrumental music of Bollywood songs."
-      ],
+      "rounds": [ "The first round will be general Antakshari round.", "Second and third rounds will be surprise rounds, depending on the lyrics and instrumental music of Bollywood songs." ],
       "managers": [
         {
           "name": "Nirav Jadav",
@@ -1561,11 +1346,7 @@
       "fees": "20",
       "description": "One that makes you laugh for a while.\n\n1. A prank comedy has to be made on the chosen subject.\n2. It should be creative, presentable, imagination with good script.\n3. Voice-over, music and editing allowed",
       "prizes": [ ],
-      "rounds": [
-        "",
-        "",
-        "\n"
-      ],
+      "rounds": [ ],
       "managers": [
         {
           "name": "Padmang Chaudhri",
@@ -1595,16 +1376,13 @@
       "name": "View Finder",
       "participants": "1",
       "fees": "30",
-      "description": "MAKE IT A LIVE…\nviewfinder17@gmail.com",
+      "description": "MAKE IT A LIVE…\nviewfinder2k17@gmail.com",
       "prizes": [ ],
-      "rounds": [
-        "Send your maximum of 4 Photographs to the email mentioned above by 21st March, 2017. Among them, 2 Photographs should be related to the given theme and next 2 photographs from your collection with EXIF and CAPTION.\nTHEME: COLOR AND EMOTION",
-        "On the spot round.\nSelected participants from Round 1 will be given a theme on the same day. (23rd March, 2017)"
-      ],
+      "rounds": [ "Send your maximum of 4 Photographs to the email mentioned above by 21st March, 2017. Among them, 2 Photographs should be related to the given theme and next 2 photographs from your collection with EXIF and CAPTION.\nTHEME: COLOR AND EMOTION", "On the spot round.\nSelected participants from Round 1 will be given a theme on the same day. (23rd March, 2017)" ],
       "managers": [
         {
-          "name": "Subham Dhar",
-          "mobile": "7600878168"
+          "name": "Vishal Chaudhari",
+          "mobile": "8200353019"
         },
         {
           "name": "Bhadresh Katara",

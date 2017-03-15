@@ -57,12 +57,12 @@ namespace udaan17_universal_windows_app.Data
                 StorageFile file;
                 try
                 {
-                    Uri dataUri = new Uri("ms-appdata:///local/Data.json");
+                    Uri dataUri = new Uri("ms-appdata:///local/data.json");
                     file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
                 }
                 catch (Exception)
                 {
-                    var dataUri = new Uri("ms-appx:///DataModel/Data.json");
+                    var dataUri = new Uri("ms-appx:///DataModel/data.json");
                     file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
                 }
                 string jsonText = await FileIO.ReadTextAsync(file);
@@ -182,20 +182,37 @@ namespace udaan17_universal_windows_app.Data
         }
         private async Task LoadDevs()
         {
-            Uri dataUri = new Uri("ms-appx:///DataModel/developers.json");
-            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            StorageFile file;
+            try
+            {
+                Uri dataUri = new Uri("ms-appdata:///local/developers.json");
+                file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            }
+            catch (Exception)
+            {
+                var dataUri = new Uri("ms-appx:///DataModel/developers.json");
+                file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            }
             string jsonText = await FileIO.ReadTextAsync(file);
-            JsonObject Data = JsonObject.Parse(jsonText);
-            foreach (JsonValue item in Data["devs"].GetArray())
+            foreach (JsonValue item in JsonArray.Parse(jsonText))
             {
                 JsonObject o = item.GetObject();
-                _devs.Add(new Devs(o["name"].GetString(), o["email"].GetString(), o["github"].GetString(), o["mobile"].GetString(), o["title"].GetString(), o["color"].GetString()));
+                _devs.Add(new Devs(o["name"].GetString(), o["email"].GetString(), o["github"].GetString(), o["mobile"].GetString(), o["title"].GetString(), o["category"].GetString()));
             }
         }
         private async Task LoadTeam()
         {
-            Uri dataUri = new Uri("ms-appx:///DataModel/team.json");
-            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            StorageFile file;
+            try
+            {
+                Uri dataUri = new Uri("ms-appdata:///local/teamUdaan.json");
+                file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            }
+            catch (Exception)
+            {
+                var dataUri = new Uri("ms-appx:///DataModel/teamUdaan.json");
+                file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            }
             string jsonText = await FileIO.ReadTextAsync(file);
             JsonArray Data = JsonArray.Parse(jsonText);
             foreach (JsonValue teamCat in Data)
@@ -257,22 +274,22 @@ namespace udaan17_universal_windows_app.Data
             return true;
         }
 
-        public static async Task CheckDataAsync()
+        public static async Task CheckDataAsync(string fileName)
         {
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-            bool flag = await FileExists(localFolder, "Data.json");
+            bool flag = await FileExists(localFolder, fileName);
             Uri dataUri;
             if (!flag)
-                dataUri = new Uri("ms-appx:///DataModel/Data.json");
+                dataUri = new Uri("ms-appx:///DataModel/"+fileName);
             else
-                dataUri = new Uri("ms-appdata:///local/Data.json");
+                dataUri = new Uri("ms-appdata:///local/"+fileName);
             StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
             var props = await file.GetBasicPropertiesAsync();
             DateTime local = props.DateModified.DateTime;
             try
             {
-                HttpWebRequest req = WebRequest.CreateHttp("http://udaan17.in:8080/api/data.json");
-                var res = (HttpWebResponse)await req.GetResponseAsync();
+                HttpWebRequest req = WebRequest.CreateHttp("https://udaan17.in/api/"+fileName);
+                var res = await req.GetResponseAsync();
                 var str = res.Headers["Last-Modified"].ToString();
                 DateTime remote = DateTime.Parse(str);
                 if (remote.CompareTo(local) >= 0)
@@ -287,7 +304,7 @@ namespace udaan17_universal_windows_app.Data
                     }
                     else
                     {
-                        StorageFile f = await localFolder.CreateFileAsync("Data.json");
+                        StorageFile f = await localFolder.CreateFileAsync(fileName);
                         using (StreamReader sr = new StreamReader(res.GetResponseStream()))
                         using (StreamWriter sw = new StreamWriter(await f.OpenStreamForWriteAsync()))
                         {
@@ -296,7 +313,10 @@ namespace udaan17_universal_windows_app.Data
                     }
                 }
             }
-            catch (Exception) { }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
         }
     }
     public class Department

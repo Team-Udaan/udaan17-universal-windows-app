@@ -25,6 +25,7 @@ namespace udaan17_universal_windows_app
 
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private Task dataTask;
         
         public ObservableDictionary DefaultViewModel
         {
@@ -47,18 +48,24 @@ namespace udaan17_universal_windows_app
         
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            dataTask = CheckData();
             imageAnimation.Begin();
             imageAnimation.Completed += ImageAnimation_Completed;
         }
 
         private async void ImageAnimation_Completed(object sender, object e)
         {
-            await DataSource.CheckDataAsync();
+            await dataTask;
             Frame.Navigate(typeof(HubPage));
             Frame.BackStack.RemoveAt(Frame.BackStackDepth - 1);
         }
 
-       
+       private async Task CheckData()
+        {
+            await DataSource.CheckDataAsync("data.json");
+            await DataSource.CheckDataAsync("developers.json");
+            //await DataSource.CheckDataAsync("teamUdaan.json");
+        }
 
         private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
